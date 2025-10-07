@@ -75,19 +75,21 @@ const Contact = () => {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('/api/v1/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      // Netlify Forms submission
+      const form = e.target as HTMLFormElement;
+      const formDataToSubmit = new FormData(form);
 
-      const result = await response.json();
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formDataToSubmit as any).toString(),
+      });
 
       if (response.ok) {
         setSubmitStatus('success');
-        setSubmitMessage(result.message);
+        setSubmitMessage(language === 'EN' 
+          ? 'Thank you for your message! We will get back to you soon.' 
+          : 'شكراً لرسالتك! سنتواصل معك قريباً.');
         setFormData({
           name: '',
           email: '',
@@ -97,11 +99,15 @@ const Contact = () => {
         });
       } else {
         setSubmitStatus('error');
-        setSubmitMessage(result.message || 'An error occurred. Please try again.');
+        setSubmitMessage(language === 'EN' 
+          ? 'An error occurred. Please try again.' 
+          : 'حدث خطأ. يرجى المحاولة مرة أخرى.');
       }
     } catch (error) {
       setSubmitStatus('error');
-      setSubmitMessage('Network error. Please check your connection and try again.');
+      setSubmitMessage(language === 'EN' 
+        ? 'Network error. Please check your connection and try again.' 
+        : 'خطأ في الشبكة. يرجى التحقق من الاتصال والمحاولة مرة أخرى.');
     } finally {
       setIsSubmitting(false);
     }
@@ -148,7 +154,23 @@ const Contact = () => {
                 {language === 'EN' ? 'Send us a Message' : 'أرسل لنا رسالة'}
               </h2>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                name="contact" 
+                method="POST" 
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+              >
+                {/* Hidden fields for Netlify Forms */}
+                <input type="hidden" name="form-name" value="contact" />
+                <div style={{ display: 'none' }}>
+                  <label>
+                    Don't fill this out if you're human: 
+                    <input name="bot-field" />
+                  </label>
+                </div>
+                
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-white/90 mb-2 font-medium">

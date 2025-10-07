@@ -18,6 +18,20 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'sans': ['Bahij TheSansArabic', 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
+				'arabic': ['Bahij TheSansArabic', 'Tajawal', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+			},
+			fontWeight: {
+				'extralight': '200',
+				'light': '300',
+				'semilight': '350',
+				'normal': '400',
+				'semibold': '600',
+				'bold': '700',
+				'extrabold': '800',
+				'black': '900',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

@@ -86,9 +86,9 @@ const Footer: React.FC = () => {
               <img
                 src="/assets/logos/logo-gold.png"
                 alt="Al Fauzan Real Estate"
-                className="h-20 w-auto mx-auto lg:mx-0"
+                className="h-32 w-auto mx-auto lg:mx-0"
               />
-              <div className={`mt-6 flex flex-col justify-center ${language === 'AR' ? 'lg:justify-end' : 'lg:justify-start'} space-y-3`}>
+              <div className={`mt-6 flex flex-row justify-center ${language === 'AR' ? 'lg:justify-end' : 'lg:justify-start'} space-x-3`}>
                 <a 
                   href="#" 
                   className="text-gray-400 hover:text-gray-600 transition-colors p-2 rounded-full hover:bg-gray-100"

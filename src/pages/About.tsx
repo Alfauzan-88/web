@@ -1,7 +1,6 @@
 import React from 'react';
 import TransparentNavigation from '@/components/TransparentNavigation';
 import ScrollableKeyframe from '@/components/ScrollableKeyframe';
-import CatalogueViewer from '@/components/CatalogueViewer';
 import EventsGallery from '@/components/EventsGallery';
 import GroupCompanies from '@/components/GroupCompanies';
 import Footer from '@/components/Footer';
@@ -49,7 +48,7 @@ const About = () => {
         ]
       },
       ceo: {
-        title: "Message from Our CEO",
+        title: "Message from Our Founder",
         subtitle: "Leading with vision and commitment to excellence",
         name: "Ali Fauzan Mohammed Al Fauzan",
         position: "CEO",
@@ -340,9 +339,6 @@ const About = () => {
 
       {/* Vision Section - 3rd */}
       <ScrollableKeyframe />
-      
-      {/* Catalogue Section - 4th */}
-      <CatalogueViewer language={language} />
       
       {/* Events Gallery Section */}
       <EventsGallery />

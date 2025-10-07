@@ -165,7 +165,7 @@ const InteractiveImageGallery: React.FC<InteractiveImageGalleryProps> = ({ image
       <h2 className={`text-3xl md:text-4xl font-bold text-white mb-8 ${
         language === 'AR' ? 'font-arabic text-right' : ''
       }`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
-        {language === 'EN' ? 'Interactive Gallery' : 'معرض تفاعلي'}
+        {title}
       </h2>
 
       {/* Thumbnail Grid */}
@@ -302,6 +302,15 @@ const InteractiveImageGallery: React.FC<InteractiveImageGalleryProps> = ({ image
 };
 
 export default InteractiveImageGallery;
+
+
+
+
+
+
+
+
+
 
 
 

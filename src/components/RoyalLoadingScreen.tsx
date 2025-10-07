@@ -10,22 +10,16 @@ const RoyalLoadingScreen: React.FC<RoyalLoadingScreenProps> = ({ onLoadingComple
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    if (videoLoaded && videoRef.current) {
-      // Listen for video end event
-      const handleVideoEnd = () => {
+    if (videoLoaded) {
+      // Auto-complete loading after 3 seconds for looping video
+      const timer = setTimeout(() => {
         setIsVisible(false);
         setTimeout(() => {
           onLoadingComplete();
         }, 500);
-      };
+      }, 3000);
 
-      videoRef.current.addEventListener('ended', handleVideoEnd);
-
-      return () => {
-        if (videoRef.current) {
-          videoRef.current.removeEventListener('ended', handleVideoEnd);
-        }
-      };
+      return () => clearTimeout(timer);
     }
   }, [videoLoaded, onLoadingComplete]);
 
@@ -40,22 +34,40 @@ const RoyalLoadingScreen: React.FC<RoyalLoadingScreenProps> = ({ onLoadingComple
 
   return (
     <div className="fixed inset-0 bg-black z-50 overflow-hidden">
-      {/* Custom Video Background */}
-      <video
-        ref={videoRef}
-        className="w-full h-full object-cover"
-        autoPlay
-        muted
-        playsInline
-        onLoadedData={handleVideoLoad}
-      >
-        <source src="/assets/videos/loading-screen.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/assets/videos/loading-screen.jpg)'
+        }}
+      />
+
+      {/* Centered Motion Logo */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <video
+          ref={videoRef}
+          className="w-auto h-[60vh] md:h-[70vh] lg:h-[80vh] max-w-[90vw] object-contain"
+          autoPlay
+          muted
+          loop
+          playsInline
+          onLoadedData={handleVideoLoad}
+          style={{
+            filter: 'drop-shadow(0 0 40px rgba(255, 215, 0, 0.6)) drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.8))'
+          }}
+        >
+          <source src="/assets/logos/logo-motion.webm" type="video/webm" />
+          <img
+            src="/assets/logos/logo-white.png"
+            alt="Alfauzan Logo"
+            className="w-auto h-[60vh] md:h-[70vh] lg:h-[80vh] max-w-[90vw] object-contain"
+          />
+        </video>
+      </div>
 
       {/* Loading indicator */}
       {!videoLoaded && (
-        <div className="absolute inset-0 bg-black flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-400 mx-auto mb-4"></div>
             <p className="text-white text-lg">Loading...</p>

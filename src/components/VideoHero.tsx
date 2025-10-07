@@ -49,8 +49,6 @@ const VideoHero: React.FC = () => {
   const currentContent = content[language];
 
   // Get dynamic content from database
-  const journeyLinerText = getContent('hero', 'journey_liner', language) || 'JOURNEY OF DEVELOPMENT';
-  const journeyLinerImage = getContent('hero', 'journey_liner_image', language) || '/assets/images/journey-of-development.png';
   const heroVideo = getContent('hero', 'hero_video', language) || '/assets/videos/hero-video.mp4';
 
   // Refresh content when language changes
@@ -63,7 +61,6 @@ const VideoHero: React.FC = () => {
       // Hero content animation
       gsap.set('.hero-content > *', { opacity: 0, y: 50 });
       gsap.set('.hero-logo', { opacity: 0, y: 30, scale: 0.8 });
-      gsap.set('.journey-liner', { opacity: 0, y: 20, scale: 0.9 });
       
       const tl = gsap.timeline({ delay: 0.5 });
       
@@ -74,13 +71,6 @@ const VideoHero: React.FC = () => {
         duration: 1,
         ease: 'back.out(1.7)'
       })
-      .to('.journey-liner', {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.8,
-        ease: 'power3.out'
-      }, '-=0.4')
       .to('.hero-title', {
         opacity: 1,
         y: 0,
@@ -147,7 +137,7 @@ const VideoHero: React.FC = () => {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, [journeyLinerText, journeyLinerImage, heroVideo]); // Re-run animations when content changes
+  }, [heroVideo]); // Re-run animations when content changes
 
   // Video control functions removed
 
@@ -183,33 +173,34 @@ const VideoHero: React.FC = () => {
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className={`hero-content max-w-5xl mx-auto text-center ${language === 'AR' ? 'font-arabic' : ''}`}>
-            
-            {/* Brand Logo */}
-            <div className="hero-logo mb-8 flex justify-center">
-              <img
-                src="/assets/logos/logo-white.png"
-                alt="Ali Alfauzan Co & Sons Real Estate - Fauzan 1988"
-                className="h-48 md:h-64 lg:h-80 w-auto transition-all duration-300 hover:scale-105"
-                style={{
-                  filter: 'drop-shadow(0 0 40px rgba(255, 215, 0, 0.6)) drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.8))',
-                  maxWidth: '800px'
-                }}
-              />
+        <div className="max-w-7xl mx-auto px-0 py-20">
+          <div className="grid lg:grid-cols-12 gap-2 items-center min-h-screen">
+            {/* Left Side - Motion Logo */}
+            <div className="lg:col-span-6 flex justify-center lg:justify-start lg:pl-0 lg:-ml-12">
+              <div className="hero-logo lg:pt-20">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="h-96 md:h-[28rem] lg:h-[36rem] xl:h-[40rem] w-auto transition-all duration-300 hover:scale-105"
+                  style={{
+                    filter: 'drop-shadow(0 0 40px rgba(255, 215, 0, 0.6)) drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.8))',
+                    maxWidth: '1000px'
+                  }}
+                >
+                  <source src="/assets/logos/logo-motion.webm" type="video/webm" />
+                  <img
+                    src="/assets/logos/logo-white.png"
+                    alt="Ali Alfauzan Co & Sons Real Estate - Fauzan 1988"
+                    className="h-96 md:h-[28rem] lg:h-[36rem] xl:h-[40rem] w-auto"
+                  />
+                </video>
+              </div>
             </div>
             
-            {/* Journey of Development Liner */}
-            <div className="journey-liner mb-8 flex justify-center">
-              <img
-                src={journeyLinerImage}
-                alt={journeyLinerText}
-                className="h-16 md:h-20 lg:h-24 w-auto transition-all duration-300 hover:scale-105"
-                style={{
-                  filter: 'drop-shadow(0 0 20px rgba(255, 255, 255, 0.3))'
-                }}
-              />
-            </div>
+            {/* Right Side - Content */}
+            <div className={`lg:col-span-6 hero-content text-center lg:text-left ${language === 'AR' ? 'font-arabic' : ''}`}>
             
             {/* Main Title */}
             <h1 className={`hero-title text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-6 leading-tight text-center ${
@@ -263,6 +254,7 @@ const VideoHero: React.FC = () => {
               </div>
             )}
 
+            </div>
           </div>
         </div>
       </div>

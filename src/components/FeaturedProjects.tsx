@@ -11,7 +11,7 @@ const FeaturedProjects = () => {
       location: 'Riyadh, Saudi Arabia',
       year: '2024',
       type: 'Industrial',
-      image: '/assets/images/projects/Al fauzan industrial city/hero.png',
+      image: '/assets/images/projects/Al fauzan industrial city/hero.jpg',
       description: 'A modern industrial complex featuring state-of-the-art manufacturing facilities and logistics centers.',
       status: 'Under Construction'
     },
@@ -31,7 +31,7 @@ const FeaturedProjects = () => {
       location: 'Riyadh, Saudi Arabia',
       year: '2024',
       type: 'Commercial',
-      image: '/assets/images/projects/SAMA/sama.png',
+      image: '/assets/images/projects/SAMA/sama.jpg',
       description: 'High-end commercial development with panoramic city views and premium business facilities.',
       status: 'Planning Phase'
     }

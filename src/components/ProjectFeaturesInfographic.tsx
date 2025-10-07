@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building, Settings, MapPin } from 'lucide-react';
+import { Users, Wrench, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 interface ProjectFeaturesInfographicProps {
@@ -72,7 +72,7 @@ const ProjectFeaturesInfographic: React.FC<ProjectFeaturesInfographicProps> = ({
       <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-500 shadow-2xl hover:shadow-yellow-400/20">
         <div className="text-center mb-8">
           <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-            <Building className="h-10 w-10 text-yellow-800" />
+            <Users className="h-10 w-10 text-yellow-800" />
           </div>
           <h3 className={`text-2xl font-bold text-white mb-4 ${
             language === 'AR' ? 'font-arabic' : ''
@@ -98,7 +98,7 @@ const ProjectFeaturesInfographic: React.FC<ProjectFeaturesInfographicProps> = ({
       <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-500 shadow-2xl hover:shadow-yellow-400/20">
         <div className="text-center mb-8">
           <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-            <Settings className="h-10 w-10 text-yellow-800" />
+            <Wrench className="h-10 w-10 text-yellow-800" />
           </div>
           <h3 className={`text-2xl font-bold text-white mb-4 ${
             language === 'AR' ? 'font-arabic' : ''

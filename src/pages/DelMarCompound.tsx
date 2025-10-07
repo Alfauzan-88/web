@@ -5,7 +5,6 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import RiyalIcon from '@/components/RiyalIcon';
 import { 
-  ArrowLeft, 
   MapPin, 
   Bed, 
   Bath, 
@@ -47,7 +46,6 @@ const DelMarCompound = () => {
 
   const content = {
     EN: {
-      backToProperties: "Back to Properties",
       propertyOverview: "Property Overview",
       features: "Features & Amenities",
       neighborhood: "Neighborhood",
@@ -77,7 +75,6 @@ const DelMarCompound = () => {
       designInfrastructure: "Design & Infrastructure"
     },
     AR: {
-      backToProperties: "العودة إلى العقارات",
       propertyOverview: "نظرة عامة على العقار",
       features: "المميزات والمرافق",
       neighborhood: "الحي",
@@ -131,26 +128,54 @@ const DelMarCompound = () => {
     images: [
       "/assets/images/projects/DMC/Hero.png?v=1",
       "/assets/images/projects/DMC/Thumbnail.png?v=1",
-      "/assets/images/projects/DMC/1.jpeg",
-      "/assets/images/projects/DMC/2.jpeg",
-      "/assets/images/projects/DMC/3.jpeg",
-      "/assets/images/projects/DMC/4.jpeg",
-      "/assets/images/projects/DMC/5.jpeg",
-      "/assets/images/projects/DMC/6.jpeg",
-      "/assets/images/projects/DMC/7.jpeg",
-      "/assets/images/projects/DMC/8.jpeg",
-      "/assets/images/projects/DMC/9.jpeg",
-      "/assets/images/projects/DMC/10.jpeg",
-      "/assets/images/projects/DMC/11.jpeg",
-      "/assets/images/projects/DMC/12.jpeg",
-      "/assets/images/projects/DMC/13.jpeg",
-      "/assets/images/projects/DMC/14.jpeg",
-      "/assets/images/projects/DMC/15.jpeg",
-      "/assets/images/projects/DMC/16.jpeg",
-      "/assets/images/projects/DMC/17.jpeg",
-      "/assets/images/projects/DMC/18.jpeg",
-      "/assets/images/projects/DMC/19.jpeg",
-      "/assets/images/projects/DMC/20.jpeg"
+      "/assets/images/projects/DMC/1.jpg",
+      "/assets/images/projects/DMC/2.JPG",
+      "/assets/images/projects/DMC/3.jpg",
+      "/assets/images/projects/DMC/4.jpg",
+      "/assets/images/projects/DMC/5.jpg",
+      "/assets/images/projects/DMC/6.jpg",
+      "/assets/images/projects/DMC/7.jpg",
+      "/assets/images/projects/DMC/8.jpg",
+      "/assets/images/projects/DMC/9.jpg",
+      "/assets/images/projects/DMC/10.jpg",
+      "/assets/images/projects/DMC/11.jpg",
+      "/assets/images/projects/DMC/12.jpg",
+      "/assets/images/projects/DMC/13.jpg",
+      "/assets/images/projects/DMC/14.JPG",
+      "/assets/images/projects/DMC/15.JPG",
+      "/assets/images/projects/DMC/16.JPG",
+      "/assets/images/projects/DMC/17.JPG",
+      "/assets/images/projects/DMC/18.JPG",
+      "/assets/images/projects/DMC/19.JPG",
+      "/assets/images/projects/DMC/20.jpg",
+      "/assets/images/projects/DMC/21.JPG",
+      "/assets/images/projects/DMC/22.JPG",
+      "/assets/images/projects/DMC/23.JPG",
+      "/assets/images/projects/DMC/24.JPG",
+      "/assets/images/projects/DMC/25.JPG",
+      "/assets/images/projects/DMC/26.JPG",
+      "/assets/images/projects/DMC/27.jpg",
+      "/assets/images/projects/DMC/28.jpg",
+      "/assets/images/projects/DMC/29.JPG",
+      "/assets/images/projects/DMC/30.JPG",
+      "/assets/images/projects/DMC/31.JPG",
+      "/assets/images/projects/DMC/32.JPG",
+      "/assets/images/projects/DMC/33.JPG",
+      "/assets/images/projects/DMC/34.JPG",
+      "/assets/images/projects/DMC/35.JPG",
+      "/assets/images/projects/DMC/36.JPG",
+      "/assets/images/projects/DMC/37.JPG",
+      "/assets/images/projects/DMC/38.JPG",
+      "/assets/images/projects/DMC/39.jpg",
+      "/assets/images/projects/DMC/40.JPG",
+      "/assets/images/projects/DMC/41.JPG",
+      "/assets/images/projects/DMC/42.JPG",
+      "/assets/images/projects/DMC/43.JPG",
+      "/assets/images/projects/DMC/44.JPG",
+      "/assets/images/projects/DMC/45.JPG",
+      "/assets/images/projects/DMC/46.JPG",
+      "/assets/images/projects/DMC/47.JPG",
+      "/assets/images/projects/DMC/48.JPG"
     ],
     description: language === 'EN'
       ? "Del Mar Compound, the newest private residential project of Al-Fauzan group. Del Mar is located in Al-Thumamah Road close to Al-Imam University, Riyadh, Saudi Arabia. Del Mar resident has 32 villas, 4 building containing 112 residential apartment, with total area of 25,000 Sqm. Del Mar provides our residents with a pleasant environment and facilities such as Gym, Swimming Pool, Kids playing area, Barbeque Area, Mini Market and relaxation area."
@@ -228,40 +253,31 @@ const DelMarCompound = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
         <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 text-white" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold mb-4 md:mb-6 text-white px-4" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
             {property.title}
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-4xl mx-auto" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-white/90 max-w-4xl mx-auto px-4" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
             {property.subtitle}
           </p>
-          <div className="flex flex-wrap justify-center gap-6 text-lg text-white/80">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm md:text-lg text-white/80 px-4">
             <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5" />
-              <span>{property.location}</span>
+              <MapPin className="w-4 h-4 md:w-5 md:h-5" />
+              <span className="text-center">{property.location}</span>
             </div>
           </div>
         </div>
 
-        {/* Back Button */}
-        <Button
-          onClick={() => navigate('/properties')}
-          variant="outline"
-          className="absolute top-8 left-8 bg-black/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
-        >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          {currentContent.backToProperties}
-        </Button>
       </section>
 
       {/* Property Overview */}
-      <section className="relative z-10 py-20 px-4">
+      <section className="relative z-10 py-12 md:py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid lg:grid-cols-3 gap-8 md:gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2">
               {/* Gallery */}
               <div className="relative mb-12">
-                <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
+                <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
                   <img 
                     src={property.images[currentImageIndex]} 
                     alt={property.title}
@@ -274,27 +290,27 @@ const DelMarCompound = () => {
                     onClick={prevImage}
                     variant="outline"
                     size="icon"
-                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
+                    className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-black/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 w-8 h-8 md:w-10 md:h-10"
                   >
-                    <ChevronLeft className="w-6 h-6" />
+                    <ChevronLeft className="w-4 h-4 md:w-6 md:h-6" />
                   </Button>
                   <Button
                     onClick={nextImage}
                     variant="outline"
                     size="icon"
-                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
+                    className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-black/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 w-8 h-8 md:w-10 md:h-10"
                   >
-                    <ChevronRight className="w-6 h-6" />
+                    <ChevronRight className="w-4 h-4 md:w-6 md:h-6" />
                   </Button>
                 </div>
                 
                 {/* Thumbnail Navigation */}
-                <div className="flex gap-2 mt-4 overflow-x-auto">
+                <div className="flex gap-2 mt-4 overflow-x-auto pb-2">
                   {property.images.map((image, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden bg-black/20 backdrop-blur-sm border ${
+                      className={`flex-shrink-0 w-16 h-12 sm:w-20 sm:h-16 rounded-lg overflow-hidden bg-black/20 backdrop-blur-sm border ${
                         index === currentImageIndex ? 'border-yellow-400' : 'border-white/20'
                       }`}
                     >
@@ -309,60 +325,60 @@ const DelMarCompound = () => {
               </div>
 
               {/* Description */}
-              <div className="mb-12 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h2 className="text-3xl font-bold mb-6 text-white">{currentContent.description}</h2>
-                <p className="text-gray-300 leading-relaxed text-lg">
+              <div className="mb-8 md:mb-12 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-8">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-white">{currentContent.description}</h2>
+                <p className="text-gray-300 leading-relaxed text-base md:text-lg">
                   {property.description}
                 </p>
               </div>
 
               {/* Specifications */}
-              <div className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-white">{currentContent.specifications}</h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="flex items-center gap-4 p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
-                    <Square className="w-8 h-8 text-yellow-400" />
-                    <div>
-                      <p className="font-semibold text-white">{currentContent.totalArea}</p>
-                      <p className="text-gray-300">{property.totalArea}</p>
+              <div className="mb-8 md:mb-12">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-white">{currentContent.specifications}</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                  <div className="flex items-center gap-3 md:gap-4 p-4 md:p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
+                    <Square className="w-6 h-6 md:w-8 md:h-8 text-yellow-400 flex-shrink-0" />
+                    <div className="min-w-0">
+                      <p className="font-semibold text-white text-sm md:text-base">{currentContent.totalArea}</p>
+                      <p className="text-gray-300 text-sm md:text-base">{property.totalArea}</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4 p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
-                    <Home className="w-8 h-8 text-yellow-400" />
-                    <div>
-                      <p className="font-semibold text-white">{currentContent.villas}</p>
-                      <p className="text-gray-300">{property.villas}</p>
+                  <div className="flex items-center gap-3 md:gap-4 p-4 md:p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
+                    <Home className="w-6 h-6 md:w-8 md:h-8 text-yellow-400 flex-shrink-0" />
+                    <div className="min-w-0">
+                      <p className="font-semibold text-white text-sm md:text-base">{currentContent.villas}</p>
+                      <p className="text-gray-300 text-sm md:text-base">{property.villas}</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4 p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
-                    <Building className="w-8 h-8 text-yellow-400" />
-                    <div>
-                      <p className="font-semibold text-white">{currentContent.apartments}</p>
-                      <p className="text-gray-300">{property.apartments}</p>
+                  <div className="flex items-center gap-3 md:gap-4 p-4 md:p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
+                    <Building className="w-6 h-6 md:w-8 md:h-8 text-yellow-400 flex-shrink-0" />
+                    <div className="min-w-0">
+                      <p className="font-semibold text-white text-sm md:text-base">{currentContent.apartments}</p>
+                      <p className="text-gray-300 text-sm md:text-base">{property.apartments}</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4 p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
-                    <Car className="w-8 h-8 text-yellow-400" />
-                    <div>
-                      <p className="font-semibold text-white">{currentContent.parkingSpaces}</p>
-                      <p className="text-gray-300">{property.parking}</p>
+                  <div className="flex items-center gap-3 md:gap-4 p-4 md:p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
+                    <Car className="w-6 h-6 md:w-8 md:h-8 text-yellow-400 flex-shrink-0" />
+                    <div className="min-w-0">
+                      <p className="font-semibold text-white text-sm md:text-base">{currentContent.parkingSpaces}</p>
+                      <p className="text-gray-300 text-sm md:text-base">{property.parking}</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Rental Details */}
-              <div className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-white">{currentContent.rentalDetails}</h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
-                    <h3 className="text-xl font-semibold mb-4 text-yellow-400">{language === 'EN' ? 'Furnished Flats' : 'الشقق المفروشة'}</h3>
+              <div className="mb-8 md:mb-12">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-white">{currentContent.rentalDetails}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                  <div className="p-4 md:p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
+                    <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-yellow-400">{language === 'EN' ? 'Furnished Flats' : 'الشقق المفروشة'}</h3>
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
-                        <span className="text-white">{language === 'EN' ? '02 Bedrooms' : 'غرفتي نوم'}</span>
-                        <div className="flex items-center gap-1 text-yellow-400 font-semibold">
+                        <span className="text-white text-sm md:text-base">{language === 'EN' ? '02 Bedrooms' : 'غرفتي نوم'}</span>
+                        <div className="flex items-center gap-1 text-yellow-400 font-semibold text-sm md:text-base">
                           <span>70,000</span>
-                          <RiyalIcon className="w-4 h-4" />
+                          <RiyalIcon className="w-3 h-3 md:w-4 md:h-4" />
                         </div>
                       </div>
                       <div className="flex justify-between items-center">
@@ -375,8 +391,8 @@ const DelMarCompound = () => {
                     </div>
                   </div>
                   
-                  <div className="p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
-                    <h3 className="text-xl font-semibold mb-4 text-yellow-400">{language === 'EN' ? 'Furnished Villas' : 'الفيلات المفروشة'}</h3>
+                  <div className="p-4 md:p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
+                    <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-yellow-400">{language === 'EN' ? 'Furnished Villas' : 'الفيلات المفروشة'}</h3>
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
                         <span className="text-white">{language === 'EN' ? '03 Bedrooms' : '3 غرف نوم'}</span>
@@ -388,8 +404,8 @@ const DelMarCompound = () => {
                     </div>
                   </div>
                   
-                  <div className="p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
-                    <h3 className="text-xl font-semibold mb-4 text-yellow-400">{language === 'EN' ? 'Furnished Studios' : 'الاستوديوهات المفروشة'}</h3>
+                  <div className="p-4 md:p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
+                    <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-yellow-400">{language === 'EN' ? 'Furnished Studios' : 'الاستوديوهات المفروشة'}</h3>
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
                         <span className="text-white">{language === 'EN' ? '01 Bedroom' : 'غرفة نوم واحدة'}</span>
@@ -401,8 +417,8 @@ const DelMarCompound = () => {
                     </div>
                   </div>
                   
-                  <div className="p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
-                    <h3 className="text-xl font-semibold mb-4 text-yellow-400">{language === 'EN' ? 'Additional Fees' : 'الرسوم الإضافية'}</h3>
+                  <div className="p-4 md:p-6 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl">
+                    <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-yellow-400">{language === 'EN' ? 'Additional Fees' : 'الرسوم الإضافية'}</h3>
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
                         <span className="text-white">{language === 'EN' ? 'Security Deposit (Refundable)' : 'الوديعة الأمنية (قابلة للاسترداد)'}</span>
@@ -421,24 +437,24 @@ const DelMarCompound = () => {
               </div>
 
               {/* Amenities */}
-              <div className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-white">{currentContent.amenities}</h2>
-                <div className="grid md:grid-cols-3 gap-6">
+              <div className="mb-8 md:mb-12">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-white">{currentContent.amenities}</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                   {property.amenities.map((amenity, index) => (
-                    <div key={index} className="flex items-center gap-3 p-4 bg-black/20 backdrop-blur-sm border border-white/10 rounded-xl">
-                      <amenity.icon className="w-6 h-6 text-yellow-400" />
-                      <span className="font-medium text-white">{amenity.name}</span>
+                    <div key={index} className="flex items-center gap-3 p-3 md:p-4 bg-black/20 backdrop-blur-sm border border-white/10 rounded-xl">
+                      <amenity.icon className="w-5 h-5 md:w-6 md:h-6 text-yellow-400 flex-shrink-0" />
+                      <span className="font-medium text-white text-sm md:text-base">{amenity.name}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Neighborhood */}
-              <div className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-white">{currentContent.neighborhood}</h2>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                    <h3 className="text-xl font-semibold mb-4 text-white">{language === 'EN' ? 'Schools' : 'المدارس'}</h3>
+              <div className="mb-8 md:mb-12">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-white">{currentContent.neighborhood}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                  <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-6">
+                    <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">{language === 'EN' ? 'Schools' : 'المدارس'}</h3>
                     <ul className="space-y-2">
                       {property.neighborhood.schools.map((school, index) => (
                         <li key={index} className="flex items-center gap-2 text-gray-300">
@@ -448,8 +464,8 @@ const DelMarCompound = () => {
                       ))}
                     </ul>
                   </div>
-                  <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                    <h3 className="text-xl font-semibold mb-4 text-white">{language === 'EN' ? 'Hospitals' : 'المستشفيات'}</h3>
+                  <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-6">
+                    <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">{language === 'EN' ? 'Hospitals' : 'المستشفيات'}</h3>
                     <ul className="space-y-2">
                       {property.neighborhood.hospitals.map((hospital, index) => (
                         <li key={index} className="flex items-center gap-2 text-gray-300">
@@ -459,8 +475,8 @@ const DelMarCompound = () => {
                       ))}
                     </ul>
                   </div>
-                  <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                    <h3 className="text-xl font-semibold mb-4 text-white">{language === 'EN' ? 'Shopping Centers' : 'مراكز التسوق'}</h3>
+                  <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-6">
+                    <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">{language === 'EN' ? 'Shopping Centers' : 'مراكز التسوق'}</h3>
                     <ul className="space-y-2">
                       {property.neighborhood.malls.map((mall, index) => (
                         <li key={index} className="flex items-center gap-2 text-gray-300">
@@ -470,8 +486,8 @@ const DelMarCompound = () => {
                       ))}
                     </ul>
                   </div>
-                  <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                    <h3 className="text-xl font-semibold mb-4 text-white">{language === 'EN' ? 'Restaurants' : 'المطاعم'}</h3>
+                  <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-6">
+                    <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">{language === 'EN' ? 'Restaurants' : 'المطاعم'}</h3>
                     <ul className="space-y-2">
                       {property.neighborhood.restaurants.map((restaurant, index) => (
                         <li key={index} className="flex items-center gap-2 text-gray-300">
@@ -486,61 +502,64 @@ const DelMarCompound = () => {
             </div>
 
             {/* Sidebar */}
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 mt-8 lg:mt-0">
                              {/* Contact Card */}
-               <div className="sticky top-8 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                 <div className="text-center mb-6">
-                   <h3 className="text-xl font-bold text-white">{property.agent.name}</h3>
+               <div className="sticky top-8 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-6">
+                 <div className="text-center mb-4 md:mb-6">
+                   <h3 className="text-lg md:text-xl font-bold text-white">{property.agent.name}</h3>
                   <div className="flex items-center justify-center gap-1 text-yellow-400 mb-2">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className={`w-4 h-4 ${i < Math.floor(property.agent.rating) ? 'fill-current' : ''}`} />
+                      <Star key={i} className={`w-3 h-3 md:w-4 md:h-4 ${i < Math.floor(property.agent.rating) ? 'fill-current' : ''}`} />
                     ))}
-                    <span className="text-gray-300 ml-2">{property.agent.rating}</span>
+                    <span className="text-gray-300 ml-2 text-sm md:text-base">{property.agent.rating}</span>
                   </div>
-                  <p className="text-gray-300">{property.agent.properties} {language === 'EN' ? 'Properties' : 'عقار'}</p>
+                  <p className="text-gray-300 text-sm md:text-base">{property.agent.properties} {language === 'EN' ? 'Properties' : 'عقار'}</p>
                 </div>
 
-                                 <div className="space-y-4">
+                                 <div className="space-y-3 md:space-y-4">
                    <Button 
-                     className="w-full bg-yellow-400 hover:bg-yellow-500 text-black" 
+                     className="w-full bg-yellow-400 hover:bg-yellow-500 text-black text-sm md:text-base" 
                      size="lg"
-                     onClick={() => window.open(`mailto:${property.agent.email}?subject=Del Mar Compound Inquiry`, '_blank')}
+                     onClick={() => window.open(`tel:${property.agent.phone}`, '_self')}
                    >
-                     <Mail className="w-4 h-4 mr-2" />
-                     {currentContent.contactAgent}
+                     <Phone className="w-4 h-4 mr-2" />
+                     <span className="hidden sm:inline">{currentContent.contactAgent}</span>
+                     <span className="sm:hidden">Call</span>
                    </Button>
                    <Button 
                      variant="outline" 
-                     className="w-full border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black" 
+                     className="w-full border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black text-sm md:text-base" 
                      size="lg"
-                     onClick={() => window.open(`mailto:${property.agent.email}?subject=Schedule Viewing - Del Mar Compound`, '_blank')}
+                     onClick={() => window.open('https://api.whatsapp.com/send/?phone=966565222000&text&type=phone_number&app_absent=0', '_blank')}
                    >
                      <Calendar className="w-4 h-4 mr-2" />
-                     {currentContent.scheduleViewing}
+                     <span className="hidden sm:inline">{currentContent.scheduleViewing}</span>
+                     <span className="sm:hidden">WhatsApp</span>
                    </Button>
                    <Button 
                      variant="outline" 
-                     className="w-full border-white/20 text-white hover:bg-white/20" 
+                     className="w-full border-white/20 text-white hover:bg-white/20 text-sm md:text-base" 
                      size="lg"
                      onClick={() => window.open(`mailto:${property.agent.email}`, '_blank')}
                    >
                      <Mail className="w-4 h-4 mr-2" />
-                     {property.agent.email}
+                     <span className="hidden sm:inline">{property.agent.email}</span>
+                     <span className="sm:hidden">Email</span>
                    </Button>
                  </div>
 
-                <div className="mt-6 pt-6 border-t border-white/10">
+                <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-white/10">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-gray-300">{language === 'EN' ? 'Price' : 'السعر'}</span>
-                    <span className="text-2xl font-bold text-yellow-400">{property.price}</span>
+                    <span className="text-gray-300 text-sm md:text-base">{language === 'EN' ? 'Price' : 'السعر'}</span>
+                    <span className="text-lg md:text-2xl font-bold text-yellow-400">{property.price}</span>
                   </div>
                                      <div className="flex items-center justify-between mb-2">
-                     <span className="text-gray-300">{currentContent.projectType}</span>
-                     <span className="font-semibold text-white">{property.type}</span>
+                     <span className="text-gray-300 text-sm md:text-base">{currentContent.projectType}</span>
+                     <span className="font-semibold text-white text-sm md:text-base">{property.type}</span>
                    </div>
                    <div className="flex items-center justify-between">
-                     <span className="text-gray-300">{currentContent.yearBuilt}</span>
-                     <span className="font-semibold text-white">{property.yearBuilt}</span>
+                     <span className="text-gray-300 text-sm md:text-base">{currentContent.yearBuilt}</span>
+                     <span className="font-semibold text-white text-sm md:text-base">{property.yearBuilt}</span>
                    </div>
                 </div>
               </div>
@@ -550,11 +569,11 @@ const DelMarCompound = () => {
       </section>
 
       {/* Map Section */}
-      <section className="relative z-10 py-20 px-4">
+      <section className="relative z-10 py-12 md:py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-white">{currentContent.location}</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-white">{currentContent.location}</h2>
+            <p className="text-base md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
               {language === 'EN' 
                 ? "Discover the strategic location of Del Mar Compound in the heart of Al-Thumamah, Riyadh"
                 : "اكتشف الموقع الاستراتيجي لمجمع ديل مار في قلب الثمامة، الرياض"
@@ -562,16 +581,16 @@ const DelMarCompound = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-6 text-white">{currentContent.locationDetails}</h3>
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-8">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-white">{currentContent.locationDetails}</h3>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <MapPin className="w-6 h-6 text-yellow-400 mt-1" />
-                    <div>
-                      <p className="font-semibold text-white">{language === 'EN' ? 'Address' : 'العنوان'}</p>
-                      <p className="text-gray-300">{property.location}</p>
+                  <div className="flex items-start gap-3 md:gap-4">
+                    <MapPin className="w-5 h-5 md:w-6 md:h-6 text-yellow-400 mt-1 flex-shrink-0" />
+                    <div className="min-w-0">
+                      <p className="font-semibold text-white text-sm md:text-base">{language === 'EN' ? 'Address' : 'العنوان'}</p>
+                      <p className="text-gray-300 text-sm md:text-base">{property.location}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -601,7 +620,7 @@ const DelMarCompound = () => {
                 </div>
                 
                 <Button 
-                  className="w-full mt-8 bg-yellow-400 hover:bg-yellow-500 text-black" 
+                  className="w-full mt-6 md:mt-8 bg-yellow-400 hover:bg-yellow-500 text-black text-sm md:text-base" 
                   size="lg"
                   onClick={() => window.open(property.mapUrl, '_blank')}
                 >
@@ -611,7 +630,7 @@ const DelMarCompound = () => {
               </div>
             </div>
             
-            <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
+            <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10 order-1 lg:order-2">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.8468047!2d46.7754497!3d24.8468047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efed0739f1581%3A0xebd9e10db3ab3a42!2sDel%20Mar%20Compound!5e0!3m2!1sen!2ssa!4v1234567890"
                 width="100%"

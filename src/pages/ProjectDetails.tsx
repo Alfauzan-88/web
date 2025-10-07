@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { 
-  ArrowLeft, 
   MapPin, 
   Calendar, 
   Building, 
@@ -18,8 +17,10 @@ import {
   Heart,
   Phone,
   Mail,
-  Download,
   Play,
+  Factory,
+  ShoppingBag,
+  Car,
   X,
   Send,
   Eye,
@@ -29,9 +30,10 @@ import {
 } from 'lucide-react';
 import RiyalIcon from '@/components/RiyalIcon';
 import { useLanguage } from '@/contexts/LanguageContext';
-import InteractiveImageGallery from '@/components/InteractiveImageGallery';
+import DynamicImageGallery from '@/components/DynamicImageGallery';
 import ProjectFeaturesInfographic from '@/components/ProjectFeaturesInfographic';
 import { projectsData, Project } from '@/data/projectsData';
+import { useDynamicProject } from '@/hooks/useDynamicProject';
 
 
 
@@ -41,9 +43,7 @@ const ProjectDetails = () => {
   const { language } = useLanguage();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showInterestForm, setShowInterestForm] = useState(false);
-  const [project, setProject] = useState<Project | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [baseProject, setBaseProject] = useState<Project | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -56,51 +56,39 @@ const ProjectDetails = () => {
 
 
 
-  // Fetch project data from static data
+  // Fetch base project data from static data
   useEffect(() => {
-    const fetchProject = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        
-        if (!id) {
-          setError('Project ID is required');
-          return;
-        }
-
-        // Get project data from projectsData
-        const projectData = projectsData[id];
-        if (!projectData) {
-          setError('Project not found');
-          return;
-        }
-
-        const currentProject = projectData[language];
-        setProject(currentProject);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'An error occurred');
-      } finally {
-        setLoading(false);
-      }
+    const fetchBaseProject = async () => {
+      if (!id) return;
+      
+      const projectData = projectsData[id];
+      if (!projectData) return;
+      
+      const selectedProject = projectData[language] || projectData.EN;
+      setBaseProject(selectedProject);
     };
 
-    fetchProject();
+    fetchBaseProject();
   }, [id, language]);
+
+  // Use dynamic project hook to get project with dynamic images
+  const { project, loading, error, refreshImages } = useDynamicProject(
+    id || '', 
+    baseProject
+  );
 
   const content = {
     EN: {
-      backToProjects: "Back to Projects",
       projectOverview: "Project Overview",
       keyFeatures: "Key Features",
       specifications: "Specifications",
       timeline: "Project Timeline",
-      gallery: "Gallery",
+      gallery: "Project Images",
       contact: "Contact Us",
-      download: "Download Brochure",
       share: "Share Project",
       imInterested: "I'm Interested",
       investmentOpportunities: "Investment Opportunities",
-      viewVideo: "View Video",
+      viewVideo: "Project Video",
       totalArea: "Total Area",
       industrialZones: "Industrial Zones",
       commercialAreas: "Commercial Areas",
@@ -134,18 +122,16 @@ const ProjectDetails = () => {
       }
     },
     AR: {
-      backToProjects: "العودة للمشاريع",
       projectOverview: "نظرة عامة على المشروع",
       keyFeatures: "المميزات الرئيسية",
       specifications: "المواصفات",
       timeline: "الجدول الزمني للمشروع",
-      gallery: "معرض الصور",
+      gallery: "صور المشروع",
       contact: "اتصل بنا",
-      download: "تحميل الكتيب",
       share: "مشاركة المشروع",
       imInterested: "أنا مهتم",
       investmentOpportunities: "فرص الاستثمار",
-      viewVideo: "مشاهدة الفيديو",
+      viewVideo: "فيديو المشروع",
       totalArea: "المساحة الإجمالية",
       industrialZones: "المناطق الصناعية",
       commercialAreas: "المناطق التجارية",
@@ -186,24 +172,15 @@ const ProjectDetails = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch('/api/v1/contact/project-interest', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          company: formData.company,
-          project_title: project.title,
-          investment_type: currentContent.investmentOptions[formData.investmentType as keyof typeof currentContent.investmentOptions],
-          budget: currentContent.budgetOptions[formData.budget as keyof typeof currentContent.budgetOptions],
-          message: formData.message
-        }),
-      });
+      // Netlify Forms submission
+      const form = e.target as HTMLFormElement;
+      const formDataToSubmit = new FormData(form);
 
-      const result = await response.json();
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formDataToSubmit as any).toString(),
+      });
 
       if (response.ok) {
         // Reset form and close modal
@@ -219,12 +196,18 @@ const ProjectDetails = () => {
         setShowInterestForm(false);
         
         // Show success message
-        alert(result.message || (language === 'EN' ? 'Thank you for your interest! We will contact you within 24 hours.' : 'شكراً لاهتمامك! سنتواصل معك خلال 24 ساعة.'));
+        alert(language === 'EN' 
+          ? 'Thank you for your interest! We will contact you within 24 hours.' 
+          : 'شكراً لاهتمامك! سنتواصل معك خلال 24 ساعة.');
       } else {
-        alert(result.message || (language === 'EN' ? 'An error occurred. Please try again.' : 'حدث خطأ. يرجى المحاولة مرة أخرى.'));
+        alert(language === 'EN' 
+          ? 'An error occurred. Please try again.' 
+          : 'حدث خطأ. يرجى المحاولة مرة أخرى.');
       }
     } catch (error) {
-      alert(language === 'EN' ? 'Network error. Please check your connection and try again.' : 'خطأ في الشبكة. يرجى التحقق من الاتصال والمحاولة مرة أخرى.');
+      alert(language === 'EN' 
+        ? 'Network error. Please check your connection and try again.' 
+        : 'خطأ في الشبكة. يرجى التحقق من الاتصال والمحاولة مرة أخرى.');
     }
   };
 
@@ -311,14 +294,6 @@ const ProjectDetails = () => {
          />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
         
-        {/* Back Button */}
-        <button
-          onClick={() => navigate(-1)}
-          className="absolute top-24 left-6 z-10 flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-white hover:bg-white/20 transition-all duration-300 border border-white/20"
-        >
-          <ArrowLeft className="h-5 w-5" />
-          <span className={language === 'AR' ? 'font-arabic' : ''}>{currentContent.backToProjects}</span>
-        </button>
 
         {/* QR Code in Right Corner */}
         <a 
@@ -329,7 +304,7 @@ const ProjectDetails = () => {
             : project?.id === "4"
             ? "https://www.google.com/maps/place/Fouzan+Real+Estate/@24.6445934,46.8390385,17.31z/data=!4m12!1m5!3m4!2zMjTCsDM4JzI3LjMiTiA0NsKwNTAnMTguOCJF!8m2!3d24.6409167!4d46.8385556!3m5!1s0x3e2fa7e6f6ba4431:0x5f255fb01ff86919!8m2!3d24.6442475!4d46.8413776!16s%2Fg%2F11b7dqk9vx?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
             : project?.id === "5"
-            ? "https://www.google.com/maps/place/An+Noor,+Riyadh+14272/@24.6351906,46.8063974,17z/data=!3m1!4b1!4m6!3m5!1s0x3e2f080b37cf68a5:0x4ea8419d81a9b09d!8m2!3d24.6351906!4d46.8063974!16s%2Fg%2F11g626qxx1?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
+            ? "https://maps.app.goo.gl/C622oEPCeipEjsub7"
             : project?.id === "6"
             ? "https://www.google.com/maps?q=24.6029722,46.8223333&entry=gps&lucs=,94282564,94224825,94227247,94227248,94231188,47071704,47069508,94218641,94282134,94203019,47084304&g_ep=CAISEjI1LjMwLjAuNzg1NjQ2NTQ3MBgAINeCAypjLDk0MjgyNTY0LDk0MjI0ODI1LDk0MjI3MjQ3LDk0MjI3MjQ4LDk0MjMxMTg4LDQ3MDcxNzA0LDQ3MDY5NTA4LDk0MjE4NjQxLDk0MjgyMTM0LDk0MjAzMDE5LDQ3MDg0MzA0QgJTQQ%3D%3D&skid=abb12424-6ae3-4950-8cbb-6ac161f726f1&g_st=ipc"
             : project?.id === "7"
@@ -354,7 +329,7 @@ const ProjectDetails = () => {
           }
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute bottom-6 right-6 z-10 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-3"
+          className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-2 md:p-3"
           title="View on Google Maps"
         >
           <img 
@@ -389,76 +364,69 @@ const ProjectDetails = () => {
               : "/assets/images/projects/Al fauzan industrial city/QR.png"
             }
             alt="QR Code - View on Google Maps"
-            className="w-24 h-24"
+            className="w-16 h-16 md:w-24 md:h-24"
           />
         </a>
 
         {/* Project Info */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 lg:p-12">
           <div className="max-w-7xl mx-auto">
-            <div className="flex items-center space-x-2 mb-4">
-              <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
+            <div className="flex items-center space-x-2 mb-3 md:mb-4">
+              <span className="bg-yellow-400 text-black px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-semibold">
                 {project?.category}
-              </span>
-                              <span className={`px-3 py-1 rounded-full text-sm ${
-                  project?.status === 'مكتمل' || project?.status === 'Completed' ? 'bg-green-500 text-white' : 'bg-orange-500 text-white'
-                }`}>
-                  {project?.status}
               </span>
             </div>
             
-                          <h1 className={`text-4xl md:text-6xl font-bold text-white mb-4 ${
+                          <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-3 md:mb-4 ${
                 language === 'AR' ? 'font-arabic' : ''
               }`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
                 {project?.title}
             </h1>
             
-            <div className="flex flex-wrap items-center gap-6 text-white/90 mb-6">
+            <div className="flex flex-wrap items-center gap-3 md:gap-6 text-white/90 mb-4 md:mb-6 text-sm md:text-base">
               <div className="flex items-center">
-                <MapPin className="h-5 w-5 mr-2" />
-                <span className={language === 'AR' ? 'font-arabic' : ''}>{project?.location}</span>
+                <MapPin className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2 flex-shrink-0" />
+                <span className={`truncate ${language === 'AR' ? 'font-arabic' : ''}`}>{project?.location}</span>
               </div>
               <div className="flex items-center">
-                <Calendar className="h-5 w-5 mr-2" />
+                <Calendar className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2 flex-shrink-0" />
                 <span>{project.year}</span>
               </div>
               <div className="flex items-center">
-                <RiyalIcon className="h-5 w-5 mr-2" />
+                <RiyalIcon className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2 flex-shrink-0" />
                 <span className={language === 'AR' ? 'font-arabic' : ''}>{project.value}</span>
               </div>
               <div className="flex items-center">
-                <Building className="h-5 w-5 mr-2" />
+                <Building className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2 flex-shrink-0" />
                 <span className={language === 'AR' ? 'font-arabic' : ''}>{project.area}</span>
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 md:gap-4">
               <Button 
-                className="bg-yellow-400 hover:bg-yellow-500 text-black"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black text-sm md:text-base px-4 py-2 md:px-6 md:py-3"
                 onClick={() => setShowInterestForm(true)}
               >
                 <Target className="h-4 w-4 mr-2" />
-                {currentContent.imInterested}
+                <span className="hidden sm:inline">{currentContent.imInterested}</span>
+                <span className="sm:hidden">Interested</span>
               </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black">
-                <Download className="h-4 w-4 mr-2" />
-                {currentContent.download}
-              </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black text-sm md:text-base px-4 py-2 md:px-6 md:py-3">
                 <Share2 className="h-4 w-4 mr-2" />
-                {currentContent.share}
+                <span className="hidden sm:inline">{currentContent.share}</span>
+                <span className="sm:hidden">Share</span>
               </Button>
             </div>
           </div>
         </div>
 
                  {/* Image Navigation */}
-         <div className="absolute bottom-6 right-6 flex space-x-2">
+         <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 flex space-x-2">
            {(project.images_urls && project.images_urls.length > 0 ? project.images_urls : [project.main_image_url || project.images[0]]).map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
                 index === currentImageIndex ? 'bg-yellow-400' : 'bg-white/50 hover:bg-white/80'
               }`}
             />
@@ -467,19 +435,19 @@ const ProjectDetails = () => {
       </section>
 
       {/* Content Sections */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10">
         
         {/* Project Overview */}
-        <section className="mb-20">
-          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
-            <h2 className={`text-3xl md:text-4xl font-bold text-white mb-8 ${
+        <section className="mb-12 md:mb-20">
+          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-4 md:p-8 border border-white/20">
+            <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 md:mb-8 ${
               language === 'AR' ? 'font-arabic text-right' : ''
             }`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
               {currentContent.projectOverview}
             </h2>
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
               <div>
-                                 <p className={`text-lg text-white/90 leading-relaxed mb-6 ${
+                                 <p className={`text-base md:text-xl text-white/90 leading-relaxed mb-6 ${
                    language === 'AR' ? 'font-arabic text-right' : ''
                  }`} style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
                    {project.long_description}
@@ -487,26 +455,53 @@ const ProjectDetails = () => {
               </div>
               
               {/* Specifications Grid */}
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl text-center border border-white/20">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">{project.specifications.totalArea}</div>
-                  <div className="text-white/90">{currentContent.totalArea}</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                {/* Total Area - Building/Area Icon */}
+                <div className="bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-xl text-center border border-white/20">
+                  <div className="flex justify-center mb-3">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                      <Building className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />
+                    </div>
+                  </div>
+                  <div className="text-xl md:text-3xl font-bold text-yellow-400 mb-2">{project.specifications.totalArea}</div>
+                  <div className="text-white/90 text-sm md:text-base">{currentContent.totalArea}</div>
                 </div>
-                                 <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl text-center border border-white/20">
-                   <div className="text-3xl font-bold text-yellow-400 mb-2">
-                     {'industrialZones' in project.specifications ? project.specifications.industrialZones : project.specifications.industrialUnits}
-                   </div>
-                   <div className="text-white/90">{currentContent.industrialZones || currentContent.industrialUnits}</div>
-                 </div>
-                 <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl text-center border border-white/20">
-                   <div className="text-3xl font-bold text-yellow-400 mb-2">
-                     {'commercialAreas' in project.specifications ? project.specifications.commercialAreas : project.specifications.commercialSpaces}
-                   </div>
-                   <div className="text-white/90">{currentContent.commercialAreas}</div>
-                 </div>
-                <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl text-center border border-white/20">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">{project.specifications.parkingSpaces}</div>
-                  <div className="text-white/90">{currentContent.parkingSpaces}</div>
+                
+                {/* Industrial Zones - Factory/Industrial Icon */}
+                <div className="bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-xl text-center border border-white/20">
+                  <div className="flex justify-center mb-3">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                      <Factory className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />
+                    </div>
+                  </div>
+                  <div className="text-xl md:text-3xl font-bold text-yellow-400 mb-2">
+                    {'industrialZones' in project.specifications ? project.specifications.industrialZones : project.specifications.industrialUnits}
+                  </div>
+                  <div className="text-white/90 text-sm md:text-base">{currentContent.industrialZones || currentContent.industrialUnits}</div>
+                </div>
+                
+                {/* Commercial Areas - Shopping/Store Icon */}
+                <div className="bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-xl text-center border border-white/20">
+                  <div className="flex justify-center mb-3">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                      <ShoppingBag className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />
+                    </div>
+                  </div>
+                  <div className="text-xl md:text-3xl font-bold text-yellow-400 mb-2">
+                    {'commercialAreas' in project.specifications ? project.specifications.commercialAreas : project.specifications.commercialSpaces}
+                  </div>
+                  <div className="text-white/90 text-sm md:text-base">{currentContent.commercialAreas}</div>
+                </div>
+                
+                {/* Parking Spaces - Car/Parking Icon */}
+                <div className="bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-xl text-center border border-white/20">
+                  <div className="flex justify-center mb-3">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                      <Car className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />
+                    </div>
+                  </div>
+                  <div className="text-xl md:text-3xl font-bold text-yellow-400 mb-2">{project.specifications.parkingSpaces}</div>
+                  <div className="text-white/90 text-sm md:text-base">{currentContent.parkingSpaces}</div>
                 </div>
               </div>
             </div>
@@ -514,9 +509,9 @@ const ProjectDetails = () => {
         </section>
 
         {/* Key Features Infographic */}
-        <section className="mb-20">
-          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
-            <h2 className={`text-3xl md:text-4xl font-bold text-white mb-8 ${
+        <section className="mb-12 md:mb-20">
+          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-4 md:p-8 border border-white/20">
+            <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 md:mb-8 ${
               language === 'AR' ? 'font-arabic text-right' : ''
             }`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
               {currentContent.keyFeatures}
@@ -529,9 +524,9 @@ const ProjectDetails = () => {
 
         {/* Video Section */}
         {project.video_url && (
-          <section className="mb-20">
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
-              <h2 className={`text-3xl md:text-4xl font-bold text-white mb-8 ${
+          <section className="mb-12 md:mb-20">
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-4 md:p-8 border border-white/20">
+              <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 md:mb-8 ${
                 language === 'AR' ? 'font-arabic text-right' : ''
               }`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
                 {currentContent.viewVideo}
@@ -550,11 +545,11 @@ const ProjectDetails = () => {
           </section>
         )}
 
-                 {/* Interactive Gallery */}
+                 {/* Project Images */}
          <section>
-           <InteractiveImageGallery 
+           <DynamicImageGallery 
              images={project.images_urls.length > 0 ? project.images_urls : [project.main_image_url]} 
-             title={project.title} 
+             title={currentContent.gallery} 
            />
          </section>
       </div>
@@ -563,28 +558,45 @@ const ProjectDetails = () => {
       {showInterestForm && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white/10 backdrop-blur-md rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/20">
-            <div className="p-8">
-              <div className="flex justify-between items-center mb-6">
-                <div>
-                  <h3 className={`text-2xl font-bold text-white ${language === 'AR' ? 'font-arabic' : ''}`}>
+            <div className="p-4 md:p-8">
+              <div className="flex justify-between items-center mb-4 md:mb-6">
+                <div className="flex-1 pr-4">
+                  <h3 className={`text-xl md:text-2xl font-bold text-white ${language === 'AR' ? 'font-arabic' : ''}`}>
                     {currentContent.formTitle}
                   </h3>
-                  <p className={`text-white/80 mt-2 ${language === 'AR' ? 'font-arabic' : ''}`}>
+                  <p className={`text-white/80 mt-2 text-sm md:text-base ${language === 'AR' ? 'font-arabic' : ''}`}>
                     {currentContent.formSubtitle}
                   </p>
                 </div>
                 <button
                   onClick={() => setShowInterestForm(false)}
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-white/80 hover:text-white transition-colors flex-shrink-0"
                 >
-                  <X className="h-6 w-6" />
+                  <X className="h-5 w-5 md:h-6 md:w-6" />
                 </button>
               </div>
               
-              <form onSubmit={handleFormSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form 
+                name="project-interest" 
+                method="POST" 
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                onSubmit={handleFormSubmit} 
+                className="space-y-6"
+              >
+                {/* Hidden fields for Netlify Forms */}
+                <input type="hidden" name="form-name" value="project-interest" />
+                <input type="hidden" name="project-title" value={project?.title || ''} />
+                <div style={{ display: 'none' }}>
+                  <label>
+                    Don't fill this out if you're human: 
+                    <input name="bot-field" />
+                  </label>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div>
-                    <label className={`block text-white mb-2 ${language === 'AR' ? 'font-arabic' : ''}`}>
+                    <label className={`block text-white mb-2 text-sm md:text-base ${language === 'AR' ? 'font-arabic' : ''}`}>
                       {currentContent.name} *
                     </label>
                     <Input
@@ -592,12 +604,12 @@ const ProjectDetails = () => {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      className="bg-white/10 border-white/20 text-white placeholder-white/50 backdrop-blur-md"
+                      className="bg-white/10 border-white/20 text-white placeholder-white/50 backdrop-blur-md text-sm md:text-base"
                       placeholder={currentContent.name}
                     />
                   </div>
                   <div>
-                    <label className={`block text-white mb-2 ${language === 'AR' ? 'font-arabic' : ''}`}>
+                    <label className={`block text-white mb-2 text-sm md:text-base ${language === 'AR' ? 'font-arabic' : ''}`}>
                       {currentContent.email} *
                     </label>
                     <Input
@@ -605,48 +617,48 @@ const ProjectDetails = () => {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="bg-white/10 border-white/20 text-white placeholder-white/50 backdrop-blur-md"
+                      className="bg-white/10 border-white/20 text-white placeholder-white/50 backdrop-blur-md text-sm md:text-base"
                       placeholder={currentContent.email}
                     />
                   </div>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div>
-                    <label className={`block text-white mb-2 ${language === 'AR' ? 'font-arabic' : ''}`}>
+                    <label className={`block text-white mb-2 text-sm md:text-base ${language === 'AR' ? 'font-arabic' : ''}`}>
                       {currentContent.phone}
                     </label>
                     <Input
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                      className="bg-white/10 border-white/20 text-white placeholder-white/50 backdrop-blur-md"
+                      className="bg-white/10 border-white/20 text-white placeholder-white/50 backdrop-blur-md text-sm md:text-base"
                       placeholder={currentContent.phone}
                     />
                   </div>
                   <div>
-                    <label className={`block text-white mb-2 ${language === 'AR' ? 'font-arabic' : ''}`}>
+                    <label className={`block text-white mb-2 text-sm md:text-base ${language === 'AR' ? 'font-arabic' : ''}`}>
                       {currentContent.company}
                     </label>
                     <Input
                       type="text"
                       value={formData.company}
                       onChange={(e) => setFormData({...formData, company: e.target.value})}
-                      className="bg-white/10 border-white/20 text-white placeholder-white/50 backdrop-blur-md"
+                      className="bg-white/10 border-white/20 text-white placeholder-white/50 backdrop-blur-md text-sm md:text-base"
                       placeholder={currentContent.company}
                     />
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div>
-                    <label className={`block text-white mb-2 ${language === 'AR' ? 'font-arabic' : ''}`}>
+                    <label className={`block text-white mb-2 text-sm md:text-base ${language === 'AR' ? 'font-arabic' : ''}`}>
                       {currentContent.investmentType}
                     </label>
                     <select
                       value={formData.investmentType}
                       onChange={(e) => setFormData({...formData, investmentType: e.target.value})}
-                      className="w-full bg-white/10 border border-white/20 text-white rounded-md px-3 py-2 backdrop-blur-md"
+                      className="w-full bg-white/10 border border-white/20 text-white rounded-md px-3 py-2 backdrop-blur-md text-sm md:text-base"
                     >
                       {Object.entries(currentContent.investmentOptions).map(([key, value]) => (
                         <option key={key} value={key} className="bg-gray-800">{value}</option>
@@ -654,13 +666,13 @@ const ProjectDetails = () => {
                     </select>
                   </div>
                   <div>
-                    <label className={`block text-white mb-2 ${language === 'AR' ? 'font-arabic' : ''}`}>
+                    <label className={`block text-white mb-2 text-sm md:text-base ${language === 'AR' ? 'font-arabic' : ''}`}>
                       {currentContent.budget}
                     </label>
                     <select
                       value={formData.budget}
                       onChange={(e) => setFormData({...formData, budget: e.target.value})}
-                      className="w-full bg-white/10 border border-white/20 text-white rounded-md px-3 py-2 backdrop-blur-md"
+                      className="w-full bg-white/10 border border-white/20 text-white rounded-md px-3 py-2 backdrop-blur-md text-sm md:text-base"
                     >
                       {Object.entries(currentContent.budgetOptions).map(([key, value]) => (
                         <option key={key} value={key} className="bg-gray-800">{value}</option>
@@ -670,21 +682,21 @@ const ProjectDetails = () => {
                 </div>
 
                 <div>
-                  <label className={`block text-white mb-2 ${language === 'AR' ? 'font-arabic' : ''}`}>
+                  <label className={`block text-white mb-2 text-sm md:text-base ${language === 'AR' ? 'font-arabic' : ''}`}>
                     {currentContent.message}
                   </label>
                   <Textarea
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    className="bg-white/10 border-white/20 text-white placeholder-white/50 backdrop-blur-md min-h-[120px]"
+                    className="bg-white/10 border-white/20 text-white placeholder-white/50 backdrop-blur-md min-h-[100px] md:min-h-[120px] text-sm md:text-base"
                     placeholder={currentContent.message}
                   />
                 </div>
 
-                <div className="flex gap-4 pt-4">
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-4">
                   <Button 
                     type="submit" 
-                    className="bg-yellow-400 hover:bg-yellow-500 text-black flex-1"
+                    className="bg-yellow-400 hover:bg-yellow-500 text-black flex-1 text-sm md:text-base"
                   >
                     <Send className="h-4 w-4 mr-2" />
                     {currentContent.submit}
@@ -693,7 +705,7 @@ const ProjectDetails = () => {
                     type="button" 
                     variant="outline" 
                     onClick={() => setShowInterestForm(false)}
-                    className="border-white text-white hover:bg-white hover:text-black"
+                    className="border-white text-white hover:bg-white hover:text-black text-sm md:text-base"
                   >
                     {currentContent.cancel}
                   </Button>

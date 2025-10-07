@@ -36,7 +36,71 @@
   --gradient-navy: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1e3a8a 100%);
 }
 
-/* Custom Fonts */
+/* Custom Fonts - Bahij TheSansArabic */
+@font-face {
+  font-family: 'Bahij TheSansArabic';
+  src: url('/fonts/Bahij_TheSansArabic-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bahij TheSansArabic';
+  src: url('/fonts/Bahij_TheSansArabic-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bahij TheSansArabic';
+  src: url('/fonts/Bahij_TheSansArabic-SemiLight.ttf') format('truetype');
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bahij TheSansArabic';
+  src: url('/fonts/Bahij_TheSansArabic-Plain.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bahij TheSansArabic';
+  src: url('/fonts/Bahij_TheSansArabic-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bahij TheSansArabic';
+  src: url('/fonts/Bahij_TheSansArabic-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bahij TheSansArabic';
+  src: url('/fonts/Bahij_TheSansArabic-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bahij TheSansArabic';
+  src: url('/fonts/Bahij_TheSansArabic-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -44,13 +108,13 @@
   
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-family: 'Bahij TheSansArabic', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     font-variation-settings: normal;
   }
   
   .font-arabic {
-    font-family: 'Tajawal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Bahij TheSansArabic', 'Tajawal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
   
   html {

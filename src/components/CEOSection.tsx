@@ -12,7 +12,7 @@ const CEOSection: React.FC = () => {
   const content = {
     EN: {
       ceo: {
-        title: "Message from Our CEO",
+        title: "Message from Our Founder",
         subtitle: "Leading with vision and commitment to excellence"
       }
     },

@@ -56,7 +56,7 @@ const Services = () => {
              sqm: "15M+",
              clients: "500+"
            },
-          image: "/assets/images/projects/Al fauzan industrial city/hero.png",
+          image: "/assets/images/projects/Al fauzan industrial city/hero.jpg",
           testimonial: {
             text: "Al Fauzan delivered our industrial complex on time and exceeded all expectations. The facilities have significantly improved our operational efficiency.",
             client: "Ahmed Al-Rashid, Operations Director"
@@ -81,7 +81,7 @@ const Services = () => {
              sqm: "8M+",
              clients: "300+"
            },
-          image: "/assets/images/projects/SAMA/sama.png",
+          image: "/assets/images/projects/SAMA/sama.jpg",
           testimonial: {
             text: "Al Fauzan delivered our corporate headquarters on time and exceeded all expectations. The attention to detail and quality is outstanding.",
             client: "Fatima Al-Zahra, CEO of TechCorp"
@@ -131,7 +131,7 @@ const Services = () => {
              sqm: "4M+",
              clients: "150+"
            },
-          image: "/assets/images/projects/remas/remas.png",
+          image: "/assets/images/projects/remas/remas.jpg",
           testimonial: {
             text: "Their warehouse solution has revolutionized our logistics operations. The design is both functional and cost-effective.",
             client: "Sara Al-Mutairi, Logistics Manager"
@@ -233,7 +233,7 @@ const Services = () => {
             sqm: "2 مليون+",
             clients: "500+"
           },
-          image: "/assets/images/projects/SAMA/sama.png",
+          image: "/assets/images/projects/SAMA/sama.jpg",
           testimonial: {
             text: "سلمت الفوزان مقرنا الرئيسي في الوقت المحدد وتجاوزت جميع التوقعات. الاهتمام بالتفاصيل والجودة متميز.",
             client: "أحمد الراشد، الرئيس التنفيذي لشركة التقنية"

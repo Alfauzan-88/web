@@ -140,10 +140,10 @@ const WebsiteContentManager: React.FC = () => {
   const handleImageUpload = async (file: File) => {
     try {
       setUploading(true);
-      // For demo purposes, return a placeholder URL
+      // For demo purposes, return a default project image
       // In a real implementation, this would upload to the server
       console.log('Image uploaded:', file.name);
-      return '/assets/images/placeholder.jpg';
+      return '/assets/images/projects/Al fauzan industrial city/hero.jpg';
     } catch (error) {
       console.error('Error uploading image:', error);
       return null;
