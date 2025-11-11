@@ -11,7 +11,7 @@ const FeaturedProjects = () => {
       location: 'Riyadh, Saudi Arabia',
       year: '2024',
       type: 'Industrial',
-      image: '/assets/images/projects/Al fauzan industrial city/hero.jpg',
+      image: '/assets/images/projects/Al fauzan industrial city/1.jpg',
       description: 'A modern industrial complex featuring state-of-the-art manufacturing facilities and logistics centers.',
       status: 'Under Construction'
     },
@@ -21,7 +21,7 @@ const FeaturedProjects = () => {
       location: 'Riyadh, Saudi Arabia',
       year: '2023',
       type: 'Residential',
-      image: '/assets/images/projects/DMC/Hero.png',
+      image: '/assets/images/projects/DMC/1.jpg',
       description: 'Premium residential compound with luxury amenities and modern living spaces.',
       status: 'Completed'
     },
@@ -31,7 +31,7 @@ const FeaturedProjects = () => {
       location: 'Riyadh, Saudi Arabia',
       year: '2024',
       type: 'Commercial',
-      image: '/assets/images/projects/SAMA/sama.jpg',
+      image: '/assets/images/projects/SAMA/1.JPG',
       description: 'High-end commercial development with panoramic city views and premium business facilities.',
       status: 'Planning Phase'
     }

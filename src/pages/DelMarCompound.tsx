@@ -124,13 +124,11 @@ const DelMarCompound = () => {
     parking: 208,
     yearBuilt: 2024,
     status: language === 'EN' ? "Under Construction" : "قيد الإنشاء",
-    heroImage: "/assets/images/projects/DMC/Hero.png?v=1",
+    heroImage: "/assets/images/projects/DMC/1.jpg",
     images: [
-      "/assets/images/projects/DMC/Hero.png?v=1",
-      "/assets/images/projects/DMC/Thumbnail.png?v=1",
       "/assets/images/projects/DMC/1.jpg",
-      "/assets/images/projects/DMC/2.JPG",
-      "/assets/images/projects/DMC/3.jpg",
+      "/assets/images/projects/DMC/2.jpg",
+      "/assets/images/projects/DMC/3.JPG",
       "/assets/images/projects/DMC/4.jpg",
       "/assets/images/projects/DMC/5.jpg",
       "/assets/images/projects/DMC/6.jpg",
@@ -166,16 +164,15 @@ const DelMarCompound = () => {
       "/assets/images/projects/DMC/36.JPG",
       "/assets/images/projects/DMC/37.JPG",
       "/assets/images/projects/DMC/38.JPG",
-      "/assets/images/projects/DMC/39.jpg",
-      "/assets/images/projects/DMC/40.JPG",
+      "/assets/images/projects/DMC/39.JPG",
+      "/assets/images/projects/DMC/40.jpg",
       "/assets/images/projects/DMC/41.JPG",
       "/assets/images/projects/DMC/42.JPG",
       "/assets/images/projects/DMC/43.JPG",
       "/assets/images/projects/DMC/44.JPG",
       "/assets/images/projects/DMC/45.JPG",
       "/assets/images/projects/DMC/46.JPG",
-      "/assets/images/projects/DMC/47.JPG",
-      "/assets/images/projects/DMC/48.JPG"
+      "/assets/images/projects/DMC/47.jpg"
     ],
     description: language === 'EN'
       ? "Del Mar Compound, the newest private residential project of Al-Fauzan group. Del Mar is located in Al-Thumamah Road close to Al-Imam University, Riyadh, Saudi Arabia. Del Mar resident has 32 villas, 4 building containing 112 residential apartment, with total area of 25,000 Sqm. Del Mar provides our residents with a pleasant environment and facilities such as Gym, Swimming Pool, Kids playing area, Barbeque Area, Mini Market and relaxation area."
@@ -203,12 +200,9 @@ const DelMarCompound = () => {
       { icon: ShoppingBag, name: language === 'EN' ? "Mini Market" : "ميني ماركت" },
       { icon: Trees, name: language === 'EN' ? "Relaxation Area" : "منطقة استرخاء" }
     ],
-    agent: {
-      name: language === 'EN' ? "Mohammad Tariq" : "محمد طارق",
+    salesTeam: {
       phone: "+966 565222000",
-      email: "it@alfauzan.com",
-      rating: 4.9,
-      properties: 15
+      email: "it@alfauzan.com"
     },
     neighborhood: {
       schools: language === 'EN' ? ["Imam University", "Al-Thumamah Schools"] : ["جامعة الإمام", "مدارس الثمامة"],
@@ -506,53 +500,53 @@ const DelMarCompound = () => {
                              {/* Contact Card */}
                <div className="sticky top-8 bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-6">
                  <div className="text-center mb-4 md:mb-6">
-                   <h3 className="text-lg md:text-xl font-bold text-white">{property.agent.name}</h3>
-                  <div className="flex items-center justify-center gap-1 text-yellow-400 mb-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className={`w-3 h-3 md:w-4 md:h-4 ${i < Math.floor(property.agent.rating) ? 'fill-current' : ''}`} />
-                    ))}
-                    <span className="text-gray-300 ml-2 text-sm md:text-base">{property.agent.rating}</span>
-                  </div>
-                  <p className="text-gray-300 text-sm md:text-base">{property.agent.properties} {language === 'EN' ? 'Properties' : 'عقار'}</p>
+                   <h3 className={`text-lg md:text-xl font-bold text-white ${language === 'AR' ? 'font-arabic' : ''}`}>
+                     {language === 'EN' ? 'Contact Sales Team' : 'تواصل مع فريق المبيعات'}
+                   </h3>
+                   <p className={`text-gray-300 text-sm md:text-base mt-2 ${language === 'AR' ? 'font-arabic' : ''}`}>
+                     {language === 'EN' ? 'Get in touch with our sales team for more information' : 'تواصل مع فريق المبيعات للحصول على مزيد من المعلومات'}
+                   </p>
                 </div>
 
                                  <div className="space-y-3 md:space-y-4">
                    <Button 
                      className="w-full bg-yellow-400 hover:bg-yellow-500 text-black text-sm md:text-base" 
                      size="lg"
-                     onClick={() => window.open(`tel:${property.agent.phone}`, '_self')}
+                     onClick={() => {
+                       const message = language === 'AR' 
+                         ? 'مرحباً! أنا مهتم بمشروع ديل مار كومباوند. يرجى تزويدي بمزيد من المعلومات.'
+                         : 'Hello! I\'m interested in Del Mar Compound. Please provide me with more information.';
+                       const whatsappUrl = `https://wa.me/966565222000?text=${encodeURIComponent(message)}`;
+                       window.open(whatsappUrl, '_blank');
+                     }}
                    >
                      <Phone className="w-4 h-4 mr-2" />
-                     <span className="hidden sm:inline">{currentContent.contactAgent}</span>
-                     <span className="sm:hidden">Call</span>
+                     <span className="hidden sm:inline">{language === 'EN' ? 'Contact Sales Team' : 'تواصل مع فريق المبيعات'}</span>
+                     <span className="sm:hidden">{language === 'EN' ? 'Sales' : 'مبيعات'}</span>
                    </Button>
                    <Button 
                      variant="outline" 
                      className="w-full border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black text-sm md:text-base" 
                      size="lg"
-                     onClick={() => window.open('https://api.whatsapp.com/send/?phone=966565222000&text&type=phone_number&app_absent=0', '_blank')}
+                     onClick={() => window.open(`tel:${property.salesTeam.phone}`, '_self')}
                    >
                      <Calendar className="w-4 h-4 mr-2" />
-                     <span className="hidden sm:inline">{currentContent.scheduleViewing}</span>
-                     <span className="sm:hidden">WhatsApp</span>
+                     <span className="hidden sm:inline">{language === 'EN' ? 'Call Sales Team' : 'اتصل بفريق المبيعات'}</span>
+                     <span className="sm:hidden">{language === 'EN' ? 'Call' : 'اتصل'}</span>
                    </Button>
                    <Button 
                      variant="outline" 
                      className="w-full border-white/20 text-white hover:bg-white/20 text-sm md:text-base" 
                      size="lg"
-                     onClick={() => window.open(`mailto:${property.agent.email}`, '_blank')}
+                     onClick={() => window.open(`mailto:${property.salesTeam.email}`, '_blank')}
                    >
                      <Mail className="w-4 h-4 mr-2" />
-                     <span className="hidden sm:inline">{property.agent.email}</span>
+                     <span className="hidden sm:inline">{property.salesTeam.email}</span>
                      <span className="sm:hidden">Email</span>
                    </Button>
                  </div>
 
                 <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-white/10">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-gray-300 text-sm md:text-base">{language === 'EN' ? 'Price' : 'السعر'}</span>
-                    <span className="text-lg md:text-2xl font-bold text-yellow-400">{property.price}</span>
-                  </div>
                                      <div className="flex items-center justify-between mb-2">
                      <span className="text-gray-300 text-sm md:text-base">{currentContent.projectType}</span>
                      <span className="font-semibold text-white text-sm md:text-base">{property.type}</span>

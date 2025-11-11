@@ -118,8 +118,8 @@ const UnitExplorer: React.FC<UnitExplorerProps> = ({ projectId, projectName }) =
         paymentTerms: 'Monthly in advance'
       },
       images: [
-            '/assets/images/projects/Al fauzan industrial city/hero.jpg',
-    '/assets/images/projects/DMC/Hero.png'
+            '/assets/images/projects/Al fauzan industrial city/1.jpg',
+    '/assets/images/projects/DMC/1.jpg'
       ]
     },
     {
@@ -157,7 +157,7 @@ const UnitExplorer: React.FC<UnitExplorerProps> = ({ projectId, projectName }) =
         paymentTerms: 'Monthly in advance'
       },
       images: [
-        '/assets/images/projects/SAMA/sama.jpg'
+        '/assets/images/projects/SAMA/1.JPG'
       ]
     },
     {
@@ -195,7 +195,7 @@ const UnitExplorer: React.FC<UnitExplorerProps> = ({ projectId, projectName }) =
         paymentTerms: 'Monthly in advance'
       },
       images: [
-        '/assets/images/projects/remas/remas.jpg'
+        '/assets/images/projects/remas/1.jpg'
       ]
     }
   ];

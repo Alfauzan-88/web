@@ -54,7 +54,66 @@ const ProjectDetails = () => {
     budget: '1M-5M'
   });
 
+  // Project agent numbers mapping
+  const projectAgents: { [key: string]: string } = {
+    "1": "9660593330077", // Al Fauzan Industrial City
+    "2": "966537141515", // Remas
+    "3": "966599999249", // Sama
+    "4": "966599999249", // Shams
+    "5": "966537141515", // Exit 18
+    "6": "966599999249", // Al Manakh
+    "7": "9660593330077", // Mashael
+    "8": "966597811111", // 96
+    "9": "966597811111", // Durrat
+    "10": "966598161616", // Raneem
+    "11": "966597811111", // Istanbul
+    "12": "966598161616", // Randa
+    "13": "966598161616", // Rana
+    "14": "966593330077", // Al Fauzan Administrative Headquarters
+    "15": "966593330077", // Aziziyah
+    "16": "966593330077", // Al Faisaliyah
+    "17": "966593330077", // Al Mohamadiyah
+    "18": "966593330077", // Taibah
+    "19": "966593330077", // Al Jazeera
+    "20": "966597811111", // Circon
+    "21": "966598161616", // Al Saada
+    "22": "966537141515", // Al Hars
+    "23": "966593330077"  // Administrative HQ
+  };
 
+  // Project-specific Arabic messages
+  const getProjectMessage = (projectId: string, projectTitle: string, isArabic: boolean) => {
+    if (isArabic) {
+      const arabicMessages: { [key: string]: string } = {
+        "1": "مرحباً! أنا مهتم بمشروع مدينة الفوزان الصناعية. يرجى تزويدي بمزيد من المعلومات.",
+        "2": "مرحباً! أنا مهتم بمشروع الريماس. يرجى تزويدي بمزيد من المعلومات.",
+        "3": "مرحباً! أنا مهتم بمشروع السامة. يرجى تزويدي بمزيد من المعلومات.",
+        "4": "مرحباً! أنا مهتم بمشروع الشمس. يرجى تزويدي بمزيد من المعلومات.",
+        "5": "مرحباً! أنا مهتم بمشروع مخرج 18. يرجى تزويدي بمزيد من المعلومات.",
+        "6": "مرحباً! أنا مهتم بمشروع المناخ. يرجى تزويدي بمزيد من المعلومات.",
+        "7": "مرحباً! أنا مهتم بمشروع المشاعل. يرجى تزويدي بمزيد من المعلومات.",
+        "8": "مرحباً! أنا مهتم بمشروع 96. يرجى تزويدي بمزيد من المعلومات.",
+        "9": "مرحباً! أنا مهتم بمشروع درة الشرق الصناعي. يرجى تزويدي بمزيد من المعلومات.",
+        "10": "مرحباً! أنا مهتم بمشروع رنيم. يرجى تزويدي بمزيد من المعلومات.",
+        "11": "مرحباً! أنا مهتم بمشروع إسطنبول. يرجى تزويدي بمزيد من المعلومات.",
+        "12": "مرحباً! أنا مهتم بمشروع رندا. يرجى تزويدي بمزيد من المعلومات.",
+        "13": "مرحباً! أنا مهتم بمشروع رنا. يرجى تزويدي بمزيد من المعلومات.",
+        "14": "مرحباً! أنا مهتم بالمقر الإداري لشركة علي الفوزان وأولاده العقارية. يرجى تزويدي بمزيد من المعلومات.",
+        "15": "مرحباً! أنا مهتم بمشروع العزيزية. يرجى تزويدي بمزيد من المعلومات.",
+        "16": "مرحباً! أنا مهتم بمشروع الفيصلية الصناعي. يرجى تزويدي بمزيد من المعلومات.",
+        "17": "مرحباً! أنا مهتم بمشروع المحمدية الصناعي. يرجى تزويدي بمزيد من المعلومات.",
+        "18": "مرحباً! أنا مهتم بمشروع طيبة للمستودعات. يرجى تزويدي بمزيد من المعلومات.",
+        "19": "مرحباً! أنا مهتم بمشروع الجزيرة للمستودعات. يرجى تزويدي بمزيد من المعلومات.",
+        "20": "مرحباً! أنا مهتم بمشروع السيركون. يرجى تزويدي بمزيد من المعلومات.",
+        "21": "مرحباً! أنا مهتم بمشروع السعادة. يرجى تزويدي بمزيد من المعلومات.",
+        "22": "مرحباً! أنا مهتم بمشروع الحرس. يرجى تزويدي بمزيد من المعلومات.",
+        "23": "مرحباً! أنا مهتم بالمقر الإداري. يرجى تزويدي بمزيد من المعلومات."
+      };
+      return arabicMessages[projectId] || `مرحباً! أنا مهتم بهذا المشروع. يرجى تزويدي بمزيد من المعلومات.`;
+    } else {
+      return `Hello! I'm interested in ${projectTitle}. Please provide me with more information.`;
+    }
+  };
 
   // Fetch base project data from static data
   useEffect(() => {
@@ -77,6 +136,15 @@ const ProjectDetails = () => {
     baseProject
   );
 
+  // Debug: Log project data to console
+  React.useEffect(() => {
+    if (project) {
+      console.log('Project data:', project);
+      console.log('Project area:', project.area);
+      console.log('Project totalArea:', project.specifications?.totalArea);
+    }
+  }, [project]);
+
   const content = {
     EN: {
       projectOverview: "Project Overview",
@@ -88,7 +156,6 @@ const ProjectDetails = () => {
       share: "Share Project",
       imInterested: "I'm Interested",
       investmentOpportunities: "Investment Opportunities",
-      viewVideo: "Project Video",
       totalArea: "Total Area",
       industrialZones: "Industrial Zones",
       commercialAreas: "Commercial Areas",
@@ -131,7 +198,6 @@ const ProjectDetails = () => {
       share: "مشاركة المشروع",
       imInterested: "أنا مهتم",
       investmentOpportunities: "فرص الاستثمار",
-      viewVideo: "فيديو المشروع",
       totalArea: "المساحة الإجمالية",
       industrialZones: "المناطق الصناعية",
       commercialAreas: "المناطق التجارية",
@@ -288,16 +354,17 @@ const ProjectDetails = () => {
       {/* Hero Section */}
       <section className="relative h-[80vh] overflow-hidden z-10">
                  <img
-           src={(project.images_urls && project.images_urls[currentImageIndex]) || project.main_image_url || project.images[0]}
+           src={project.main_image_url || (project.images_urls && project.images_urls[currentImageIndex]) || project.images[0]}
            alt={project.title}
            className="w-full h-full object-cover"
          />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
         
-
         {/* QR Code in Right Corner */}
         <a 
-          href={project?.id === "2" 
+          href={project?.id === "1"
+            ? "https://www.google.com/maps?q=%D9%85%D8%AF%D9%8A%D9%86%D8%A9+%D8%A7%D9%84%D9%81%D9%88%D8%B2%D8%A7%D9%86%D8%A7%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D9%8A%D8%A9%D8%8C+%D8%B7%D8%B1%D9%8A%D9%82+%D8%A7%D9%84%D8%AE%D8%B1%D8%AC%D8%8C+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6+14548&ftid=0x3e2f99f12ee457e3:0x17b95c627c6482ec&entry=gps&lucs=,94282564,94224825,94227247,94227248,94231188,47071704,47069508,94218641,94282134,94203019,47084304&g_ep=CAISEjI1LjMwLjAuNzg1NjQ2NTQ3MBgAINeCAypjLDk0MjgyNTY0LDk0MjI0ODI1LDk0MjI3MjQ3LDk0MjI3MjQ4LDk0MjMxMTg4LDQ3MDcxNzA0LDQ3MDY5NTA4LDk0MjE4NjQxLDk0MjgyMTM0LDk0MjAzMDE5LDQ3MDg0MzA0QgJTQQ%3D%3D&skid=f66e323c-5f41-4c91-b468-aae28b9f8efe&g_st=ipc"
+            : project?.id === "2" 
             ? "https://www.google.com/maps?q=%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B9%D9%84%D8%8C+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6+14326&ftid=0x3e2fa6c5762592e7:0x53323b90d7b1706a&entry=gps&lucs=,94282564,94224825,94227247,94227248,94231188,47071704,47069508,94218641,94282134,94203019,47084304&g_ep=CAISEjI1LjMwLjAuNzg1NjQ2NTQ3MBgAINeCAypjLDk0MjgyNTY0LDk0MjI0ODI1LDk0MjI3MjQ3LDk0MjI3MjQ4LDk0MjMxMTg4LDQ3MDcxNzA0LDQ3MDY5NTA4LDk0MjE4NjQxLDk0MjgyMTM0LDk0MjAzMDE5LDQ3MDg0MzA0QgJTQQ%3D%3D&skid=4bb072a2-ef5c-41aa-918b-ec07a36b59c2&g_st=ipc"
             : project?.id === "3"
             ? "https://www.google.com/maps/place/24%C2%B035'42.7%22N+46%C2%B051'40.5%22E/@24.5951944,46.8586751,17z/data=!3m1!4b1!4m4!3m3!8m2!3d24.5951944!4d46.86125?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
@@ -325,15 +392,33 @@ const ProjectDetails = () => {
             ? "https://www.google.com/maps/place/24%C2%B036'32.1%22N+46%C2%B051'14.7%22E/@24.6089014,46.8515051,17z/data=!3m1!4b1!4m4!3m3!8m2!3d24.6089014!4d46.85408?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
             : project?.id === "15"
             ? "https://www.google.com/maps?q=24.5864722,46.8006111&entry=gps&lucs=,94282564,94224825,94227247,94227248,94231188,47071704,47069508,94218641,94282134,94203019,47084304&g_ep=CAISEjI1LjMwLjAuNzg1NjQ2NTQ3MBgAINeCAypjLDk0MjgyNTY0LDk0MjI0ODI1LDk0MjI3MjQ3LDk0MjI3MjQ4LDk0MjMxMTg4LDQ3MDcxNzA0LDQ3MDY5NTA4LDk0MjE4NjQxLDk0MjgyMTM0LDk0MjAzMDE5LDQ3MDg0MzA0QgJTQQ%3D%3D&skid=7bfedaf7-45df-4414-a65d-9183d1580283&g_st=ipc"
-            : "https://www.google.com/maps?q=%D9%85%D8%AF%D9%8A%D9%86%D8%A9+%D8%A7%D9%84%D9%81%D9%88%D8%B2%D8%A7%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D9%8A%D8%A9%D8%8C+%D8%B7%D8%B1%D9%8A%D9%82+%D8%A7%D9%84%D8%AE%D8%B1%D8%AC%D8%8C+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6+14548&ftid=0x3e2f99f12ee457e3:0x17b95c627c6482ec&entry=gps&lucs=,94282564,94224825,94227247,94227248,94231188,47071704,47069508,94218641,94282134,94203019,47084304&g_ep=CAISEjI1LjMwLjAuNzg1NjQ2NTQ3MBgAINeCAypjLDk0MjgyNTY0LDk0MjI0ODI1LDk0MjI3MjQ3LDk0MjI3MjQ4LDk0MjMxMTg4LDQ3MDcxNzA0LDQ3MDY5NTA4LDk0MjE4NjQxLDk0MjgyMTM0LDk0MjAzMDE5LDQ3MDg0MzA0QgJTQQ%3D%3D&skid=f66e323c-5f41-4c91-b468-aae28b9f8efe&g_st=ipc"
+            : project?.id === "16"
+            ? "https://maps.app.goo.gl/cogNeiyKCmD73R56A"
+            : project?.id === "17"
+            ? "https://goo.gl/maps/uvReQGc3yBjJmnoM6"
+            : project?.id === "18"
+            ? "https://maps.app.goo.gl/X8Z1y9faa3sRaCRm8"
+            : project?.id === "19"
+            ? "https://maps.app.goo.gl/8SpLDTA84EpLBuPn8"
+            : project?.id === "20"
+            ? "https://maps.app.goo.gl/UoH5LM8ZfUWniEdb9"
+            : project?.id === "21"
+            ? "https://www.google.com/maps/place/RQAA4841%D8%8C+4841+%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%B1%D8%8C+7520%D8%8C+%D8%AD%D9%8A+%D8%A7%D9%84%D8%B3%D8%B9%D8%A7%D8%AF%D8%A9%D8%8C+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6+14258%E2%80%AD/@24.69131,46.8448917,1035m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3e2fa9b559af71ab:0xc90c999b2f7c456b!8m2!3d24.69131!4d46.8448917!16s/g/11rb4smwlf?hl=ar-SA&entry=ttu"
+            : project?.id === "22"
+            ? "https://maps.app.goo.gl/QrNtU3sFPU7K9tqr5"
+            : project?.id === "23"
+            ? "https://maps.app.goo.gl/vfzQnPYpc1Fayfs37"
+            : "https://www.google.com/maps?q=%D9%85%D8%AF%D9%8A%D9%86%D8%A9+%D8%A7%D9%84%D9%81%D9%88%D8%B2%D8%A7%D9%86%D8%A7%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D9%8A%D8%A9%D8%8C+%D8%B7%D8%B1%D9%8A%D9%82+%D8%A7%D9%84%D8%AE%D8%B1%D8%AC%D8%8C+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6+14548&ftid=0x3e2f99f12ee457e3:0x17b95c627c6482ec&entry=gps&lucs=,94282564,94224825,94227247,94227248,94231188,47071704,47069508,94218641,94282134,94203019,47084304&g_ep=CAISEjI1LjMwLjAuNzg1NjQ2NTQ3MBgAINeCAypjLDk0MjgyNTY0LDk0MjI0ODI1LDk0MjI3MjQ3LDk0MjI3MjQ4LDk0MjMxMTg4LDQ3MDcxNzA0LDQ3MDY5NTA4LDk0MjE4NjQxLDk0MjgyMTM0LDk0MjAzMDE5LDQ3MDg0MzA0QgJTQQ%3D%3D&skid=f66e323c-5f41-4c91-b468-aae28b9f8efe&g_st=ipc"
           }
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-2 md:p-3"
+          className="absolute bottom-16 right-4 md:bottom-20 md:right-6 z-10 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-2 md:p-3"
           title="View on Google Maps"
         >
           <img 
-            src={project?.id === "2" 
+            src={project?.id === "1" 
+              ? "/assets/images/projects/Al fauzan industrial city/QR.png"
+              : project?.id === "2" 
               ? "/assets/images/projects/remas/QR.png"
               : project?.id === "3"
               ? "/assets/images/projects/SAMA/QR.png"
@@ -358,9 +443,25 @@ const ProjectDetails = () => {
               : project?.id === "13"
               ? "/assets/images/projects/Rana/QR.png"
               : project?.id === "14"
-              ? "/assets/images/projects/ALNAMOTHAJIYA/QR.png"
+              ? "/assets/images/projects/14/QR.jpeg"
               : project?.id === "15"
               ? "/assets/images/projects/Aziziyah/QR.png"
+              : project?.id === "16"
+              ? "/assets/images/projects/faisaliyah/QR.jpeg"
+              : project?.id === "17"
+              ? "/assets/images/projects/Muhammadiya/QR.jpeg"
+              : project?.id === "18"
+              ? "/assets/images/projects/Taibah/QR.jpeg"
+              : project?.id === "19"
+              ? "/assets/images/projects/Al Jazeera/QR.jpeg"
+              : project?.id === "20"
+              ? "/assets/images/projects/Siricon/QR.jpeg"
+              : project?.id === "21"
+              ? "/assets/images/projects/Saada/QR.jpg"
+              : project?.id === "22"
+              ? "/assets/images/projects/Hars/QR.jpeg"
+              : project?.id === "23"
+              ? "/assets/images/projects/14/QR.jpeg"
               : "/assets/images/projects/Al fauzan industrial city/QR.png"
             }
             alt="QR Code - View on Google Maps"
@@ -389,23 +490,23 @@ const ProjectDetails = () => {
                 <span className={`truncate ${language === 'AR' ? 'font-arabic' : ''}`}>{project?.location}</span>
               </div>
               <div className="flex items-center">
-                <Calendar className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2 flex-shrink-0" />
-                <span>{project.year}</span>
-              </div>
-              <div className="flex items-center">
-                <RiyalIcon className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2 flex-shrink-0" />
-                <span className={language === 'AR' ? 'font-arabic' : ''}>{project.value}</span>
-              </div>
-              <div className="flex items-center">
                 <Building className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2 flex-shrink-0" />
-                <span className={language === 'AR' ? 'font-arabic' : ''}>{project.area}</span>
+                <span className={language === 'AR' ? 'font-arabic' : ''}>
+                  {project.area || project.specifications?.totalArea || 'N/A'}
+                </span>
               </div>
             </div>
 
             <div className="flex flex-wrap gap-3 md:gap-4">
               <Button 
                 className="bg-yellow-400 hover:bg-yellow-500 text-black text-sm md:text-base px-4 py-2 md:px-6 md:py-3"
-                onClick={() => setShowInterestForm(true)}
+                onClick={() => {
+                  const agentNumber = projectAgents[id || ""] || "9665011222261"; // Fallback to main number
+                  const projectName = project?.title || "Project";
+                  const message = getProjectMessage(id || "", projectName, language === 'AR');
+                  const whatsappUrl = `https://wa.me/${agentNumber}?text=${encodeURIComponent(message)}`;
+                  window.open(whatsappUrl, '_blank');
+                }}
               >
                 <Target className="h-4 w-4 mr-2" />
                 <span className="hidden sm:inline">{currentContent.imInterested}</span>
@@ -459,22 +560,24 @@ const ProjectDetails = () => {
                 {/* Total Area - Building/Area Icon */}
                 <div className="bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-xl text-center border border-white/20">
                   <div className="flex justify-center mb-3">
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-yellow-400/20 rounded-full flex items-center justify-center">
-                      <Building className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+                      <Building className="w-8 h-8 md:w-10 md:h-10 text-yellow-800" />
                     </div>
                   </div>
-                  <div className="text-xl md:text-3xl font-bold text-yellow-400 mb-2">{project.specifications.totalArea}</div>
+                  <div className="text-xl md:text-3xl font-bold text-white mb-2">
+                    {project.specifications?.totalArea || project.area || 'N/A'}
+                  </div>
                   <div className="text-white/90 text-sm md:text-base">{currentContent.totalArea}</div>
                 </div>
                 
                 {/* Industrial Zones - Factory/Industrial Icon */}
                 <div className="bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-xl text-center border border-white/20">
                   <div className="flex justify-center mb-3">
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-yellow-400/20 rounded-full flex items-center justify-center">
-                      <Factory className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+                      <Factory className="w-8 h-8 md:w-10 md:h-10 text-yellow-800" />
                     </div>
                   </div>
-                  <div className="text-xl md:text-3xl font-bold text-yellow-400 mb-2">
+                  <div className="text-xl md:text-3xl font-bold text-white mb-2">
                     {'industrialZones' in project.specifications ? project.specifications.industrialZones : project.specifications.industrialUnits}
                   </div>
                   <div className="text-white/90 text-sm md:text-base">{currentContent.industrialZones || currentContent.industrialUnits}</div>
@@ -483,11 +586,11 @@ const ProjectDetails = () => {
                 {/* Commercial Areas - Shopping/Store Icon */}
                 <div className="bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-xl text-center border border-white/20">
                   <div className="flex justify-center mb-3">
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-yellow-400/20 rounded-full flex items-center justify-center">
-                      <ShoppingBag className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+                      <ShoppingBag className="w-8 h-8 md:w-10 md:h-10 text-yellow-800" />
                     </div>
                   </div>
-                  <div className="text-xl md:text-3xl font-bold text-yellow-400 mb-2">
+                  <div className="text-xl md:text-3xl font-bold text-white mb-2">
                     {'commercialAreas' in project.specifications ? project.specifications.commercialAreas : project.specifications.commercialSpaces}
                   </div>
                   <div className="text-white/90 text-sm md:text-base">{currentContent.commercialAreas}</div>
@@ -496,11 +599,11 @@ const ProjectDetails = () => {
                 {/* Parking Spaces - Car/Parking Icon */}
                 <div className="bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-xl text-center border border-white/20">
                   <div className="flex justify-center mb-3">
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-yellow-400/20 rounded-full flex items-center justify-center">
-                      <Car className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+                      <Car className="w-8 h-8 md:w-10 md:h-10 text-yellow-800" />
                     </div>
                   </div>
-                  <div className="text-xl md:text-3xl font-bold text-yellow-400 mb-2">{project.specifications.parkingSpaces}</div>
+                  <div className="text-xl md:text-3xl font-bold text-white mb-2">{project.specifications.parkingSpaces}</div>
                   <div className="text-white/90 text-sm md:text-base">{currentContent.parkingSpaces}</div>
                 </div>
               </div>
@@ -522,28 +625,6 @@ const ProjectDetails = () => {
 
 
 
-        {/* Video Section */}
-        {project.video_url && (
-          <section className="mb-12 md:mb-20">
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-4 md:p-8 border border-white/20">
-              <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 md:mb-8 ${
-                language === 'AR' ? 'font-arabic text-right' : ''
-              }`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
-                {currentContent.viewVideo}
-              </h2>
-              <div className="relative aspect-video rounded-xl overflow-hidden">
-                <video
-                  className="w-full h-full object-cover"
-                  controls
-                  poster={project.images[0]}
-                >
-                                     <source src={project.video_url} type="video/mp4" />
-                  {language === 'AR' ? 'متصفحك لا يدعم تشغيل الفيديو.' : 'Your browser does not support the video tag.'}
-                </video>
-              </div>
-            </div>
-          </section>
-        )}
 
                  {/* Project Images */}
          <section>

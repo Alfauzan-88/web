@@ -388,6 +388,132 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* iOS-specific logo transparency fixes */
+@supports (-webkit-touch-callout: none) {
+  video, img {
+    -webkit-mask: none !important;
+    mask: none !important;
+    mix-blend-mode: normal !important;
+    background-color: transparent !important;
+    background: transparent !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+  }
+  
+  .hero-logo video,
+  .hero-logo img,
+  nav img {
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    -webkit-mask: none !important;
+    mask: none !important;
+    background-color: transparent !important;
+    background: transparent !important;
+    mix-blend-mode: normal !important;
+  }
+}
+
+/* Additional iOS Safari fixes */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .hero-logo video,
+  .hero-logo img,
+  nav img {
+    background: transparent !important;
+    background-color: transparent !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+  }
+}
+
+/* Force transparency for all logo elements on iOS */
+@supports (-webkit-appearance: none) {
+  .hero-logo video,
+  .hero-logo img,
+  nav img {
+    background: transparent !important;
+    background-color: transparent !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    -webkit-mask: none !important;
+    mask: none !important;
+  }
+}
+
+/* Ultra-aggressive iOS Safari logo transparency fix */
+@media screen and (max-width: 1024px) {
+  .hero-logo video,
+  .hero-logo img,
+  nav img {
+    background: transparent !important;
+    background-color: transparent !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    -webkit-mask: none !important;
+    mask: none !important;
+    mix-blend-mode: normal !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    border: none !important;
+    outline: none !important;
+  }
+}
+
+/* Force transparency using CSS mask approach for iOS */
+@supports (-webkit-mask: url()) {
+  .hero-logo video,
+  .hero-logo img,
+  nav img {
+    -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/></svg>') !important;
+    mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/></svg>') !important;
+    -webkit-mask-size: contain !important;
+    mask-size: contain !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-repeat: no-repeat !important;
+    -webkit-mask-position: center !important;
+    mask-position: center !important;
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+}
+
+/* Alternative approach: Use CSS filter to remove background */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .hero-logo video,
+  .hero-logo img,
+  nav img {
+    filter: brightness(1) contrast(1) !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+  }
+}
+
+/* iOS-specific logo fix using background-image approach */
+@media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 0) {
+  .hero-logo video,
+  .hero-logo img {
+    background-image: url('/assets/logos/logo-white.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-color: transparent !important;
+    -webkit-mask: none !important;
+    mask: none !important;
+    opacity: 0.99 !important;
+  }
+  
+  .hero-logo video {
+    background-image: none !important;
+  }
+}
+
+/* Force isolation context for iOS */
+.hero-logo {
+  isolation: isolate !important;
+  contain: layout style paint !important;
+}
+
 /* Reduce Motion */
 @media (prefers-reduced-motion: reduce) {
   * {

@@ -7,7 +7,6 @@ import { Calendar, User, Tag, Eye, Share2, MessageCircle, ArrowRight, ExternalLi
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const News = () => {
-  const [activeCategory, setActiveCategory] = useState('All');
   const { language } = useLanguage();
   const navigate = useNavigate();
 
@@ -170,9 +169,7 @@ const News = () => {
 
   const currentContent = content[language];
   const allPosts = currentContent.articles;
-  const filteredArticles = activeCategory === 'All' || activeCategory === 'الكل'
-    ? allPosts
-    : allPosts.filter(article => article.category === activeCategory);
+  const filteredArticles = allPosts;
 
   return (
     <div className="min-h-screen overflow-x-hidden relative">
@@ -209,25 +206,9 @@ const News = () => {
         </div>
       </section>
 
-      {/* Category Filters */}
+      {/* Articles Section */}
       <section className="py-12 z-10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {currentContent.categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-6 py-3 rounded-full transition-all duration-300 backdrop-blur-sm border ${
-                  activeCategory === category
-                    ? 'bg-yellow-400 text-black font-semibold border-yellow-400'
-                    : 'bg-white/10 text-white hover:bg-white/20 border-white/20'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
           {/* Featured Article */}
           {filteredArticles.find(article => article.featured) && (
             <div className="mb-12">
@@ -246,15 +227,12 @@ const News = () => {
                       <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium">
                         Featured
                       </span>
-                      <span className="bg-white/20 text-yellow-400 px-3 py-1 rounded-full text-sm backdrop-blur-sm">
-                        {article.category}
-                      </span>
                     </div>
                     <h2 className={`text-2xl font-bold mb-4 text-white ${
-                      language === 'AR' ? 'font-arabic text-right' : ''
+                      language === 'AR' ? 'font-arabic' : ''
                     }`}>{article.title}</h2>
                     <p className={`text-white/90 mb-6 ${
-                      language === 'AR' ? 'font-arabic text-right' : ''
+                      language === 'AR' ? 'font-arabic' : ''
                     }`}>{article.excerpt}</p>
                     <div className="flex items-center gap-6 text-sm text-white/70 mb-4">
                       <div className="flex items-center">
@@ -302,13 +280,6 @@ const News = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  
-                  {/* Category Badge */}
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-yellow-400 text-black rounded-full text-xs font-semibold">
-                      {article.category}
-                    </span>
-                  </div>
                 </div>
 
                 {/* Article Content */}
@@ -325,13 +296,13 @@ const News = () => {
                   </div>
 
                   <h3 className={`text-xl font-bold text-gray-900 mb-3 group-hover:text-yellow-500 transition-colors leading-tight ${
-                    language === 'AR' ? 'font-arabic text-right' : ''
+                    language === 'AR' ? 'font-arabic' : ''
                   }`}>
                     {article.title}
                   </h3>
 
                   <p className={`text-gray-600 mb-4 text-sm leading-relaxed ${
-                    language === 'AR' ? 'font-arabic text-right' : ''
+                    language === 'AR' ? 'font-arabic' : ''
                   }`}>
                     {article.excerpt}
                   </p>
@@ -368,25 +339,6 @@ const News = () => {
             ))}
           </div>
 
-          {/* Newsletter Signup */}
-          <div className="mt-16 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl p-8 text-center backdrop-blur-sm border border-yellow-400/20">
-            <h3 className={`text-2xl font-bold text-black mb-4 ${
-              language === 'AR' ? 'font-arabic' : ''
-            }`}>Stay Updated</h3>
-            <p className={`text-black mb-6 ${
-              language === 'AR' ? 'font-arabic' : ''
-            }`}>Subscribe to our newsletter for the latest real estate news and insights</p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder={language === 'AR' ? 'أدخل بريدك الإلكتروني' : 'Enter your email'}
-                className="flex-1 px-4 py-2 rounded-lg border-0 text-black placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-black"
-              />
-              <Button className="bg-black text-yellow-400 hover:bg-gray-900 transition-colors">
-                {language === 'AR' ? 'اشتراك' : 'Subscribe'}
-              </Button>
-            </div>
-          </div>
 
         </div>
       </section>

@@ -33,8 +33,8 @@ const Contact = () => {
       },
       info: {
         title: "Get In Touch",
-        address: "4356 Eastern Ring Branch Rd، 7746 الطريق الدائري الشرقي الفرعي، الربوة، الرياض 12822, Riyadh 11574",
-        phone: "+966 505 200 333",
+        address: "4356 Eastern Ring Branch Rd،12822, Riyadh 11574 ",
+        phone: "+966 50 112 2261",
         email: "it@alfauzan.com",
         hours: "Sunday - Thursday: 8:00 AM - 6:00 PM"
       }
@@ -52,8 +52,8 @@ const Contact = () => {
       },
       info: {
         title: "تواصل معنا",
-        address: "4356 Eastern Ring Branch Rd، 7746 الطريق الدائري الشرقي الفرعي، الربوة، الرياض 12822, Riyadh 11574",
-        phone: "+966 505 200 333",
+        address: "الرياض - الدائري الشرقي مخرج 14",
+        phone: "+966 50 112 2261",
         email: "it@alfauzan.com",
         hours: "الأحد - الخميس: 8:00 ص - 6:00 م"
       }

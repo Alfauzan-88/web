@@ -11,12 +11,12 @@ const StatsSection: React.FC = () => {
 
   const content = {
     EN: {
-      title: "Our Track Record Speaks",
-      subtitle: "Three decades of excellence in real estate development and investment",
+      title: "Our Achievements Speak of Our Leadership, and Your Trust Drives Our Success",
+      subtitle: "Our proven achievements and pioneering projects reflect our commitment to building a thriving real estate future that fulfills our client's aspirations and places them at the forefront of success.",
       stats: [
         { 
           icon: Building, 
-          number: 6, 
+          number: 22, 
           label: 'Projects in the main regions of the Kingdom',
           suffix: '+'
         },
@@ -46,7 +46,7 @@ const StatsSection: React.FC = () => {
         },
         { 
           icon: Award, 
-          number: 35, 
+          number: 38, 
           label: 'Years of experience in real estate and industrial development',
           suffix: '+'
         },
@@ -58,9 +58,9 @@ const StatsSection: React.FC = () => {
         },
         { 
           icon: TrendingUp, 
-          number: 10000, 
-          label: 'Direct and indirect job opportunities created through the company\'s projects',
-          suffix: '+'
+          number: 10, 
+          label: 'Job opportunities created through company projects',
+          suffix: 'k+'
         },
         { 
           icon: Building, 
@@ -89,12 +89,13 @@ const StatsSection: React.FC = () => {
       ]
     },
     AR: {
-      title: "سجلنا يتحدث عن نفسه",
-      subtitle: "ثلاثة عقود من التميز في التطوير العقاري والاستثمار",
+      // Updated Arabic content
+      title: "إنجازاتنا تتحدث عن ريادتنا وثقتكم تقود نجاحنا",
+      subtitle: "إنجازاتنا الموثقة ومشاريعنا الرائدة تعكس التزامنا ببناء مستقبل عقاري مزدهر يلبي طموحات عملائنا، ويضعهم في مقدمة النجاح",
       stats: [
         { 
           icon: Building, 
-          number: 6, 
+          number: 22, 
           label: 'المشاريع في المناطق الرئيسية في المملكة',
           suffix: '+'
         },
@@ -124,7 +125,7 @@ const StatsSection: React.FC = () => {
         },
         { 
           icon: Award, 
-          number: 35, 
+          number: 38, 
           label: 'سنة من الخبرة في التطوير العقاري والصناعي',
           suffix: '+'
         },
@@ -136,9 +137,9 @@ const StatsSection: React.FC = () => {
         },
         { 
           icon: TrendingUp, 
-          number: 10000, 
-          label: 'فرصة عمل مباشرة وغير مباشرة تم توفيرها من خلال مشاريع الشركة',
-          suffix: '+'
+          number: 10, 
+          label: 'فرص عمل تم توفيرها من خلال مشاريع الشركة',
+          suffix: 'k+'
         },
         { 
           icon: Building, 
@@ -192,8 +193,8 @@ const StatsSection: React.FC = () => {
   return (
     <section id="stats" ref={sectionRef} className="py-20 z-10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center mb-16 ${language === 'AR' ? 'text-right' : ''}`}>
-          <h2 className={`text-3xl md:text-4xl font-bold text-white mb-4 ${language === 'AR' ? 'font-arabic' : ''}`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+        <div className="text-center mb-16">
+          <h2 className={`text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-4 ${language === 'AR' ? 'font-arabic' : ''}`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
             {currentContent.title}
           </h2>
           <p className={`text-xl text-white/90 max-w-2xl mx-auto ${language === 'AR' ? 'font-arabic' : ''}`} style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
@@ -201,7 +202,7 @@ const StatsSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {currentContent.stats.map((stat, index) => {
             return (
               <div 
@@ -213,14 +214,14 @@ const StatsSection: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                 
                 {/* Main Tile */}
-                <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:border-yellow-400/30 transition-all duration-500 text-center group-hover:bg-white/15">
+                <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-white/20 hover:border-yellow-400/30 transition-all duration-500 text-center group-hover:bg-white/15">
                   {/* Icon */}
-                  <div className="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-yellow-400/30 transition-all duration-500">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-yellow-400/30 transition-all duration-500">
                     <stat.icon className="h-8 w-8 text-yellow-400" />
                   </div>
                   
                   {/* Number */}
-                  <div className="text-4xl md:text-5xl font-bold text-white mb-2" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
                     <AnimatedCounter 
                       end={stat.number} 
                       suffix={stat.suffix} 
@@ -230,7 +231,7 @@ const StatsSection: React.FC = () => {
                   </div>
                   
                   {/* Label */}
-                  <p className={`text-white/90 text-lg ${language === 'AR' ? 'font-arabic' : ''}`} style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
+                  <p className={`text-white/90 text-sm sm:text-lg ${language === 'AR' ? 'font-arabic' : ''}`} style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
                     {stat.label}
                   </p>
                 </div>

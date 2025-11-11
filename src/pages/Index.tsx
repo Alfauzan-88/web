@@ -6,7 +6,6 @@ import ScrollableKeyframe from '@/components/ScrollableKeyframe';
 import Projects3D from '@/components/Projects3D';
 import PreciseProperties from '@/components/PreciseProperties';
 import StatsSection from '@/components/StatsSection';
-import CEOSection from '@/components/CEOSection';
 import SuccessPartners from '@/components/SuccessPartners';
 import GroupCompanies from '@/components/GroupCompanies';
 import LatestNews from '@/components/LatestNews';
@@ -83,13 +82,12 @@ const Index = () => {
       <TransparentNavigation />
       <VideoHero />
       <ScrollableKeyframe />
-      <CEOSection />
       <StatsSection />
-      <LatestNews />
       <Projects3D />
       <PreciseProperties />
       <GroupCompanies />
       <SuccessPartners />
+      <LatestNews />
       <Footer />
     </div>
     </>

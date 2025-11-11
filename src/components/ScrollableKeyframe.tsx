@@ -1,21 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useRef } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-gsap.registerPlugin(ScrollTrigger);
-
 const ScrollableKeyframe: React.FC = () => {
-  const sectionRef = useRef<HTMLElement>(null);
   const cutoutRef = useRef<HTMLImageElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [activeSection, setActiveSection] = useState(0);
   const { language } = useLanguage();
 
   const content = {
     EN: {
       title: "Our Vision in Motion",
-      subtitle: "Experience the transformation of Saudi Arabia's skyline through our innovative developments",
+      subtitle: "Together to Build Future Real Estate and Industrial Communities.",
       sections: [
         {
           title: "Quality",
@@ -40,8 +33,9 @@ const ScrollableKeyframe: React.FC = () => {
       ]
     },
     AR: {
+      // Updated Arabic content
       title: "رؤيتنا في الحركة",
-      subtitle: "اختبر تحول أفق المملكة العربية السعودية من خلال تطويراتنا المبتكرة",
+      subtitle: "معاً لبناء مجتمعات عقارية وصناعية مستقبلية",
       sections: [
         {
           title: "الجودة",
@@ -69,72 +63,20 @@ const ScrollableKeyframe: React.FC = () => {
 
   const currentContent = content[language];
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      if (!cutoutRef.current || !contentRef.current) return;
-
-      // Animate cutout with diagonal movement
-      gsap.to(cutoutRef.current, {
-        x: '-50vw',
-        y: '30vh',
-        rotation: 45,
-        scale: 0.8,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top center',
-          end: 'bottom center',
-          scrub: 1,
-        }
-      });
-
-      // Animate content sections
-      currentContent.sections.forEach((_, index) => {
-        const sectionElement = contentRef.current?.querySelector(`.content-section-${index}`);
-        if (sectionElement) {
-          gsap.fromTo(sectionElement,
-            { opacity: 0, x: index % 2 === 0 ? -100 : 100 },
-            {
-              opacity: 1,
-              x: 0,
-              duration: 1,
-              scrollTrigger: {
-                trigger: sectionElement,
-                start: 'top 80%',
-                end: 'bottom 20%',
-                toggleActions: 'play none none reverse'
-              }
-            }
-          );
-        }
-      });
-
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, [currentContent.sections]);
+  // Removed scroll animations and GSAP effects
 
   return (
     <section 
       id="about"
-      ref={sectionRef} 
       className="relative py-32 overflow-hidden z-10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Clean Header Section */}
-        <div className={`text-center mb-20 ${language === 'AR' ? 'text-right' : ''}`}>
-          <div className="inline-flex items-center space-x-2 bg-gray-100 px-4 py-2 rounded-full mb-6">
-            <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                              <span className={`text-white/90 text-sm font-medium ${
-                    language === 'AR' ? 'font-arabic' : ''
-                  }`}>
-                    {currentContent.title}
-                  </span>
-          </div>
-                      <h2 className={`text-4xl md:text-5xl font-bold text-white mb-6 leading-tight ${
+        <div className="text-center mb-20">
+                      <h2 className={`text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-6 leading-tight ${
               language === 'AR' ? 'font-arabic' : ''
-            }`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+            }`} style={{ textShadow: 'none' }}>
               {currentContent.subtitle}
             </h2>
         </div>
@@ -142,24 +84,19 @@ const ScrollableKeyframe: React.FC = () => {
         {/* Main Content Layout - Similar to competitor */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
-          {/* Left Content - Vision Tiles */}
+          {/* Left Content - Vision Tiles (static, no active state) */}
           <div className={`space-y-6 ${language === 'AR' ? 'lg:order-2 text-right' : 'lg:order-1'}`}>
             {currentContent.sections.map((section, index) => (
               <div
                 key={index}
-                className={`vision-tile-${index} group cursor-pointer`}
-                onClick={() => setActiveSection(index)}
+                className="group"
               >
                 {/* Individual White Tile for Each Vision */}
-                <div className={`bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${
-                  activeSection === index ? 'border-yellow-500 shadow-xl' : 'border-gray-100 hover:border-yellow-300'
-                } ${language === 'AR' ? 'text-right' : 'text-left'}`}>
+                <div className={`bg-white rounded-xl p-6 shadow-lg transition-all duration-300 border-2 border-gray-100 ${language === 'AR' ? 'text-right' : 'text-left'}`}>
                   
                   {/* Header with Number */}
                   <div className={`flex items-center space-x-4 mb-4 ${language === 'AR' ? 'flex-row-reverse space-x-reverse' : ''}`}>
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
-                      activeSection === index ? 'bg-yellow-500 text-white' : 'bg-gray-100 text-gray-700'
-                    }`}>
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gray-100 text-gray-700">
                       <span className="text-lg font-bold">{index + 1}</span>
                     </div>
                     
@@ -177,13 +114,6 @@ const ScrollableKeyframe: React.FC = () => {
                     {section.description}
                   </p>
                   
-                  {/* Active Indicator */}
-                  {activeSection === index && (
-                    <div className="mt-4 flex items-center">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
-                      <span className="text-sm text-yellow-600 font-medium">Active</span>
-                    </div>
-                  )}
                 </div>
               </div>
             ))}
@@ -204,40 +134,9 @@ const ScrollableKeyframe: React.FC = () => {
                   }}
                 />
                 
-                {/* Floating Stats */}
-                <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg">
-                  <div className="text-center">
-                                           <div className="text-2xl font-bold text-gray-900">720</div>
-                       <div className={`text-sm text-gray-600 ${language === 'AR' ? 'font-arabic' : ''}`}>
-                         {language === 'EN' ? 'Properties' : 'عقارات متاحة'}
-                       </div>
-                  </div>
-                </div>
-                
-                <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg">
-                  <div className="text-center">
-                                           <div className="text-2xl font-bold text-gray-900">2000</div>
-                       <div className={`text-sm text-gray-600 ${language === 'AR' ? 'font-arabic' : ''}`}>
-                         {language === 'EN' ? 'Happy Clients' : 'عميل سعيد'}
-                       </div>
-                  </div>
-                </div>
               </div>
               
-              {/* Progress Indicator */}
-              <div className="mt-8 flex justify-center">
-                <div className="flex space-x-2">
-                  {currentContent.sections.map((_, i) => (
-                    <div
-                      key={i}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
-                        i === activeSection ? 'bg-yellow-500 w-8' : 'bg-gray-300 hover:bg-gray-400'
-                      }`}
-                      onClick={() => setActiveSection(i)}
-                    />
-                  ))}
-                </div>
-              </div>
+              {/* Progress Indicator removed */}
             </div>
           </div>
         </div>

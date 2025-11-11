@@ -160,12 +160,6 @@ const NewsDetails = () => {
         {/* Article Info */}
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center space-x-2 mb-4">
-              <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                {article.category}
-              </span>
-            </div>
-            
             <h1 className={`text-3xl md:text-5xl font-bold text-white mb-6 leading-tight ${
               language === 'AR' ? 'font-arabic text-right' : ''
             }`}>
@@ -357,11 +351,6 @@ const NewsDetails = () => {
                     alt={relatedArticle.title}
                     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-yellow-400 text-black px-2 py-1 rounded text-xs font-semibold">
-                      {relatedArticle.category}
-                    </span>
-                  </div>
                 </div>
                 
                 <div className="p-6">

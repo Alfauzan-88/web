@@ -47,8 +47,8 @@ export const useWebsiteContent = () => {
         id: 3,
         section: 'hero',
         key: 'hero_video',
-        value_en: '/assets/videos/hero-video.mp4',
-        value_ar: '/assets/videos/hero-video.mp4',
+        value_en: '/assets/videos/hero-banner.mp4',
+        value_ar: '/assets/videos/hero-banner.mp4',
         type: 'video',
         is_active: true,
         order: 3

@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components/ui/button';
-import { Globe, ArrowRight, Play, X } from 'lucide-react';
+import { ArrowRight, Play, X } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -106,7 +106,6 @@ const Hero3D: React.FC<Hero3DProps> = ({ language, onLanguageChange }) => {
     <section 
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black"
-      dir={language === 'AR' ? 'rtl' : 'ltr'}
     >
       {/* 3D Background Elements */}
       <div className="absolute inset-0 opacity-20">
@@ -124,30 +123,12 @@ const Hero3D: React.FC<Hero3DProps> = ({ language, onLanguageChange }) => {
 
       {/* Language Switcher */}
       <div className="absolute top-8 right-8 z-50">
-        <div className="flex items-center space-x-2 bg-black/30 backdrop-blur-sm rounded-full p-2">
           <button
-            onClick={() => onLanguageChange('EN')}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-              language === 'EN' 
-                ? 'bg-yellow-400 text-black' 
-                : 'text-white hover:bg-white/10'
-            }`}
+          onClick={() => onLanguageChange(language === 'EN' ? 'AR' : 'EN')}
+          className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-black/30 backdrop-blur-sm text-white hover:text-yellow-400 hover:bg-white/10"
           >
-            <Globe className="w-4 h-4 inline mr-1" />
-            EN
+          English | العربية
           </button>
-          <button
-            onClick={() => onLanguageChange('AR')}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-              language === 'AR' 
-                ? 'bg-yellow-400 text-black font-arabic' 
-                : 'text-white hover:bg-white/10 font-arabic'
-            }`}
-          >
-            <Globe className="w-4 h-4 inline mr-1" />
-            عربي
-          </button>
-        </div>
       </div>
 
       {/* Main Content */}
@@ -155,7 +136,7 @@ const Hero3D: React.FC<Hero3DProps> = ({ language, onLanguageChange }) => {
         {/* Main Title */}
         <div ref={titleRef} className="mb-8">
           <h1 className={`text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight ${
-            language === 'AR' ? 'font-arabic' : ''
+            language === 'AR' ? 'font-arabic text-right' : ''
           }`}>
             <span className="text-gradient">
               {currentContent.title}
@@ -166,12 +147,12 @@ const Hero3D: React.FC<Hero3DProps> = ({ language, onLanguageChange }) => {
         {/* Subtitle */}
         <div ref={subtitleRef} className="mb-8">
           <h2 className={`text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed ${
-            language === 'AR' ? 'font-arabic' : ''
+            language === 'AR' ? 'font-arabic text-right' : ''
           }`}>
             {currentContent.subtitle}
           </h2>
           <p className={`text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mt-4 leading-relaxed ${
-            language === 'AR' ? 'font-arabic' : ''
+            language === 'AR' ? 'font-arabic text-right' : ''
           }`}>
             {currentContent.description}
           </p>

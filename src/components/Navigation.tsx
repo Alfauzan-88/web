@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -79,9 +79,8 @@ const Navigation = () => {
               onClick={() => setLanguage(language === 'EN' ? 'AR' : 'EN')}
               className="text-white hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-300 hover-3d"
             >
-              <Globe className="h-4 w-4 mr-2" />
-              <span className={language === 'AR' ? 'font-arabic' : ''}>
-                {language}
+              <span className="text-sm font-medium">
+                {language === 'EN' ? 'English | العربية' : 'English | العربية'}
               </span>
             </Button>
             

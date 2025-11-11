@@ -64,7 +64,6 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["Phase 1: Infrastructure", "Phase 2: Industrial Units", "Phase 3: Commercial Areas"]
       },
       images: [
-        "/assets/images/projects/Al fauzan industrial city/hero.jpg",
         "/assets/images/projects/Al fauzan industrial city/1.jpg",
         "/assets/images/projects/Al fauzan industrial city/2.jpg",
         "/assets/images/projects/Al fauzan industrial city/3.jpg",
@@ -80,10 +79,18 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/Al fauzan industrial city/13.jpg",
         "/assets/images/projects/Al fauzan industrial city/14.jpg",
         "/assets/images/projects/Al fauzan industrial city/15.jpg",
-        "/assets/images/projects/Al fauzan industrial city/QR.png"
+        "/assets/images/projects/Al fauzan industrial city/16.jpg",
+        "/assets/images/projects/Al fauzan industrial city/17.jpg",
+        "/assets/images/projects/Al fauzan industrial city/18.jpg",
+        "/assets/images/projects/Al fauzan industrial city/19.jpg",
+        "/assets/images/projects/Al fauzan industrial city/20.jpg",
+        "/assets/images/projects/Al fauzan industrial city/21.jpg",
+        "/assets/images/projects/Al fauzan industrial city/22.jpg",
+        "/assets/images/projects/Al fauzan industrial city/23.jpg",
+        "/assets/images/projects/Al fauzan industrial city/24.jpg",
+        "/assets/images/projects/Al fauzan industrial city/25.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Al fauzan industrial city/hero.jpg",
         "/assets/images/projects/Al fauzan industrial city/1.jpg",
         "/assets/images/projects/Al fauzan industrial city/2.jpg",
         "/assets/images/projects/Al fauzan industrial city/3.jpg",
@@ -99,9 +106,18 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/Al fauzan industrial city/13.jpg",
         "/assets/images/projects/Al fauzan industrial city/14.jpg",
         "/assets/images/projects/Al fauzan industrial city/15.jpg",
-        "/assets/images/projects/Al fauzan industrial city/QR.png"
+        "/assets/images/projects/Al fauzan industrial city/16.jpg",
+        "/assets/images/projects/Al fauzan industrial city/17.jpg",
+        "/assets/images/projects/Al fauzan industrial city/18.jpg",
+        "/assets/images/projects/Al fauzan industrial city/19.jpg",
+        "/assets/images/projects/Al fauzan industrial city/20.jpg",
+        "/assets/images/projects/Al fauzan industrial city/21.jpg",
+        "/assets/images/projects/Al fauzan industrial city/22.jpg",
+        "/assets/images/projects/Al fauzan industrial city/23.jpg",
+        "/assets/images/projects/Al fauzan industrial city/24.jpg",
+        "/assets/images/projects/Al fauzan industrial city/25.jpg"
       ],
-      main_image_url: "/assets/images/projects/Al fauzan industrial city/hero.jpg",
+      main_image_url: "/assets/images/projects/Al fauzan industrial city/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -154,7 +170,6 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["المرحلة الأولى: البنية التحتية", "المرحلة الثانية: الوحدات الصناعية", "المرحلة الثالثة: المناطق التجارية"]
       },
       images: [
-        "/assets/images/projects/Al fauzan industrial city/hero.jpg",
         "/assets/images/projects/Al fauzan industrial city/1.jpg",
         "/assets/images/projects/Al fauzan industrial city/2.jpg",
         "/assets/images/projects/Al fauzan industrial city/3.jpg",
@@ -170,10 +185,18 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/Al fauzan industrial city/13.jpg",
         "/assets/images/projects/Al fauzan industrial city/14.jpg",
         "/assets/images/projects/Al fauzan industrial city/15.jpg",
-        "/assets/images/projects/Al fauzan industrial city/QR.png"
+        "/assets/images/projects/Al fauzan industrial city/16.jpg",
+        "/assets/images/projects/Al fauzan industrial city/17.jpg",
+        "/assets/images/projects/Al fauzan industrial city/18.jpg",
+        "/assets/images/projects/Al fauzan industrial city/19.jpg",
+        "/assets/images/projects/Al fauzan industrial city/20.jpg",
+        "/assets/images/projects/Al fauzan industrial city/21.jpg",
+        "/assets/images/projects/Al fauzan industrial city/22.jpg",
+        "/assets/images/projects/Al fauzan industrial city/23.jpg",
+        "/assets/images/projects/Al fauzan industrial city/24.jpg",
+        "/assets/images/projects/Al fauzan industrial city/25.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Al fauzan industrial city/hero.jpg",
         "/assets/images/projects/Al fauzan industrial city/1.jpg",
         "/assets/images/projects/Al fauzan industrial city/2.jpg",
         "/assets/images/projects/Al fauzan industrial city/3.jpg",
@@ -189,9 +212,18 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/Al fauzan industrial city/13.jpg",
         "/assets/images/projects/Al fauzan industrial city/14.jpg",
         "/assets/images/projects/Al fauzan industrial city/15.jpg",
-        "/assets/images/projects/Al fauzan industrial city/QR.png"
+        "/assets/images/projects/Al fauzan industrial city/16.jpg",
+        "/assets/images/projects/Al fauzan industrial city/17.jpg",
+        "/assets/images/projects/Al fauzan industrial city/18.jpg",
+        "/assets/images/projects/Al fauzan industrial city/19.jpg",
+        "/assets/images/projects/Al fauzan industrial city/20.jpg",
+        "/assets/images/projects/Al fauzan industrial city/21.jpg",
+        "/assets/images/projects/Al fauzan industrial city/22.jpg",
+        "/assets/images/projects/Al fauzan industrial city/23.jpg",
+        "/assets/images/projects/Al fauzan industrial city/24.jpg",
+        "/assets/images/projects/Al fauzan industrial city/25.jpg"
       ],
-      main_image_url: "/assets/images/projects/Al fauzan industrial city/hero.jpg",
+      main_image_url: "/assets/images/projects/Al fauzan industrial city/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -246,7 +278,6 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["Phase 1: Infrastructure", "Phase 2: Industrial Units"]
       },
       images: [
-        "/assets/images/projects/remas/remas.jpg",
         "/assets/images/projects/remas/1.jpg",
         "/assets/images/projects/remas/2.jpg",
         "/assets/images/projects/remas/3.jpg",
@@ -261,18 +292,9 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/remas/12.jpg",
         "/assets/images/projects/remas/13.jpg",
         "/assets/images/projects/remas/14.jpg",
-        "/assets/images/projects/remas/15.jpg",
-        "/assets/images/projects/remas/16.jpg",
-        "/assets/images/projects/remas/17.jpg",
-        "/assets/images/projects/remas/18.jpg",
-        "/assets/images/projects/remas/19.jpg",
-        "/assets/images/projects/remas/20.jpg",
-        "/assets/images/projects/remas/21.jpg",
-        "/assets/images/projects/remas/22.jpg",
-        "/assets/images/projects/remas/QR.png"
+        "/assets/images/projects/remas/15.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/remas/remas.jpg",
         "/assets/images/projects/remas/1.jpg",
         "/assets/images/projects/remas/2.jpg",
         "/assets/images/projects/remas/3.jpg",
@@ -287,17 +309,9 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/remas/12.jpg",
         "/assets/images/projects/remas/13.jpg",
         "/assets/images/projects/remas/14.jpg",
-        "/assets/images/projects/remas/15.jpg",
-        "/assets/images/projects/remas/16.jpg",
-        "/assets/images/projects/remas/17.jpg",
-        "/assets/images/projects/remas/18.jpg",
-        "/assets/images/projects/remas/19.jpg",
-        "/assets/images/projects/remas/20.jpg",
-        "/assets/images/projects/remas/21.jpg",
-        "/assets/images/projects/remas/22.jpg",
-        "/assets/images/projects/remas/QR.png"
+        "/assets/images/projects/remas/15.jpg"
       ],
-      main_image_url: "/assets/images/projects/remas/remas.jpg",
+      main_image_url: "/assets/images/projects/remas/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -311,7 +325,7 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
       industrialUnits: 200,
       loadingAreas: 15,
       status: "Completed",
-      location: "Istanbul Road, Al-Mashael District",
+      location: "Prince Mohammed Bin Abdulrahman Bin Abdulaziz Road",
       category: "Industrial Plans",
       year: "2023",
       value: "400M",
@@ -350,7 +364,6 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["المرحلة الأولى: البنية التحتية", "المرحلة الثانية: الوحدات الصناعية"]
       },
       images: [
-        "/assets/images/projects/remas/remas.jpg",
         "/assets/images/projects/remas/1.jpg",
         "/assets/images/projects/remas/2.jpg",
         "/assets/images/projects/remas/3.jpg",
@@ -365,18 +378,9 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/remas/12.jpg",
         "/assets/images/projects/remas/13.jpg",
         "/assets/images/projects/remas/14.jpg",
-        "/assets/images/projects/remas/15.jpg",
-        "/assets/images/projects/remas/16.jpg",
-        "/assets/images/projects/remas/17.jpg",
-        "/assets/images/projects/remas/18.jpg",
-        "/assets/images/projects/remas/19.jpg",
-        "/assets/images/projects/remas/20.jpg",
-        "/assets/images/projects/remas/21.jpg",
-        "/assets/images/projects/remas/22.jpg",
-        "/assets/images/projects/remas/QR.png"
+        "/assets/images/projects/remas/15.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/remas/remas.jpg",
         "/assets/images/projects/remas/1.jpg",
         "/assets/images/projects/remas/2.jpg",
         "/assets/images/projects/remas/3.jpg",
@@ -391,17 +395,9 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/remas/12.jpg",
         "/assets/images/projects/remas/13.jpg",
         "/assets/images/projects/remas/14.jpg",
-        "/assets/images/projects/remas/15.jpg",
-        "/assets/images/projects/remas/16.jpg",
-        "/assets/images/projects/remas/17.jpg",
-        "/assets/images/projects/remas/18.jpg",
-        "/assets/images/projects/remas/19.jpg",
-        "/assets/images/projects/remas/20.jpg",
-        "/assets/images/projects/remas/21.jpg",
-        "/assets/images/projects/remas/22.jpg",
-        "/assets/images/projects/remas/QR.png"
+        "/assets/images/projects/remas/15.jpg"
       ],
-      main_image_url: "/assets/images/projects/remas/remas.jpg",
+      main_image_url: "/assets/images/projects/remas/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -415,7 +411,7 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
       industrialUnits: 200,
       loadingAreas: 15,
       status: "مكتمل",
-      location: "طريق إسطنبول، حي المشاعل",
+      location: "طريق الأمير محمد بن عبدالرحمن بن عبدالعزيز",
       category: "المخططات الصناعية",
       year: "2023",
       value: "400 مليون",
@@ -456,22 +452,20 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["Phase 1: Infrastructure", "Phase 2: Commercial Units"]
       },
       images: [
-        "/assets/images/projects/SAMA/sama.jpg",
-        "/assets/images/projects/SAMA/2.jpg",
-        "/assets/images/projects/SAMA/3.jpg",
-        "/assets/images/projects/SAMA/4.jpg",
-        "/assets/images/projects/SAMA/5.jpg",
-        "/assets/images/projects/SAMA/QR.png"
+        "/assets/images/projects/SAMA/1.JPG",
+        "/assets/images/projects/SAMA/2.JPG",
+        "/assets/images/projects/SAMA/3.JPG",
+        "/assets/images/projects/SAMA/4.JPG",
+        "/assets/images/projects/SAMA/5.JPG"
       ],
       images_urls: [
-        "/assets/images/projects/SAMA/sama.jpg",
-        "/assets/images/projects/SAMA/2.jpg",
-        "/assets/images/projects/SAMA/3.jpg",
-        "/assets/images/projects/SAMA/4.jpg",
-        "/assets/images/projects/SAMA/5.jpg",
-        "/assets/images/projects/SAMA/QR.png"
+        "/assets/images/projects/SAMA/1.JPG",
+        "/assets/images/projects/SAMA/2.JPG",
+        "/assets/images/projects/SAMA/3.JPG",
+        "/assets/images/projects/SAMA/4.JPG",
+        "/assets/images/projects/SAMA/5.JPG"
       ],
-      main_image_url: "/assets/images/projects/SAMA/sama.jpg",
+      main_image_url: "/assets/images/projects/SAMA/1.JPG",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -485,7 +479,7 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
       industrialUnits: 150,
       loadingAreas: 10,
       status: "Completed",
-      location: "Istanbul Road, Al-Mashael District",
+      location: "Prince Mohammed Bin Abdulrahman Bin Abdulaziz Road",
       category: "Industrial Plans",
       year: "2023",
       value: "350M",
@@ -524,22 +518,20 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["المرحلة الأولى: البنية التحتية", "المرحلة الثانية: الوحدات التجارية"]
       },
       images: [
-        "/assets/images/projects/SAMA/sama.jpg",
-        "/assets/images/projects/SAMA/2.jpg",
-        "/assets/images/projects/SAMA/3.jpg",
-        "/assets/images/projects/SAMA/4.jpg",
-        "/assets/images/projects/SAMA/5.jpg",
-        "/assets/images/projects/SAMA/QR.png"
+        "/assets/images/projects/SAMA/1.JPG",
+        "/assets/images/projects/SAMA/2.JPG",
+        "/assets/images/projects/SAMA/3.JPG",
+        "/assets/images/projects/SAMA/4.JPG",
+        "/assets/images/projects/SAMA/5.JPG"
       ],
       images_urls: [
-        "/assets/images/projects/SAMA/sama.jpg",
-        "/assets/images/projects/SAMA/2.jpg",
-        "/assets/images/projects/SAMA/3.jpg",
-        "/assets/images/projects/SAMA/4.jpg",
-        "/assets/images/projects/SAMA/5.jpg",
-        "/assets/images/projects/SAMA/QR.png"
+        "/assets/images/projects/SAMA/1.JPG",
+        "/assets/images/projects/SAMA/2.JPG",
+        "/assets/images/projects/SAMA/3.JPG",
+        "/assets/images/projects/SAMA/4.JPG",
+        "/assets/images/projects/SAMA/5.JPG"
       ],
-      main_image_url: "/assets/images/projects/SAMA/sama.jpg",
+      main_image_url: "/assets/images/projects/SAMA/1.JPG",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -553,7 +545,7 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
       industrialUnits: 150,
       loadingAreas: 10,
       status: "مكتمل",
-      location: "طريق إسطنبول، حي المشاعل",
+      location: "طريق الأمير محمد بن عبدالرحمن بن عبدالعزيز",
       category: "المخططات الصناعية",
       year: "2023",
       value: "350 مليون",
@@ -594,38 +586,34 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["Phase 1: Infrastructure", "Phase 2: Industrial Units"]
       },
       images: [
-        "/assets/images/projects/Shams/shams.JPG",
-        "/assets/images/projects/Shams/1.jpg",
-        "/assets/images/projects/Shams/2.jpg",
-        "/assets/images/projects/Shams/3.jpg",
-        "/assets/images/projects/Shams/4.jpg",
-        "/assets/images/projects/Shams/5.jpg",
-        "/assets/images/projects/Shams/6.jpg",
+        "/assets/images/projects/Shams/1.JPG",
+        "/assets/images/projects/Shams/2.JPG",
+        "/assets/images/projects/Shams/3.JPG",
+        "/assets/images/projects/Shams/4.JPG",
+        "/assets/images/projects/Shams/5.JPG",
+        "/assets/images/projects/Shams/6.JPG",
         "/assets/images/projects/Shams/7.jpg",
-        "/assets/images/projects/Shams/8.jpg",
-        "/assets/images/projects/Shams/9.jpg",
-        "/assets/images/projects/Shams/10.jpg",
-        "/assets/images/projects/Shams/11.jpg",
-        "/assets/images/projects/Shams/12.jpg",
-        "/assets/images/projects/Shams/QR.png"
+        "/assets/images/projects/Shams/8.JPG",
+        "/assets/images/projects/Shams/9.JPG",
+        "/assets/images/projects/Shams/10.JPG",
+        "/assets/images/projects/Shams/11.JPG",
+        "/assets/images/projects/Shams/12.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Shams/shams.JPG",
-        "/assets/images/projects/Shams/1.jpg",
-        "/assets/images/projects/Shams/2.jpg",
-        "/assets/images/projects/Shams/3.jpg",
-        "/assets/images/projects/Shams/4.jpg",
-        "/assets/images/projects/Shams/5.jpg",
-        "/assets/images/projects/Shams/6.jpg",
+        "/assets/images/projects/Shams/1.JPG",
+        "/assets/images/projects/Shams/2.JPG",
+        "/assets/images/projects/Shams/3.JPG",
+        "/assets/images/projects/Shams/4.JPG",
+        "/assets/images/projects/Shams/5.JPG",
+        "/assets/images/projects/Shams/6.JPG",
         "/assets/images/projects/Shams/7.jpg",
-        "/assets/images/projects/Shams/8.jpg",
-        "/assets/images/projects/Shams/9.jpg",
-        "/assets/images/projects/Shams/10.jpg",
-        "/assets/images/projects/Shams/11.jpg",
-        "/assets/images/projects/Shams/12.jpg",
-        "/assets/images/projects/Shams/QR.png"
+        "/assets/images/projects/Shams/8.JPG",
+        "/assets/images/projects/Shams/9.JPG",
+        "/assets/images/projects/Shams/10.JPG",
+        "/assets/images/projects/Shams/11.JPG",
+        "/assets/images/projects/Shams/12.jpg"
       ],
-      main_image_url: "/assets/images/projects/Shams/shams.JPG",
+      main_image_url: "/assets/images/projects/Shams/1.JPG",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -639,7 +627,7 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
       industrialUnits: 100,
       loadingAreas: 8,
       status: "Completed",
-      location: "Istanbul Street, Al-Sulay District",
+      location: "Prince Mohammed Bin Abdulrahman Bin Abdulaziz Road",
       category: "Industrial Plans",
       year: "2023",
       value: "200M",
@@ -678,38 +666,34 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["المرحلة الأولى: البنية التحتية", "المرحلة الثانية: الوحدات الصناعية"]
       },
       images: [
-        "/assets/images/projects/Shams/shams.JPG",
-        "/assets/images/projects/Shams/1.jpg",
-        "/assets/images/projects/Shams/2.jpg",
-        "/assets/images/projects/Shams/3.jpg",
-        "/assets/images/projects/Shams/4.jpg",
-        "/assets/images/projects/Shams/5.jpg",
-        "/assets/images/projects/Shams/6.jpg",
+        "/assets/images/projects/Shams/1.JPG",
+        "/assets/images/projects/Shams/2.JPG",
+        "/assets/images/projects/Shams/3.JPG",
+        "/assets/images/projects/Shams/4.JPG",
+        "/assets/images/projects/Shams/5.JPG",
+        "/assets/images/projects/Shams/6.JPG",
         "/assets/images/projects/Shams/7.jpg",
-        "/assets/images/projects/Shams/8.jpg",
-        "/assets/images/projects/Shams/9.jpg",
-        "/assets/images/projects/Shams/10.jpg",
-        "/assets/images/projects/Shams/11.jpg",
-        "/assets/images/projects/Shams/12.jpg",
-        "/assets/images/projects/Shams/QR.png"
+        "/assets/images/projects/Shams/8.JPG",
+        "/assets/images/projects/Shams/9.JPG",
+        "/assets/images/projects/Shams/10.JPG",
+        "/assets/images/projects/Shams/11.JPG",
+        "/assets/images/projects/Shams/12.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Shams/shams.JPG",
-        "/assets/images/projects/Shams/1.jpg",
-        "/assets/images/projects/Shams/2.jpg",
-        "/assets/images/projects/Shams/3.jpg",
-        "/assets/images/projects/Shams/4.jpg",
-        "/assets/images/projects/Shams/5.jpg",
-        "/assets/images/projects/Shams/6.jpg",
+        "/assets/images/projects/Shams/1.JPG",
+        "/assets/images/projects/Shams/2.JPG",
+        "/assets/images/projects/Shams/3.JPG",
+        "/assets/images/projects/Shams/4.JPG",
+        "/assets/images/projects/Shams/5.JPG",
+        "/assets/images/projects/Shams/6.JPG",
         "/assets/images/projects/Shams/7.jpg",
-        "/assets/images/projects/Shams/8.jpg",
-        "/assets/images/projects/Shams/9.jpg",
-        "/assets/images/projects/Shams/10.jpg",
-        "/assets/images/projects/Shams/11.jpg",
-        "/assets/images/projects/Shams/12.jpg",
-        "/assets/images/projects/Shams/QR.png"
+        "/assets/images/projects/Shams/8.JPG",
+        "/assets/images/projects/Shams/9.JPG",
+        "/assets/images/projects/Shams/10.JPG",
+        "/assets/images/projects/Shams/11.JPG",
+        "/assets/images/projects/Shams/12.jpg"
       ],
-      main_image_url: "/assets/images/projects/Shams/shams.JPG",
+      main_image_url: "/assets/images/projects/Shams/1.JPG",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -723,7 +707,7 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
       industrialUnits: 100,
       loadingAreas: 8,
       status: "مكتمل",
-      location: "شارع إسطنبول، حي السلي",
+      location: "طريق الأمير محمد بن عبدالرحمن بن عبدالعزيز",
       category: "المخططات الصناعية",
       year: "2023",
       value: "200 مليون",
@@ -764,14 +748,28 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["Phase 1: Infrastructure", "Phase 2: Industrial Units", "Phase 3: Residential Areas"]
       },
       images: [
-        "/assets/images/projects/Exit 18/Exit 18.png",
-        "/assets/images/projects/Exit 18/QR.png"
+        "/assets/images/projects/Exit 18/1.jpg",
+        "/assets/images/projects/Exit 18/2.jpg",
+        "/assets/images/projects/Exit 18/3.jpg",
+        "/assets/images/projects/Exit 18/4.jpg",
+        "/assets/images/projects/Exit 18/5.jpg",
+        "/assets/images/projects/Exit 18/6.jpg",
+        "/assets/images/projects/Exit 18/7.jpg",
+        "/assets/images/projects/Exit 18/8.jpg",
+        "/assets/images/projects/Exit 18/9.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Exit 18/Exit 18.png",
-        "/assets/images/projects/Exit 18/QR.png"
+        "/assets/images/projects/Exit 18/1.jpg",
+        "/assets/images/projects/Exit 18/2.jpg",
+        "/assets/images/projects/Exit 18/3.jpg",
+        "/assets/images/projects/Exit 18/4.jpg",
+        "/assets/images/projects/Exit 18/5.jpg",
+        "/assets/images/projects/Exit 18/6.jpg",
+        "/assets/images/projects/Exit 18/7.jpg",
+        "/assets/images/projects/Exit 18/8.jpg",
+        "/assets/images/projects/Exit 18/9.jpg"
       ],
-      main_image_url: "/assets/images/projects/Exit 18/Exit 18.png",
+      main_image_url: "/assets/images/projects/Exit 18/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -824,14 +822,28 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["المرحلة الأولى: البنية التحتية", "المرحلة الثانية: الوحدات الصناعية", "المرحلة الثالثة: المناطق السكنية"]
       },
       images: [
-        "/assets/images/projects/Exit 18/Exit 18.png",
-        "/assets/images/projects/Exit 18/QR.png"
+        "/assets/images/projects/Exit 18/1.jpg",
+        "/assets/images/projects/Exit 18/2.jpg",
+        "/assets/images/projects/Exit 18/3.jpg",
+        "/assets/images/projects/Exit 18/4.jpg",
+        "/assets/images/projects/Exit 18/5.jpg",
+        "/assets/images/projects/Exit 18/6.jpg",
+        "/assets/images/projects/Exit 18/7.jpg",
+        "/assets/images/projects/Exit 18/8.jpg",
+        "/assets/images/projects/Exit 18/9.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Exit 18/Exit 18.png",
-        "/assets/images/projects/Exit 18/QR.png"
+        "/assets/images/projects/Exit 18/1.jpg",
+        "/assets/images/projects/Exit 18/2.jpg",
+        "/assets/images/projects/Exit 18/3.jpg",
+        "/assets/images/projects/Exit 18/4.jpg",
+        "/assets/images/projects/Exit 18/5.jpg",
+        "/assets/images/projects/Exit 18/6.jpg",
+        "/assets/images/projects/Exit 18/7.jpg",
+        "/assets/images/projects/Exit 18/8.jpg",
+        "/assets/images/projects/Exit 18/9.jpg"
       ],
-      main_image_url: "/assets/images/projects/Exit 18/Exit 18.png",
+      main_image_url: "/assets/images/projects/Exit 18/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -886,14 +898,18 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["Phase 1: Infrastructure", "Phase 2: Industrial Units", "Phase 3: Specialized Manufacturing"]
       },
       images: [
-        "/assets/images/projects/ALMANAKH/ALMANAKH.png",
-        "/assets/images/projects/ALMANAKH/QR.png"
+        "/assets/images/projects/ALMANAKH/1.JPG",
+        "/assets/images/projects/ALMANAKH/2.JPG",
+        "/assets/images/projects/ALMANAKH/3.JPG",
+        "/assets/images/projects/ALMANAKH/4.JPG"
       ],
       images_urls: [
-        "/assets/images/projects/ALMANAKH/ALMANAKH.png",
-        "/assets/images/projects/ALMANAKH/QR.png"
+        "/assets/images/projects/ALMANAKH/1.JPG",
+        "/assets/images/projects/ALMANAKH/2.JPG",
+        "/assets/images/projects/ALMANAKH/3.JPG",
+        "/assets/images/projects/ALMANAKH/4.JPG"
       ],
-      main_image_url: "/assets/images/projects/ALMANAKH/ALMANAKH.png",
+      main_image_url: "/assets/images/projects/ALMANAKH/1.JPG",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -946,14 +962,18 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["المرحلة الأولى: البنية التحتية", "المرحلة الثانية: الوحدات الصناعية", "المرحلة الثالثة: التصنيع المتخصص"]
       },
       images: [
-        "/assets/images/projects/ALMANAKH/ALMANAKH.png",
-        "/assets/images/projects/ALMANAKH/QR.png"
+        "/assets/images/projects/ALMANAKH/1.JPG",
+        "/assets/images/projects/ALMANAKH/2.JPG",
+        "/assets/images/projects/ALMANAKH/3.JPG",
+        "/assets/images/projects/ALMANAKH/4.JPG"
       ],
       images_urls: [
-        "/assets/images/projects/ALMANAKH/ALMANAKH.png",
-        "/assets/images/projects/ALMANAKH/QR.png"
+        "/assets/images/projects/ALMANAKH/1.JPG",
+        "/assets/images/projects/ALMANAKH/2.JPG",
+        "/assets/images/projects/ALMANAKH/3.JPG",
+        "/assets/images/projects/ALMANAKH/4.JPG"
       ],
-      main_image_url: "/assets/images/projects/ALMANAKH/ALMANAKH.png",
+      main_image_url: "/assets/images/projects/ALMANAKH/1.JPG",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -1008,7 +1028,6 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["Phase 1: Infrastructure", "Phase 2: Industrial Units", "Phase 3: Factory Development"]
       },
       images: [
-        "/assets/images/projects/mashael/Mashael.JPG",
         "/assets/images/projects/mashael/1.jpg",
         "/assets/images/projects/mashael/2.jpg",
         "/assets/images/projects/mashael/3.jpg",
@@ -1019,10 +1038,9 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/mashael/8.jpg",
         "/assets/images/projects/mashael/9.jpg",
         "/assets/images/projects/mashael/10.jpg",
-        "/assets/images/projects/mashael/QR.png"
+        "/assets/images/projects/mashael/11.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/mashael/Mashael.JPG",
         "/assets/images/projects/mashael/1.jpg",
         "/assets/images/projects/mashael/2.jpg",
         "/assets/images/projects/mashael/3.jpg",
@@ -1033,9 +1051,9 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/mashael/8.jpg",
         "/assets/images/projects/mashael/9.jpg",
         "/assets/images/projects/mashael/10.jpg",
-        "/assets/images/projects/mashael/QR.png"
+        "/assets/images/projects/mashael/11.jpg"
       ],
-      main_image_url: "/assets/images/projects/mashael/Mashael.JPG",
+      main_image_url: "/assets/images/projects/mashael/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -1088,7 +1106,6 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["المرحلة الأولى: البنية التحتية", "المرحلة الثانية: الوحدات الصناعية", "المرحلة الثالثة: تطوير المصانع"]
       },
       images: [
-        "/assets/images/projects/mashael/Mashael.JPG",
         "/assets/images/projects/mashael/1.jpg",
         "/assets/images/projects/mashael/2.jpg",
         "/assets/images/projects/mashael/3.jpg",
@@ -1099,10 +1116,9 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/mashael/8.jpg",
         "/assets/images/projects/mashael/9.jpg",
         "/assets/images/projects/mashael/10.jpg",
-        "/assets/images/projects/mashael/QR.png"
+        "/assets/images/projects/mashael/11.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/mashael/Mashael.JPG",
         "/assets/images/projects/mashael/1.jpg",
         "/assets/images/projects/mashael/2.jpg",
         "/assets/images/projects/mashael/3.jpg",
@@ -1113,9 +1129,9 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/mashael/8.jpg",
         "/assets/images/projects/mashael/9.jpg",
         "/assets/images/projects/mashael/10.jpg",
-        "/assets/images/projects/mashael/QR.png"
+        "/assets/images/projects/mashael/11.jpg"
       ],
-      main_image_url: "/assets/images/projects/mashael/Mashael.JPG",
+      main_image_url: "/assets/images/projects/mashael/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -1170,14 +1186,30 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["Phase 1: Infrastructure", "Phase 2: Industrial Units", "Phase 3: Residential Areas"]
       },
       images: [
-        "/assets/images/projects/96/96.png",
-        "/assets/images/projects/96/QR.png"
+        "/assets/images/projects/96/1.jpg",
+        "/assets/images/projects/96/2.jpg",
+        "/assets/images/projects/96/3.jpg",
+        "/assets/images/projects/96/4.jpg",
+        "/assets/images/projects/96/5.jpg",
+        "/assets/images/projects/96/6.jpg",
+        "/assets/images/projects/96/7.jpg",
+        "/assets/images/projects/96/8.jpg",
+        "/assets/images/projects/96/9.jpg",
+        "/assets/images/projects/96/10.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/96/96.png",
-        "/assets/images/projects/96/QR.png"
+        "/assets/images/projects/96/1.jpg",
+        "/assets/images/projects/96/2.jpg",
+        "/assets/images/projects/96/3.jpg",
+        "/assets/images/projects/96/4.jpg",
+        "/assets/images/projects/96/5.jpg",
+        "/assets/images/projects/96/6.jpg",
+        "/assets/images/projects/96/7.jpg",
+        "/assets/images/projects/96/8.jpg",
+        "/assets/images/projects/96/9.jpg",
+        "/assets/images/projects/96/10.jpg"
       ],
-      main_image_url: "/assets/images/projects/96/96.png",
+      main_image_url: "/assets/images/projects/96/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -1230,14 +1262,30 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["المرحلة الأولى: البنية التحتية", "المرحلة الثانية: الوحدات الصناعية", "المرحلة الثالثة: المناطق السكنية"]
       },
       images: [
-        "/assets/images/projects/96/96.png",
-        "/assets/images/projects/96/QR.png"
+        "/assets/images/projects/96/1.jpg",
+        "/assets/images/projects/96/2.jpg",
+        "/assets/images/projects/96/3.jpg",
+        "/assets/images/projects/96/4.jpg",
+        "/assets/images/projects/96/5.jpg",
+        "/assets/images/projects/96/6.jpg",
+        "/assets/images/projects/96/7.jpg",
+        "/assets/images/projects/96/8.jpg",
+        "/assets/images/projects/96/9.jpg",
+        "/assets/images/projects/96/10.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/96/96.png",
-        "/assets/images/projects/96/QR.png"
+        "/assets/images/projects/96/1.jpg",
+        "/assets/images/projects/96/2.jpg",
+        "/assets/images/projects/96/3.jpg",
+        "/assets/images/projects/96/4.jpg",
+        "/assets/images/projects/96/5.jpg",
+        "/assets/images/projects/96/6.jpg",
+        "/assets/images/projects/96/7.jpg",
+        "/assets/images/projects/96/8.jpg",
+        "/assets/images/projects/96/9.jpg",
+        "/assets/images/projects/96/10.jpg"
       ],
-      main_image_url: "/assets/images/projects/96/96.png",
+      main_image_url: "/assets/images/projects/96/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -1292,14 +1340,22 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["Phase 1: Infrastructure", "Phase 2: Industrial Units", "Phase 3: Commercial Areas"]
       },
       images: [
-        "/assets/images/projects/Durrat/Durrat.png",
-        "/assets/images/projects/Durrat/QR.png"
+        "/assets/images/projects/Durrat/1.jpg",
+        "/assets/images/projects/Durrat/2.jpg",
+        "/assets/images/projects/Durrat/3.jpg",
+        "/assets/images/projects/Durrat/4.jpg",
+        "/assets/images/projects/Durrat/5.jpg",
+        "/assets/images/projects/Durrat/6.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Durrat/Durrat.png",
-        "/assets/images/projects/Durrat/QR.png"
+        "/assets/images/projects/Durrat/1.jpg",
+        "/assets/images/projects/Durrat/2.jpg",
+        "/assets/images/projects/Durrat/3.jpg",
+        "/assets/images/projects/Durrat/4.jpg",
+        "/assets/images/projects/Durrat/5.jpg",
+        "/assets/images/projects/Durrat/6.jpg"
       ],
-      main_image_url: "/assets/images/projects/Durrat/Durrat.png",
+      main_image_url: "/assets/images/projects/Durrat/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -1352,14 +1408,22 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["المرحلة الأولى: البنية التحتية", "المرحلة الثانية: الوحدات الصناعية", "المرحلة الثالثة: المناطق التجارية"]
       },
       images: [
-        "/assets/images/projects/Durrat/Durrat.png",
-        "/assets/images/projects/Durrat/QR.png"
+        "/assets/images/projects/Durrat/1.jpg",
+        "/assets/images/projects/Durrat/2.jpg",
+        "/assets/images/projects/Durrat/3.jpg",
+        "/assets/images/projects/Durrat/4.jpg",
+        "/assets/images/projects/Durrat/5.jpg",
+        "/assets/images/projects/Durrat/6.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Durrat/Durrat.png",
-        "/assets/images/projects/Durrat/QR.png"
+        "/assets/images/projects/Durrat/1.jpg",
+        "/assets/images/projects/Durrat/2.jpg",
+        "/assets/images/projects/Durrat/3.jpg",
+        "/assets/images/projects/Durrat/4.jpg",
+        "/assets/images/projects/Durrat/5.jpg",
+        "/assets/images/projects/Durrat/6.jpg"
       ],
-      main_image_url: "/assets/images/projects/Durrat/Durrat.png",
+      main_image_url: "/assets/images/projects/Durrat/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -1414,14 +1478,32 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["Phase 1: Infrastructure", "Phase 2: Warehousing Units", "Phase 3: Commercial Areas"]
       },
       images: [
-        "/assets/images/projects/Raneem/Raneem.png",
-        "/assets/images/projects/Raneem/QR.png"
+        "/assets/images/projects/Raneem/1.jpg",
+        "/assets/images/projects/Raneem/2.jpg",
+        "/assets/images/projects/Raneem/3.jpg",
+        "/assets/images/projects/Raneem/4.jpg",
+        "/assets/images/projects/Raneem/5.jpg",
+        "/assets/images/projects/Raneem/6.JPG",
+        "/assets/images/projects/Raneem/7.jpg",
+        "/assets/images/projects/Raneem/8.jpg",
+        "/assets/images/projects/Raneem/9.JPG",
+        "/assets/images/projects/Raneem/10.JPG",
+        "/assets/images/projects/Raneem/11.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Raneem/Raneem.png",
-        "/assets/images/projects/Raneem/QR.png"
+        "/assets/images/projects/Raneem/1.jpg",
+        "/assets/images/projects/Raneem/2.jpg",
+        "/assets/images/projects/Raneem/3.jpg",
+        "/assets/images/projects/Raneem/4.jpg",
+        "/assets/images/projects/Raneem/5.jpg",
+        "/assets/images/projects/Raneem/6.JPG",
+        "/assets/images/projects/Raneem/7.jpg",
+        "/assets/images/projects/Raneem/8.jpg",
+        "/assets/images/projects/Raneem/9.JPG",
+        "/assets/images/projects/Raneem/10.JPG",
+        "/assets/images/projects/Raneem/11.jpg"
       ],
-      main_image_url: "/assets/images/projects/Raneem/Raneem.png",
+      main_image_url: "/assets/images/projects/Raneem/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -1474,14 +1556,32 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["المرحلة الأولى: البنية التحتية", "المرحلة الثانية: وحدات المستودعات", "المرحلة الثالثة: المناطق التجارية"]
       },
       images: [
-        "/assets/images/projects/Raneem/Raneem.png",
-        "/assets/images/projects/Raneem/QR.png"
+        "/assets/images/projects/Raneem/1.jpg",
+        "/assets/images/projects/Raneem/2.jpg",
+        "/assets/images/projects/Raneem/3.jpg",
+        "/assets/images/projects/Raneem/4.jpg",
+        "/assets/images/projects/Raneem/5.jpg",
+        "/assets/images/projects/Raneem/6.JPG",
+        "/assets/images/projects/Raneem/7.jpg",
+        "/assets/images/projects/Raneem/8.jpg",
+        "/assets/images/projects/Raneem/9.JPG",
+        "/assets/images/projects/Raneem/10.JPG",
+        "/assets/images/projects/Raneem/11.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Raneem/Raneem.png",
-        "/assets/images/projects/Raneem/QR.png"
+        "/assets/images/projects/Raneem/1.jpg",
+        "/assets/images/projects/Raneem/2.jpg",
+        "/assets/images/projects/Raneem/3.jpg",
+        "/assets/images/projects/Raneem/4.jpg",
+        "/assets/images/projects/Raneem/5.jpg",
+        "/assets/images/projects/Raneem/6.JPG",
+        "/assets/images/projects/Raneem/7.jpg",
+        "/assets/images/projects/Raneem/8.jpg",
+        "/assets/images/projects/Raneem/9.JPG",
+        "/assets/images/projects/Raneem/10.JPG",
+        "/assets/images/projects/Raneem/11.jpg"
       ],
-      main_image_url: "/assets/images/projects/Raneem/Raneem.png",
+      main_image_url: "/assets/images/projects/Raneem/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -1536,7 +1636,6 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["Phase 1: Infrastructure", "Phase 2: Warehousing Units", "Phase 3: Residential Areas"]
       },
       images: [
-        "/assets/images/projects/Istanbul/Istanbul.jpg",
         "/assets/images/projects/Istanbul/1.jpg",
         "/assets/images/projects/Istanbul/2.jpg",
         "/assets/images/projects/Istanbul/3.jpg",
@@ -1551,19 +1650,9 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/Istanbul/12.jpg",
         "/assets/images/projects/Istanbul/13.jpg",
         "/assets/images/projects/Istanbul/14.jpg",
-        "/assets/images/projects/Istanbul/15.jpg",
-        "/assets/images/projects/Istanbul/16.jpg",
-        "/assets/images/projects/Istanbul/17.jpg",
-        "/assets/images/projects/Istanbul/18.jpg",
-        "/assets/images/projects/Istanbul/19.jpg",
-        "/assets/images/projects/Istanbul/20.jpg",
-        "/assets/images/projects/Istanbul/21.jpg",
-        "/assets/images/projects/Istanbul/22.jpg",
-        "/assets/images/projects/Istanbul/23.jpg",
-        "/assets/images/projects/Istanbul/QR.png"
+        "/assets/images/projects/Istanbul/15.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Istanbul/Istanbul.jpg",
         "/assets/images/projects/Istanbul/1.jpg",
         "/assets/images/projects/Istanbul/2.jpg",
         "/assets/images/projects/Istanbul/3.jpg",
@@ -1578,18 +1667,9 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/Istanbul/12.jpg",
         "/assets/images/projects/Istanbul/13.jpg",
         "/assets/images/projects/Istanbul/14.jpg",
-        "/assets/images/projects/Istanbul/15.jpg",
-        "/assets/images/projects/Istanbul/16.jpg",
-        "/assets/images/projects/Istanbul/17.jpg",
-        "/assets/images/projects/Istanbul/18.jpg",
-        "/assets/images/projects/Istanbul/19.jpg",
-        "/assets/images/projects/Istanbul/20.jpg",
-        "/assets/images/projects/Istanbul/21.jpg",
-        "/assets/images/projects/Istanbul/22.jpg",
-        "/assets/images/projects/Istanbul/23.jpg",
-        "/assets/images/projects/Istanbul/QR.png"
+        "/assets/images/projects/Istanbul/15.jpg"
       ],
-      main_image_url: "/assets/images/projects/Istanbul/Istanbul.jpg",
+      main_image_url: "/assets/images/projects/Istanbul/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -1603,7 +1683,7 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
       industrialUnits: 200,
       loadingAreas: 15,
       status: "Under Construction",
-      location: "Istanbul Road, Al-Sulay District",
+      location: "Prince Mohammed Bin Abdulrahman Bin Abdulaziz Road",
       category: "Warehousing Plans",
       year: "2024",
       value: "300M",
@@ -1642,7 +1722,6 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["المرحلة الأولى: البنية التحتية", "المرحلة الثانية: وحدات المستودعات", "المرحلة الثالثة: المناطق السكنية"]
       },
       images: [
-        "/assets/images/projects/Istanbul/Istanbul.jpg",
         "/assets/images/projects/Istanbul/1.jpg",
         "/assets/images/projects/Istanbul/2.jpg",
         "/assets/images/projects/Istanbul/3.jpg",
@@ -1657,19 +1736,9 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/Istanbul/12.jpg",
         "/assets/images/projects/Istanbul/13.jpg",
         "/assets/images/projects/Istanbul/14.jpg",
-        "/assets/images/projects/Istanbul/15.jpg",
-        "/assets/images/projects/Istanbul/16.jpg",
-        "/assets/images/projects/Istanbul/17.jpg",
-        "/assets/images/projects/Istanbul/18.jpg",
-        "/assets/images/projects/Istanbul/19.jpg",
-        "/assets/images/projects/Istanbul/20.jpg",
-        "/assets/images/projects/Istanbul/21.jpg",
-        "/assets/images/projects/Istanbul/22.jpg",
-        "/assets/images/projects/Istanbul/23.jpg",
-        "/assets/images/projects/Istanbul/QR.png"
+        "/assets/images/projects/Istanbul/15.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Istanbul/Istanbul.jpg",
         "/assets/images/projects/Istanbul/1.jpg",
         "/assets/images/projects/Istanbul/2.jpg",
         "/assets/images/projects/Istanbul/3.jpg",
@@ -1684,18 +1753,9 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/Istanbul/12.jpg",
         "/assets/images/projects/Istanbul/13.jpg",
         "/assets/images/projects/Istanbul/14.jpg",
-        "/assets/images/projects/Istanbul/15.jpg",
-        "/assets/images/projects/Istanbul/16.jpg",
-        "/assets/images/projects/Istanbul/17.jpg",
-        "/assets/images/projects/Istanbul/18.jpg",
-        "/assets/images/projects/Istanbul/19.jpg",
-        "/assets/images/projects/Istanbul/20.jpg",
-        "/assets/images/projects/Istanbul/21.jpg",
-        "/assets/images/projects/Istanbul/22.jpg",
-        "/assets/images/projects/Istanbul/23.jpg",
-        "/assets/images/projects/Istanbul/QR.png"
+        "/assets/images/projects/Istanbul/15.jpg"
       ],
-      main_image_url: "/assets/images/projects/Istanbul/Istanbul.jpg",
+      main_image_url: "/assets/images/projects/Istanbul/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -1709,7 +1769,7 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
       industrialUnits: 200,
       loadingAreas: 15,
       status: "قيد الإنشاء",
-      location: "طريق إسطنبول، حي السلي",
+      location: "طريق الأمير محمد بن عبدالرحمن بن عبدالعزيز",
       category: "مخططات المستودعات",
       year: "2024",
       value: "300 مليون",
@@ -1750,14 +1810,24 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["Phase 1: Infrastructure", "Phase 2: Warehousing Units", "Phase 3: Residential Areas"]
       },
       images: [
-        "/assets/images/projects/Randa/Randa.png",
-        "/assets/images/projects/Randa/QR.png"
+        "/assets/images/projects/Randa/1.jpg",
+        "/assets/images/projects/Randa/2.jpg",
+        "/assets/images/projects/Randa/3.jpg",
+        "/assets/images/projects/Randa/4.jpg",
+        "/assets/images/projects/Randa/5.jpg",
+        "/assets/images/projects/Randa/6.jpg",
+        "/assets/images/projects/Randa/7.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Randa/Randa.png",
-        "/assets/images/projects/Randa/QR.png"
+        "/assets/images/projects/Randa/1.jpg",
+        "/assets/images/projects/Randa/2.jpg",
+        "/assets/images/projects/Randa/3.jpg",
+        "/assets/images/projects/Randa/4.jpg",
+        "/assets/images/projects/Randa/5.jpg",
+        "/assets/images/projects/Randa/6.jpg",
+        "/assets/images/projects/Randa/7.jpg"
       ],
-      main_image_url: "/assets/images/projects/Randa/Randa.png",
+      main_image_url: "/assets/images/projects/Randa/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -1810,14 +1880,24 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["المرحلة الأولى: البنية التحتية", "المرحلة الثانية: وحدات المستودعات", "المرحلة الثالثة: المناطق السكنية"]
       },
       images: [
-        "/assets/images/projects/Randa/Randa.png",
-        "/assets/images/projects/Randa/QR.png"
+        "/assets/images/projects/Randa/1.jpg",
+        "/assets/images/projects/Randa/2.jpg",
+        "/assets/images/projects/Randa/3.jpg",
+        "/assets/images/projects/Randa/4.jpg",
+        "/assets/images/projects/Randa/5.jpg",
+        "/assets/images/projects/Randa/6.jpg",
+        "/assets/images/projects/Randa/7.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Randa/Randa.png",
-        "/assets/images/projects/Randa/QR.png"
+        "/assets/images/projects/Randa/1.jpg",
+        "/assets/images/projects/Randa/2.jpg",
+        "/assets/images/projects/Randa/3.jpg",
+        "/assets/images/projects/Randa/4.jpg",
+        "/assets/images/projects/Randa/5.jpg",
+        "/assets/images/projects/Randa/6.jpg",
+        "/assets/images/projects/Randa/7.jpg"
       ],
-      main_image_url: "/assets/images/projects/Randa/Randa.png",
+      main_image_url: "/assets/images/projects/Randa/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -1872,14 +1952,34 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["Phase 1: Infrastructure", "Phase 2: Warehousing Units", "Phase 3: Residential Areas"]
       },
       images: [
-        "/assets/images/projects/Rana/Rana.png",
-        "/assets/images/projects/Rana/QR.png"
+        "/assets/images/projects/Rana/1.JPG",
+        "/assets/images/projects/Rana/2.JPG",
+        "/assets/images/projects/Rana/3.JPG",
+        "/assets/images/projects/Rana/4.JPG",
+        "/assets/images/projects/Rana/5.JPG",
+        "/assets/images/projects/Rana/6.JPG",
+        "/assets/images/projects/Rana/7.JPG",
+        "/assets/images/projects/Rana/8.JPG",
+        "/assets/images/projects/Rana/9.JPG",
+        "/assets/images/projects/Rana/10.JPG",
+        "/assets/images/projects/Rana/11.JPG",
+        "/assets/images/projects/Rana/12.JPG"
       ],
       images_urls: [
-        "/assets/images/projects/Rana/Rana.png",
-        "/assets/images/projects/Rana/QR.png"
+        "/assets/images/projects/Rana/1.JPG",
+        "/assets/images/projects/Rana/2.JPG",
+        "/assets/images/projects/Rana/3.JPG",
+        "/assets/images/projects/Rana/4.JPG",
+        "/assets/images/projects/Rana/5.JPG",
+        "/assets/images/projects/Rana/6.JPG",
+        "/assets/images/projects/Rana/7.JPG",
+        "/assets/images/projects/Rana/8.JPG",
+        "/assets/images/projects/Rana/9.JPG",
+        "/assets/images/projects/Rana/10.JPG",
+        "/assets/images/projects/Rana/11.JPG",
+        "/assets/images/projects/Rana/12.JPG"
       ],
-      main_image_url: "/assets/images/projects/Rana/Rana.png",
+      main_image_url: "/assets/images/projects/Rana/1.JPG",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -1932,14 +2032,34 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["المرحلة الأولى: البنية التحتية", "المرحلة الثانية: وحدات المستودعات", "المرحلة الثالثة: المناطق السكنية"]
       },
       images: [
-        "/assets/images/projects/Rana/Rana.png",
-        "/assets/images/projects/Rana/QR.png"
+        "/assets/images/projects/Rana/1.JPG",
+        "/assets/images/projects/Rana/2.JPG",
+        "/assets/images/projects/Rana/3.JPG",
+        "/assets/images/projects/Rana/4.JPG",
+        "/assets/images/projects/Rana/5.JPG",
+        "/assets/images/projects/Rana/6.JPG",
+        "/assets/images/projects/Rana/7.JPG",
+        "/assets/images/projects/Rana/8.JPG",
+        "/assets/images/projects/Rana/9.JPG",
+        "/assets/images/projects/Rana/10.JPG",
+        "/assets/images/projects/Rana/11.JPG",
+        "/assets/images/projects/Rana/12.JPG"
       ],
       images_urls: [
-        "/assets/images/projects/Rana/Rana.png",
-        "/assets/images/projects/Rana/QR.png"
+        "/assets/images/projects/Rana/1.JPG",
+        "/assets/images/projects/Rana/2.JPG",
+        "/assets/images/projects/Rana/3.JPG",
+        "/assets/images/projects/Rana/4.JPG",
+        "/assets/images/projects/Rana/5.JPG",
+        "/assets/images/projects/Rana/6.JPG",
+        "/assets/images/projects/Rana/7.JPG",
+        "/assets/images/projects/Rana/8.JPG",
+        "/assets/images/projects/Rana/9.JPG",
+        "/assets/images/projects/Rana/10.JPG",
+        "/assets/images/projects/Rana/11.JPG",
+        "/assets/images/projects/Rana/12.JPG"
       ],
-      main_image_url: "/assets/images/projects/Rana/Rana.png",
+      main_image_url: "/assets/images/projects/Rana/1.JPG",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -2015,7 +2135,7 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/ALNAMOTHAJIYA/7.jpg",
         "/assets/images/projects/ALNAMOTHAJIYA/QR.png"
       ],
-      main_image_url: "/assets/images/projects/ALNAMOTHAJIYA/ALNAMOTHAJIYA.jpg",
+      main_image_url: "/assets/images/projects/ALNAMOTHAJIYA/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -2029,7 +2149,7 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
       industrialUnits: 250,
       loadingAreas: 18,
       status: "Under Construction",
-      location: "Istanbul Road, Al-Sulay District",
+      location: "Prince Mohammed Bin Abdulrahman Bin Abdulaziz Road",
       category: "Warehousing Plans",
       year: "2024",
       value: "250M",
@@ -2089,7 +2209,7 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/ALNAMOTHAJIYA/7.jpg",
         "/assets/images/projects/ALNAMOTHAJIYA/QR.png"
       ],
-      main_image_url: "/assets/images/projects/ALNAMOTHAJIYA/ALNAMOTHAJIYA.jpg",
+      main_image_url: "/assets/images/projects/ALNAMOTHAJIYA/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -2103,7 +2223,7 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
       industrialUnits: 250,
       loadingAreas: 18,
       status: "قيد الإنشاء",
-      location: "طريق إسطنبول، حي السلي",
+      location: "طريق الأمير محمد بن عبدالرحمن بن عبدالعزيز",
       category: "مخططات المستودعات",
       year: "2024",
       value: "250 مليون",
@@ -2144,7 +2264,6 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["Phase 1: Infrastructure", "Phase 2: Warehousing Units", "Phase 3: Commercial Areas"]
       },
       images: [
-        "/assets/images/projects/Aziziyah/Aziziyah.JPG",
         "/assets/images/projects/Aziziyah/1.jpg",
         "/assets/images/projects/Aziziyah/2.jpg",
         "/assets/images/projects/Aziziyah/3.jpg",
@@ -2156,10 +2275,10 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/Aziziyah/9.jpg",
         "/assets/images/projects/Aziziyah/10.jpg",
         "/assets/images/projects/Aziziyah/11.jpg",
-        "/assets/images/projects/Aziziyah/QR.png"
+        "/assets/images/projects/Aziziyah/12.jpg",
+        "/assets/images/projects/Aziziyah/13.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Aziziyah/Aziziyah.JPG",
         "/assets/images/projects/Aziziyah/1.jpg",
         "/assets/images/projects/Aziziyah/2.jpg",
         "/assets/images/projects/Aziziyah/3.jpg",
@@ -2171,9 +2290,10 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/Aziziyah/9.jpg",
         "/assets/images/projects/Aziziyah/10.jpg",
         "/assets/images/projects/Aziziyah/11.jpg",
-        "/assets/images/projects/Aziziyah/QR.png"
+        "/assets/images/projects/Aziziyah/12.jpg",
+        "/assets/images/projects/Aziziyah/13.jpg"
       ],
-      main_image_url: "/assets/images/projects/Aziziyah/Aziziyah.JPG",
+      main_image_url: "/assets/images/projects/Aziziyah/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -2226,7 +2346,6 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         phases: ["المرحلة الأولى: البنية التحتية", "المرحلة الثانية: وحدات المستودعات", "المرحلة الثالثة: المناطق التجارية"]
       },
       images: [
-        "/assets/images/projects/Aziziyah/Aziziyah.JPG",
         "/assets/images/projects/Aziziyah/1.jpg",
         "/assets/images/projects/Aziziyah/2.jpg",
         "/assets/images/projects/Aziziyah/3.jpg",
@@ -2238,10 +2357,10 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/Aziziyah/9.jpg",
         "/assets/images/projects/Aziziyah/10.jpg",
         "/assets/images/projects/Aziziyah/11.jpg",
-        "/assets/images/projects/Aziziyah/QR.png"
+        "/assets/images/projects/Aziziyah/12.jpg",
+        "/assets/images/projects/Aziziyah/13.jpg"
       ],
       images_urls: [
-        "/assets/images/projects/Aziziyah/Aziziyah.JPG",
         "/assets/images/projects/Aziziyah/1.jpg",
         "/assets/images/projects/Aziziyah/2.jpg",
         "/assets/images/projects/Aziziyah/3.jpg",
@@ -2253,9 +2372,10 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
         "/assets/images/projects/Aziziyah/9.jpg",
         "/assets/images/projects/Aziziyah/10.jpg",
         "/assets/images/projects/Aziziyah/11.jpg",
-        "/assets/images/projects/Aziziyah/QR.png"
+        "/assets/images/projects/Aziziyah/12.jpg",
+        "/assets/images/projects/Aziziyah/13.jpg"
       ],
-      main_image_url: "/assets/images/projects/Aziziyah/Aziziyah.JPG",
+      main_image_url: "/assets/images/projects/Aziziyah/1.jpg",
       video: "/assets/videos/project-video.mp4",
       video_url: "/assets/videos/project-video.mp4",
       brochure: "/assets/documents/project-brochure.pdf",
@@ -2278,5 +2398,885 @@ export const projectsData: Record<string, { EN: Project; AR: Project }> = {
       createdAt: "2022-01-01",
       updatedAt: "2024-01-01"
     }
+  },
+  "16": {
+    EN: {
+      id: "16",
+      title: "AL-FAISALIAH INDUSTRIAL PLAN",
+      description: "An integrated industrial plan designed to support industrial activities with modern facilities that meet the needs of investors and workshop owners, featuring advanced infrastructure and comprehensive services.",
+      overview: "An integrated industrial plan designed to support industrial activities with modern facilities that meet the needs of investors and workshop owners, featuring advanced infrastructure and comprehensive services.",
+      features: [
+        "Wide road networks designed to accommodate heavy vehicles",
+        "Advanced infrastructure, including water, sewage, and electricity networks",
+        "Designated areas for industrial workshops with flexible layouts to suit various activities",
+        "Industrial workshops of various sizes to meet the needs of different activities",
+        "Spaces prepared for establishing small and medium-sized factories",
+        "Comprehensive essential services, including water, electricity, and sewage"
+      ],
+      specifications: {
+        totalArea: "8,704.6 m²",
+        location: "Southern Ring Road, Al-Faisaliah District",
+        status: "Under Construction",
+        year: "2024",
+        value: "350M"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["Planning", "Infrastructure", "Construction", "Completion"]
+      },
+      images: [
+        "/assets/images/projects/faisaliyah/1.jpg",
+        "/assets/images/projects/faisaliyah/2.jpg",
+        "/assets/images/projects/faisaliyah/3.jpg",
+        "/assets/images/projects/faisaliyah/4.jpg",
+        "/assets/images/projects/faisaliyah/5.JPG",
+        "/assets/images/projects/faisaliyah/6.JPG",
+        "/assets/images/projects/faisaliyah/7.jpg",
+        "/assets/images/projects/faisaliyah/8.JPG",
+        "/assets/images/projects/faisaliyah/9.jpg"
+      ],
+      images_urls: [
+        "/assets/images/projects/faisaliyah/1.jpg",
+        "/assets/images/projects/faisaliyah/2.jpg",
+        "/assets/images/projects/faisaliyah/3.jpg",
+        "/assets/images/projects/faisaliyah/4.jpg",
+        "/assets/images/projects/faisaliyah/5.JPG",
+        "/assets/images/projects/faisaliyah/6.JPG",
+        "/assets/images/projects/faisaliyah/7.jpg",
+        "/assets/images/projects/faisaliyah/8.JPG",
+        "/assets/images/projects/faisaliyah/9.jpg"
+      ],
+      main_image_url: "/assets/images/projects/faisaliyah/1.jpg",
+      totalArea: "8,704.6 m²",
+      area: "8,704.6 m²",
+      status: "Under Construction",
+      location: "Southern Ring Road, Al-Faisaliah District",
+      investmentType: "Industrial Plan",
+      category: "Industrial Plans",
+      year: "2024",
+      value: "350M",
+      long_description: "An integrated industrial plan designed to support industrial activities with modern facilities that meet the needs of investors and workshop owners, featuring advanced infrastructure and comprehensive services.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    },
+    AR: {
+      id: "16",
+      title: "مخطط الفيصلية الصناعي",
+      description: "مخطط صناعي متكامل مصمم لدعم الأنشطة الصناعية مع مرافق حديثة تلبي احتياجات المستثمرين وأصحاب الورش، ويتميز ببنية تحتية متقدمة وخدمات شاملة.",
+      overview: "مخطط صناعي متكامل مصمم لدعم الأنشطة الصناعية مع مرافق حديثة تلبي احتياجات المستثمرين وأصحاب الورش، ويتميز ببنية تحتية متقدمة وخدمات شاملة.",
+      features: [
+        "شبكات طرق واسعة مصممة لاستيعاب المركبات الثقيلة",
+        "بنية تحتية متقدمة تشمل شبكات المياه والصرف الصحي والكهرباء",
+        "مناطق مخصصة للورش الصناعية بتخطيطات مرنة تناسب الأنشطة المختلفة",
+        "ورش صناعية بأحجام متنوعة لتلبية احتياجات الأنشطة المختلفة",
+        "مساحات مجهزة لإقامة المصانع الصغيرة والمتوسطة",
+        "خدمات أساسية شاملة تشمل المياه والكهرباء والصرف الصحي"
+      ],
+      specifications: {
+        totalArea: "8,704.6 متر مربع",
+        location: " الدائري الجنوبي، حي الفيصلية",
+        status: "قيد الإنشاء",
+        year: "2024",
+        value: "350 مليون"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["التخطيط", "البنية التحتية", "البناء", "الإنجاز"]
+      },
+      images: [
+        "/assets/images/projects/faisaliyah/1.jpg",
+        "/assets/images/projects/faisaliyah/2.jpg",
+        "/assets/images/projects/faisaliyah/3.jpg",
+        "/assets/images/projects/faisaliyah/4.jpg",
+        "/assets/images/projects/faisaliyah/5.JPG",
+        "/assets/images/projects/faisaliyah/6.JPG",
+        "/assets/images/projects/faisaliyah/7.jpg",
+        "/assets/images/projects/faisaliyah/8.JPG",
+        "/assets/images/projects/faisaliyah/9.jpg"
+      ],
+      images_urls: [
+        "/assets/images/projects/faisaliyah/1.jpg",
+        "/assets/images/projects/faisaliyah/2.jpg",
+        "/assets/images/projects/faisaliyah/3.jpg",
+        "/assets/images/projects/faisaliyah/4.jpg",
+        "/assets/images/projects/faisaliyah/5.JPG",
+        "/assets/images/projects/faisaliyah/6.JPG",
+        "/assets/images/projects/faisaliyah/7.jpg",
+        "/assets/images/projects/faisaliyah/8.JPG",
+        "/assets/images/projects/faisaliyah/9.jpg"
+      ],
+      main_image_url: "/assets/images/projects/faisaliyah/1.jpg",
+      totalArea: "8,704.6 متر مربع",
+      area: "8,704.6 متر مربع",
+      status: "قيد الإنشاء",
+      location: "الطريق الدائري الجنوبي، حي الفيصلية",
+      investmentType: "مخطط صناعي",
+      category: "المخططات الصناعية",
+      year: "2024",
+      value: "350 مليون",
+      long_description: "مخطط صناعي متكامل مصمم لدعم الأنشطة الصناعية مع مرافق حديثة تلبي احتياجات المستثمرين وأصحاب الورش، ويتميز ببنية تحتية متقدمة وخدمات شاملة.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    }
+  },
+  "17": {
+    EN: {
+      id: "17",
+      title: "AL-MOHAMADIYAH INDUSTRIAL PLAN",
+      description: "An integrated industrial and commercial plan providing an ideal environment to support and develop industrial and commercial activities. The plan features advanced infrastructure and a comprehensive design that caters to the needs of investors, industrial companies, and commercial businesses.",
+      overview: "An integrated industrial and commercial plan providing an ideal environment to support and develop industrial and commercial activities. The plan features advanced infrastructure and a comprehensive design that caters to the needs of investors, industrial companies, and commercial businesses.",
+      features: [
+        "A modern road network designed to accommodate both heavy and light vehicle traffic",
+        "Comprehensive infrastructure, including water, sewage, and electricity networks",
+        "Designated areas for workshops, factories, commercial buildings, and retail shops",
+        "Industrial workshops of various sizes suitable for different industrial activities",
+        "Factories equipped to meet the needs of various industrial sectors",
+        "Commercial buildings prepared for office and business operations"
+      ],
+      specifications: {
+        totalArea: "41,257.09 m²",
+        location: "Prince Mohammed Bin Abdulrahman Bin Abdulaziz Road, Al-Mashael District",
+        status: "Under Construction",
+        year: "2024",
+        value: "400M"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["Planning", "Infrastructure", "Construction", "Completion"]
+      },
+      images: [
+        "/assets/images/projects/Muhammadiya/1.jpg",
+        "/assets/images/projects/Muhammadiya/2.jpg",
+        "/assets/images/projects/Muhammadiya/3.jpg",
+        "/assets/images/projects/Muhammadiya/4.jpg",
+        "/assets/images/projects/Muhammadiya/5.jpg",
+        "/assets/images/projects/Muhammadiya/6.jpg",
+        "/assets/images/projects/Muhammadiya/7.jpg",
+        "/assets/images/projects/Muhammadiya/8.jpg",
+        "/assets/images/projects/Muhammadiya/9.jpg"
+      ],
+      images_urls: [
+        "/assets/images/projects/Muhammadiya/1.jpg",
+        "/assets/images/projects/Muhammadiya/2.jpg",
+        "/assets/images/projects/Muhammadiya/3.jpg",
+        "/assets/images/projects/Muhammadiya/4.jpg",
+        "/assets/images/projects/Muhammadiya/5.jpg",
+        "/assets/images/projects/Muhammadiya/6.jpg",
+        "/assets/images/projects/Muhammadiya/7.jpg",
+        "/assets/images/projects/Muhammadiya/8.jpg",
+        "/assets/images/projects/Muhammadiya/9.jpg"
+      ],
+      main_image_url: "/assets/images/projects/Muhammadiya/1.jpg",
+      totalArea: "41,257.09 m²",
+      area: "41,257.09 m²",
+      status: "Under Construction",
+      location: "Prince Mohammed Bin Abdulrahman Bin Abdulaziz Road, Al-Mashael District",
+      investmentType: "Industrial and Commercial Plan",
+      category: "Industrial Plans",
+      year: "2024",
+      value: "400M",
+      long_description: "An integrated industrial and commercial plan providing an ideal environment to support and develop industrial and commercial activities. The plan features advanced infrastructure and a comprehensive design that caters to the needs of investors, industrial companies, and commercial businesses.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    },
+    AR: {
+      id: "17",
+      title: "مخطط المحمدية الصناعي",
+      description: "مخطط صناعي وتجاري متكامل يوفر بيئة مثالية لدعم وتطوير الأنشطة الصناعية والتجارية. يتميز المخطط ببنية تحتية متقدمة وتصميم شامل يلبي احتياجات المستثمرين والشركات الصناعية والأعمال التجارية.",
+      overview: "مخطط صناعي وتجاري متكامل يوفر بيئة مثالية لدعم وتطوير الأنشطة الصناعية والتجارية. يتميز المخطط ببنية تحتية متقدمة وتصميم شامل يلبي احتياجات المستثمرين والشركات الصناعية والأعمال التجارية.",
+      features: [
+        "شبكة طرق حديثة مصممة لاستيعاب حركة المركبات الثقيلة والخفيفة",
+        "بنية تحتية شاملة تشمل شبكات المياه والصرف الصحي والكهرباء",
+        "مناطق مخصصة للورش والمصانع والمباني التجارية والمحلات التجارية",
+        "ورش صناعية بأحجام متنوعة مناسبة للأنشطة الصناعية المختلفة",
+        "مصانع مجهزة لتلبية احتياجات القطاعات الصناعية المختلفة",
+        "مباني تجارية مجهزة للمكاتب والعمليات التجارية"
+      ],
+      specifications: {
+        totalArea: "41,257.09 متر مربع",
+        location: "طريق الأمير محمد بن عبدالرحمن بن عبدالعزيز، حي المشاعل",
+        status: "قيد الإنشاء",
+        year: "2024",
+        value: "400 مليون"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["التخطيط", "البنية التحتية", "البناء", "الإنجاز"]
+      },
+      images: [
+        "/assets/images/projects/Muhammadiya/1.jpg",
+        "/assets/images/projects/Muhammadiya/2.jpg",
+        "/assets/images/projects/Muhammadiya/3.jpg",
+        "/assets/images/projects/Muhammadiya/4.jpg",
+        "/assets/images/projects/Muhammadiya/5.jpg",
+        "/assets/images/projects/Muhammadiya/6.jpg",
+        "/assets/images/projects/Muhammadiya/7.jpg",
+        "/assets/images/projects/Muhammadiya/8.jpg",
+        "/assets/images/projects/Muhammadiya/9.jpg"
+      ],
+      images_urls: [
+        "/assets/images/projects/Muhammadiya/1.jpg",
+        "/assets/images/projects/Muhammadiya/2.jpg",
+        "/assets/images/projects/Muhammadiya/3.jpg",
+        "/assets/images/projects/Muhammadiya/4.jpg",
+        "/assets/images/projects/Muhammadiya/5.jpg",
+        "/assets/images/projects/Muhammadiya/6.jpg",
+        "/assets/images/projects/Muhammadiya/7.jpg",
+        "/assets/images/projects/Muhammadiya/8.jpg",
+        "/assets/images/projects/Muhammadiya/9.jpg"
+      ],
+      main_image_url: "/assets/images/projects/Muhammadiya/1.jpg",
+      totalArea: "41,257.09 متر مربع",
+      area: "41,257.09 متر مربع",
+      status: "قيد الإنشاء",
+      location: "طريق الأمير محمد بن عبدالرحمن بن عبدالعزيز، حي المشاعل",
+      investmentType: "مخطط صناعي وتجاري",
+      category: "المخططات الصناعية",
+      year: "2024",
+      value: "400 مليون",
+      long_description: "مخطط صناعي وتجاري متكامل يوفر بيئة مثالية لدعم وتطوير الأنشطة الصناعية والتجارية. يتميز المخطط ببنية تحتية متقدمة وتصميم شامل يلبي احتياجات المستثمرين والشركات الصناعية والأعمال التجارية.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    }
+  },
+  "18": {
+    EN: {
+      id: "18",
+      title: "TAIBAH WAREHOUSING PLAN",
+      description: "An integrated commercial warehousing plan offering a practical environment that meets the needs of companies and investors in the storage and logistics sectors. The project features a strategic location and advanced infrastructure, making it an ideal choice for business development.",
+      overview: "An integrated commercial warehousing plan offering a practical environment that meets the needs of companies and investors in the storage and logistics sectors. The project features a strategic location and advanced infrastructure, making it an ideal choice for business development.",
+      features: [
+        "A wide road network designed to facilitate the movement of heavy vehicles and trucks",
+        "Advanced infrastructure, including water, electricity, and sewage systems",
+        "Designated areas for commercial warehouses with flexible layouts to suit various needs",
+        "Commercial warehouses of various sizes suitable for all types of storage",
+        "Infrastructure equipped to support logistics activities and related services",
+        "Comprehensive essential services, including electricity, water, and transportation facilities"
+      ],
+      specifications: {
+        totalArea: "4,900 m²",
+        location: "Al-Kharj Road, Taibah District",
+        status: "Under Construction",
+        year: "2024",
+        value: "200M"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["Planning", "Infrastructure", "Construction", "Completion"]
+      },
+      images: [
+        "/assets/images/projects/Taibah/1.jpg",
+        "/assets/images/projects/Taibah/2.jpg",
+        "/assets/images/projects/Taibah/3.jpg",
+        "/assets/images/projects/Taibah/4.jpg"
+      ],
+      images_urls: [
+        "/assets/images/projects/Taibah/1.jpg",
+        "/assets/images/projects/Taibah/2.jpg",
+        "/assets/images/projects/Taibah/3.jpg",
+        "/assets/images/projects/Taibah/4.jpg"
+      ],
+      main_image_url: "/assets/images/projects/Taibah/1.jpg",
+      totalArea: "4,900 m²",
+      area: "4,900 m²",
+      status: "Under Construction",
+      location: "Al-Kharj Road, Taibah District",
+      investmentType: "Commercial Warehousing Plan",
+      category: "Warehousing Plans",
+      year: "2024",
+      value: "200M",
+      long_description: "An integrated commercial warehousing plan offering a practical environment that meets the needs of companies and investors in the storage and logistics sectors. The project features a strategic location and advanced infrastructure, making it an ideal choice for business development.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    },
+    AR: {
+      id: "18",
+      title: "مخطط طيبة للمستودعات",
+      description: "مخطط مستودعات تجاري متكامل يوفر بيئة عملية تلبي احتياجات الشركات والمستثمرين في قطاعات التخزين واللوجستيات. يتميز المشروع بموقع استراتيجي وبنية تحتية متقدمة، مما يجعله خياراً مثالياً لتطوير الأعمال.",
+      overview: "مخطط مستودعات تجاري متكامل يوفر بيئة عملية تلبي احتياجات الشركات والمستثمرين في قطاعات التخزين واللوجستيات. يتميز المشروع بموقع استراتيجي وبنية تحتية متقدمة، مما يجعله خياراً مثالياً لتطوير الأعمال.",
+      features: [
+        "شبكة طرق واسعة مصممة لتسهيل حركة المركبات الثقيلة والشاحنات",
+        "بنية تحتية متقدمة تشمل أنظمة المياه والكهرباء والصرف الصحي",
+        "مناطق مخصصة للمستودعات التجارية بتخطيطات مرنة تناسب الاحتياجات المختلفة",
+        "مستودعات تجارية بأحجام متنوعة مناسبة لجميع أنواع التخزين",
+        "بنية تحتية مجهزة لدعم أنشطة اللوجستيات والخدمات ذات الصلة",
+        "خدمات أساسية شاملة تشمل الكهرباء والمياه ومرافق النقل"
+      ],
+      specifications: {
+        totalArea: "4,900 متر مربع",
+        location: "طريق الخرج، حي طيبة",
+        status: "قيد الإنشاء",
+        year: "2024",
+        value: "200 مليون"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["التخطيط", "البنية التحتية", "البناء", "الإنجاز"]
+      },
+      images: [
+        "/assets/images/projects/Taibah/1.jpg",
+        "/assets/images/projects/Taibah/2.jpg",
+        "/assets/images/projects/Taibah/3.jpg",
+        "/assets/images/projects/Taibah/4.jpg"
+      ],
+      images_urls: [
+        "/assets/images/projects/Taibah/1.jpg",
+        "/assets/images/projects/Taibah/2.jpg",
+        "/assets/images/projects/Taibah/3.jpg",
+        "/assets/images/projects/Taibah/4.jpg"
+      ],
+      main_image_url: "/assets/images/projects/Taibah/1.jpg",
+      totalArea: "4,900 متر مربع",
+      area: "4,900 متر مربع",
+      status: "قيد الإنشاء",
+      location: "طريق الخرج، حي طيبة",
+      investmentType: "مخطط مستودعات تجاري",
+      category: "مخططات المستودعات",
+      year: "2024",
+      value: "200 مليون",
+      long_description: "مخطط مستودعات تجاري متكامل يوفر بيئة عملية تلبي احتياجات الشركات والمستثمرين في قطاعات التخزين واللوجستيات. يتميز المشروع بموقع استراتيجي وبنية تحتية متقدمة، مما يجعله خياراً مثالياً لتطوير الأعمال.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    }
+  },
+  "19": {
+    EN: {
+      id: "19",
+      title: "AL-JAZEERA WAREHOUSING PLAN",
+      description: "An integrated warehousing plan offering an exceptional operational environment that meets the requirements of companies and investors in the storage and logistics sectors. The project features a strategic location and modern infrastructure to support efficient business operations.",
+      overview: "An integrated warehousing plan offering an exceptional operational environment that meets the requirements of companies and investors in the storage and logistics sectors. The project features a strategic location and modern infrastructure to support efficient business operations.",
+      features: [
+        "A wide road network designed to accommodate trucks and heavy vehicles",
+        "Advanced infrastructure, including water, electricity, and sewage systems",
+        "Designated areas for warehouses with flexible layouts to suit various storage purposes",
+        "Warehouses of various sizes to meet diverse storage needs",
+        "Facilities equipped to support logistics operations and related services",
+        "Comprehensive essential services, including power, water, and transportation infrastructure"
+      ],
+      specifications: {
+        totalArea: "75,005 m²",
+        location: "Harun Al-Rashid Road, Al-Jazeera District",
+        status: "Under Construction",
+        year: "2024",
+        value: "250M"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["Planning", "Infrastructure", "Construction", "Completion"]
+      },
+      images: [
+        "/assets/images/projects/Al Jazeera/1.jpg",
+        "/assets/images/projects/Al Jazeera/2.jpg",
+        "/assets/images/projects/Al Jazeera/3.jpg",
+        "/assets/images/projects/Al Jazeera/4.jpg",
+        "/assets/images/projects/Al Jazeera/5.jpg",
+        "/assets/images/projects/Al Jazeera/6.jpg",
+        "/assets/images/projects/Al Jazeera/7.jpg"
+      ],
+      images_urls: [
+        "/assets/images/projects/Al Jazeera/1.jpg",
+        "/assets/images/projects/Al Jazeera/2.jpg",
+        "/assets/images/projects/Al Jazeera/3.jpg",
+        "/assets/images/projects/Al Jazeera/4.jpg",
+        "/assets/images/projects/Al Jazeera/5.jpg",
+        "/assets/images/projects/Al Jazeera/6.jpg",
+        "/assets/images/projects/Al Jazeera/7.jpg"
+      ],
+      main_image_url: "/assets/images/projects/Al Jazeera/1.jpg",
+      totalArea: "75,005 m²",
+      area: "75,005 m²",
+      status: "Under Construction",
+      location: "Harun Al-Rashid Road, Al-Jazeera District",
+      investmentType: "Warehousing Plan",
+      category: "Warehousing Plans",
+      year: "2024",
+      value: "250M",
+      long_description: "An integrated warehousing plan offering an exceptional operational environment that meets the requirements of companies and investors in the storage and logistics sectors. The project features a strategic location and modern infrastructure to support efficient business operations.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    },
+    AR: {
+      id: "19",
+      title: "مخطط الجزيرة للمستودعات",
+      description: "مخطط مستودعات متكامل يوفر بيئة تشغيلية استثنائية تلبي متطلبات الشركات والمستثمرين في قطاعات التخزين واللوجستيات. يتميز المشروع بموقع استراتيجي وبنية تحتية حديثة لدعم العمليات التجارية بكفاءة.",
+      overview: "مخطط مستودعات متكامل يوفر بيئة تشغيلية استثنائية تلبي متطلبات الشركات والمستثمرين في قطاعات التخزين واللوجستيات. يتميز المشروع بموقع استراتيجي وبنية تحتية حديثة لدعم العمليات التجارية بكفاءة.",
+      features: [
+        "شبكة طرق واسعة مصممة لاستيعاب الشاحنات والمركبات الثقيلة",
+        "بنية تحتية متقدمة تشمل أنظمة المياه والكهرباء والصرف الصحي",
+        "مناطق مخصصة للمستودعات بتخطيطات مرنة تناسب أغراض التخزين المختلفة",
+        "مستودعات بأحجام متنوعة لتلبية احتياجات التخزين المتنوعة",
+        "مرافق مجهزة لدعم عمليات اللوجستيات والخدمات ذات الصلة",
+        "خدمات أساسية شاملة تشمل الطاقة والمياه وبنية النقل التحتية"
+      ],
+      specifications: {
+        totalArea: "75,005 متر مربع",
+        location: "طريق هارون الرشيد، حي الجزيرة",
+        status: "قيد الإنشاء",
+        year: "2024",
+        value: "250 مليون"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["التخطيط", "البنية التحتية", "البناء", "الإنجاز"]
+      },
+      images: [
+        "/assets/images/projects/Al Jazeera/1.jpg",
+        "/assets/images/projects/Al Jazeera/2.jpg",
+        "/assets/images/projects/Al Jazeera/3.jpg",
+        "/assets/images/projects/Al Jazeera/4.jpg",
+        "/assets/images/projects/Al Jazeera/5.jpg",
+        "/assets/images/projects/Al Jazeera/6.jpg",
+        "/assets/images/projects/Al Jazeera/7.jpg"
+      ],
+      images_urls: [
+        "/assets/images/projects/Al Jazeera/1.jpg",
+        "/assets/images/projects/Al Jazeera/2.jpg",
+        "/assets/images/projects/Al Jazeera/3.jpg",
+        "/assets/images/projects/Al Jazeera/4.jpg",
+        "/assets/images/projects/Al Jazeera/5.jpg",
+        "/assets/images/projects/Al Jazeera/6.jpg",
+        "/assets/images/projects/Al Jazeera/7.jpg"
+      ],
+      main_image_url: "/assets/images/projects/Al Jazeera/1.jpg",
+      totalArea: "75,005 متر مربع",
+      area: "75,005 متر مربع",
+      status: "قيد الإنشاء",
+      location: "طريق هارون الرشيد، حي الجزيرة",
+      investmentType: "مخطط مستودعات",
+      category: "مخططات المستودعات",
+      year: "2024",
+      value: "250 مليون",
+      long_description: "مخطط مستودعات متكامل يوفر بيئة تشغيلية استثنائية تلبي متطلبات الشركات والمستثمرين في قطاعات التخزين واللوجستيات. يتميز المشروع بموقع استراتيجي وبنية تحتية حديثة لدعم العمليات التجارية بكفاءة.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    }
+  },
+  "20": {
+    EN: {
+      id: "20",
+      title: "CIRCON BUILDING",
+      description: "A modern commercial building combining offices and retail shops to provide an integrated workspace in a strategic location at the heart of Al-Olaya District. The building features a contemporary design and advanced facilities to meet the needs of businesses and entrepreneurs.",
+      overview: "A modern commercial building combining offices and retail shops to provide an integrated workspace in a strategic location at the heart of Al-Olaya District. The building features a contemporary design and advanced facilities to meet the needs of businesses and entrepreneurs.",
+      features: [
+        "A modern architectural design offering a practical and elegant environment",
+        "Spacious parking facilities for employees and visitors",
+        "Integrated infrastructure, including electricity, water, and communication systems",
+        "32 Commercial Offices: Modern offices with various sizes suitable for diverse businesses",
+        "8 Retail Shops: Shops in prime locations on Olaya Street to cater to various commercial activities",
+        "24/7 security and maintenance services to ensure a safe and comfortable experience"
+      ],
+      specifications: {
+        totalArea: "2,200 m²",
+        location: "Olaya Street, Al-Olaya District",
+        status: "Under Construction",
+        year: "2024",
+        value: "150M"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["Planning", "Infrastructure", "Construction", "Completion"]
+      },
+      images: [
+        "/assets/images/projects/Siricon/1.jpg",
+        "/assets/images/projects/Siricon/2.jpg",
+        "/assets/images/projects/Siricon/3.jpg",
+        "/assets/images/projects/Siricon/4.jpg",
+        "/assets/images/projects/Siricon/5.jpg",
+        "/assets/images/projects/Siricon/6.jpg"
+      ],
+      images_urls: [
+        "/assets/images/projects/Siricon/1.jpg",
+        "/assets/images/projects/Siricon/2.jpg",
+        "/assets/images/projects/Siricon/3.jpg",
+        "/assets/images/projects/Siricon/4.jpg",
+        "/assets/images/projects/Siricon/5.jpg",
+        "/assets/images/projects/Siricon/6.jpg"
+      ],
+      main_image_url: "/assets/images/projects/Siricon/1.jpg",
+      totalArea: "2,200 m²",
+      area: "2,200 m²",
+      status: "Under Construction",
+      location: "Olaya Street, Al-Olaya District",
+      investmentType: "Commercial Building",
+      category: "Commercial Buildings",
+      year: "2024",
+      value: "150M",
+      long_description: "A modern commercial building combining offices and retail shops to provide an integrated workspace in a strategic location at the heart of Al-Olaya District. The building features a contemporary design and advanced facilities to meet the needs of businesses and entrepreneurs.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    },
+    AR: {
+      id: "20",
+      title: "مبنى السيركون",
+      description: "مبنى تجاري حديث يجمع بين المكاتب والمحلات التجارية لتوفير مساحة عمل متكاملة في موقع استراتيجي في قلب حي العليا. يتميز المبنى بتصميم معاصر ومرافق متقدمة تلبي احتياجات الشركات ورجال الأعمال.",
+      overview: "مبنى تجاري حديث يجمع بين المكاتب والمحلات التجارية لتوفير مساحة عمل متكاملة في موقع استراتيجي في قلب حي العليا. يتميز المبنى بتصميم معاصر ومرافق متقدمة تلبي احتياجات الشركات ورجال الأعمال.",
+      features: [
+        "تصميم معماري حديث يوفر بيئة عملية وأنيقة",
+        "مرافق مواقف واسعة للموظفين والزوار",
+        "بنية تحتية متكاملة تشمل أنظمة الكهرباء والمياه والاتصالات",
+        "32 مكتب تجاري: مكاتب حديثة بأحجام متنوعة مناسبة للأعمال المتنوعة",
+        "8 محلات تجارية: محلات في مواقع مميزة على شارع العليا لتلبية الأنشطة التجارية المختلفة",
+        "خدمات أمن وصيانة على مدار الساعة لضمان تجربة آمنة ومريحة"
+      ],
+      specifications: {
+        totalArea: "2,200 متر مربع",
+        location: "شارع العليا، حي العليا",
+        status: "قيد الإنشاء",
+        year: "2024",
+        value: "150 مليون"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["التخطيط", "البنية التحتية", "البناء", "الإنجاز"]
+      },
+      images: [
+        "/assets/images/projects/Siricon/1.jpg",
+        "/assets/images/projects/Siricon/2.jpg",
+        "/assets/images/projects/Siricon/3.jpg",
+        "/assets/images/projects/Siricon/4.jpg",
+        "/assets/images/projects/Siricon/5.jpg",
+        "/assets/images/projects/Siricon/6.jpg"
+      ],
+      images_urls: [
+        "/assets/images/projects/Siricon/1.jpg",
+        "/assets/images/projects/Siricon/2.jpg",
+        "/assets/images/projects/Siricon/3.jpg",
+        "/assets/images/projects/Siricon/4.jpg",
+        "/assets/images/projects/Siricon/5.jpg",
+        "/assets/images/projects/Siricon/6.jpg"
+      ],
+      main_image_url: "/assets/images/projects/Siricon/1.jpg",
+      totalArea: "2,200 متر مربع",
+      area: "2,200 متر مربع",
+      status: "قيد الإنشاء",
+      location: "شارع العليا",
+      investmentType: "مبنى تجاري",
+      category: "المباني التجارية",
+      year: "2024",
+      value: "150 مليون",
+      long_description: "مبنى تجاري حديث يجمع بين المكاتب والمحلات التجارية لتوفير مساحة عمل متكاملة في موقع استراتيجي في قلب حي العليا. يتميز المبنى بتصميم معاصر ومرافق متقدمة تلبي احتياجات الشركات ورجال الأعمال.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    }
+  },
+  "21": {
+    EN: {
+      id: "21",
+      title: "ALSAADA BUILDING",
+      description: "A modern residential building offering comfortable apartments designed to meet the needs of families and individuals. It features a tranquil location and comprehensive amenities, making it an ideal choice for living in the distinguished Al-Saada District.",
+      overview: "A modern residential building offering comfortable apartments designed to meet the needs of families and individuals. It features a tranquil location and comprehensive amenities, making it an ideal choice for living in the distinguished Al-Saada District.",
+      features: [
+        "A modern design providing comfortable living spaces suitable for families",
+        "Secure and designated parking spaces for residents and visitors",
+        "Comprehensive infrastructure, including water, electricity, and sewage systems",
+        "34 Residential Apartments: Apartments of various sizes suitable for individuals and small families",
+        "Integrated security system to ensure residents' safety around the clock",
+        "Regular maintenance services to ensure the quality of the facilities"
+      ],
+      specifications: {
+        totalArea: "2,622 m²",
+        location: "Al-Nahar Street, Al-Saada District",
+        status: "Under Construction",
+        year: "2024",
+        value: "120M"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["Planning", "Infrastructure", "Construction", "Completion"]
+      },
+      images: [
+        "/assets/images/projects/Saada/1.jpg",
+        "/assets/images/projects/Saada/2.jpg",
+        "/assets/images/projects/Saada/3.jpg",
+        "/assets/images/projects/Saada/4.jpg"
+      ],
+      images_urls: [
+        "/assets/images/projects/Saada/1.jpg",
+        "/assets/images/projects/Saada/2.jpg",
+        "/assets/images/projects/Saada/3.jpg",
+        "/assets/images/projects/Saada/4.jpg"
+      ],
+      main_image_url: "/assets/images/projects/Saada/1.jpg",
+      totalArea: "2,622 m²",
+      area: "2,622 m²",
+      status: "Under Construction",
+      location: "Al-Nahar Street, Al-Saada District",
+      investmentType: "Residential Building",
+      category: "Residential Buildings",
+      year: "2024",
+      value: "120M",
+      long_description: "A modern residential building offering comfortable apartments designed to meet the needs of families and individuals. It features a tranquil location and comprehensive amenities, making it an ideal choice for living in the distinguished Al-Saada District.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    },
+    AR: {
+      id: "21",
+      title: "مبنى السعادة",
+      description: "مبنى سكني حديث يوفر شقق مريحة مصممة لتلبية احتياجات العائلات والأفراد. يتميز بموقع هادئ ومرافق شاملة، مما يجعله خياراً مثالياً للعيش في حي السعادة المتميز.",
+      overview: "مبنى سكني حديث يوفر شقق مريحة مصممة لتلبية احتياجات العائلات والأفراد. يتميز بموقع هادئ ومرافق شاملة، مما يجعله خياراً مثالياً للعيش في حي السعادة المتميز.",
+      features: [
+        "تصميم حديث يوفر مساحات معيشية مريحة مناسبة للعائلات",
+        "مواقف آمنة ومخصصة للسكان والزوار",
+        "بنية تحتية شاملة تشمل أنظمة المياه والكهرباء والصرف الصحي",
+        "34 شقة سكنية: شقق بأحجام متنوعة مناسبة للأفراد والعائلات الصغيرة",
+        "نظام أمن متكامل لضمان سلامة السكان على مدار الساعة",
+        "خدمات صيانة دورية لضمان جودة المرافق"
+      ],
+      specifications: {
+        totalArea: "2,622 متر مربع",
+        location: "شارع النهر، حي السعادة",
+        status: "قيد الإنشاء",
+        year: "2024",
+        value: "120 مليون"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["التخطيط", "البنية التحتية", "البناء", "الإنجاز"]
+      },
+      images: [
+        "/assets/images/projects/Saada/1.jpg",
+        "/assets/images/projects/Saada/2.jpg",
+        "/assets/images/projects/Saada/3.jpg",
+        "/assets/images/projects/Saada/4.jpg"
+      ],
+      images_urls: [
+        "/assets/images/projects/Saada/1.jpg",
+        "/assets/images/projects/Saada/2.jpg",
+        "/assets/images/projects/Saada/3.jpg",
+        "/assets/images/projects/Saada/4.jpg"
+      ],
+      main_image_url: "/assets/images/projects/Saada/1.jpg",
+      totalArea: "2,622 متر مربع",
+      area: "2,622 متر مربع",
+      status: "قيد الإنشاء",
+      location: "شارع النهر، حي السعادة",
+      investmentType: "مبنى سكني",
+      category: "المباني السكنية",
+      year: "2024",
+      value: "120 مليون",
+      long_description: "مبنى سكني حديث يوفر شقق مريحة مصممة لتلبية احتياجات العائلات والأفراد. يتميز بموقع هادئ ومرافق شاملة، مما يجعله خياراً مثالياً للعيش في حي السعادة المتميز.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    }
+  },
+  "22": {
+    EN: {
+      id: "22",
+      title: "AL-HARAS BUILDING",
+      description: "A mixed-use building combining residential units and retail shops with a modern design and a strategic location in Al-Saada District. The building aims to meet the needs of residents and business owners by providing an integrated living and commercial environment.",
+      overview: "A mixed-use building combining residential units and retail shops with a modern design and a strategic location in Al-Saada District. The building aims to meet the needs of residents and business owners by providing an integrated living and commercial environment.",
+      features: [
+        "A modern architectural design blending residential and commercial spaces",
+        "Designated parking spaces for residents and commercial clients",
+        "Comprehensive infrastructure, including water, electricity, and sewage systems",
+        "22 Residential Apartments: Comfortable apartments of various sizes suitable for individuals and families",
+        "13 Retail Shops: Shops in prime locations catering to diverse commercial activities",
+        "Regular maintenance services for public facilities and common areas"
+      ],
+      specifications: {
+        totalArea: "2,100 m²",
+        location: "Abi Ubaidah Amir Bin Al-Jarrah Road, Al-Saada District",
+        status: "Under Construction",
+        year: "2024",
+        value: "180M"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["Planning", "Infrastructure", "Construction", "Completion"]
+      },
+      images: [
+        "/assets/images/projects/Hars/1.jpg",
+        "/assets/images/projects/Hars/2.jpg",
+        "/assets/images/projects/Hars/3.jpg",
+        "/assets/images/projects/Hars/4.jpg"
+      ],
+      images_urls: [
+        "/assets/images/projects/Hars/1.jpg",
+        "/assets/images/projects/Hars/2.jpg",
+        "/assets/images/projects/Hars/3.jpg",
+        "/assets/images/projects/Hars/4.jpg"
+      ],
+      main_image_url: "/assets/images/projects/Hars/1.jpg",
+      totalArea: "2,100 m²",
+      area: "2,100 m²",
+      status: "Under Construction",
+      location: "Abi Ubaidah Amir Bin Al-Jarrah Road, Al-Saada District",
+      investmentType: "Residential and Commercial Building",
+      category: "Residential and Commercial Buildings",
+      year: "2024",
+      value: "180M",
+      long_description: "A mixed-use building combining residential units and retail shops with a modern design and a strategic location in Al-Saada District. The building aims to meet the needs of residents and business owners by providing an integrated living and commercial environment.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    },
+    AR: {
+      id: "22",
+      title: "مبنى الحرس",
+      description: "مبنى مختلط يجمع بين الوحدات السكنية والمحلات التجارية بتصميم حديث وموقع استراتيجي في حي السعادة. يهدف المبنى إلى تلبية احتياجات السكان وأصحاب الأعمال من خلال توفير بيئة معيشية وتجارية متكاملة.",
+      overview: "مبنى مختلط يجمع بين الوحدات السكنية والمحلات التجارية بتصميم حديث وموقع استراتيجي في حي السعادة. يهدف المبنى إلى تلبية احتياجات السكان وأصحاب الأعمال من خلال توفير بيئة معيشية وتجارية متكاملة.",
+      features: [
+        "تصميم معماري حديث يدمج المساحات السكنية والتجارية",
+        "مواقف مخصصة للسكان والعملاء التجاريين",
+        "بنية تحتية شاملة تشمل أنظمة المياه والكهرباء والصرف الصحي",
+        "22 شقة سكنية: شقق مريحة بأحجام متنوعة مناسبة للأفراد والعائلات",
+        "13 محل تجاري: محلات في مواقع مميزة تخدم الأنشطة التجارية المتنوعة",
+        "خدمات صيانة دورية للمرافق العامة والمناطق المشتركة"
+      ],
+      specifications: {
+        totalArea: "2,100 متر مربع",
+        location: "طريق أبي عبيدة عامر بن الجراح، حي السعادة",
+        status: "قيد الإنشاء",
+        year: "2024",
+        value: "180 مليون"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["التخطيط", "البنية التحتية", "البناء", "الإنجاز"]
+      },
+      images: [
+        "/assets/images/projects/Hars/1.jpg",
+        "/assets/images/projects/Hars/2.jpg",
+        "/assets/images/projects/Hars/3.jpg",
+        "/assets/images/projects/Hars/4.jpg"
+      ],
+      images_urls: [
+        "/assets/images/projects/Hars/1.jpg",
+        "/assets/images/projects/Hars/2.jpg",
+        "/assets/images/projects/Hars/3.jpg",
+        "/assets/images/projects/Hars/4.jpg"
+      ],
+      main_image_url: "/assets/images/projects/Hars/1.jpg",
+      totalArea: "2,100 متر مربع",
+      area: "2,100 متر مربع",
+      status: "قيد الإنشاء",
+      location: "طريق أبي عبيدة عامر بن الجراح، حي السعادة",
+      investmentType: "مبنى سكني وتجاري",
+      category: "المباني السكنية والتجارية",
+      year: "2024",
+      value: "180 مليون",
+      long_description: "مبنى مختلط يجمع بين الوحدات السكنية والمحلات التجارية بتصميم حديث وموقع استراتيجي في حي السعادة. يهدف المبنى إلى تلبية احتياجات السكان وأصحاب الأعمال من خلال توفير بيئة معيشية وتجارية متكاملة.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    }
+  },
+  "23": {
+    EN: {
+      id: "23",
+      title: "AL-FAUZAN ADMINISTRATIVE HEADQUARTERS",
+      description: "The state-of-the-art headquarters of Ali Al Fozan & Sons Real Estate Company features a modern architectural design and strategic location at Eastern Ring Road Exit 14. This prestigious administrative building offers an integrated work environment that fosters innovation, efficiency, and excellence in real estate development.",
+      overview: "The state-of-the-art headquarters of Ali Al Fozan & Sons Real Estate Company features a modern architectural design and strategic location at Eastern Ring Road Exit 14. This prestigious administrative building offers an integrated work environment that fosters innovation, efficiency, and excellence in real estate development.",
+      features: [
+        "Modern Architectural Design with Contemporary Aesthetics",
+        "Strategic Location at Eastern Ring Road Exit 14",
+        "Integrated Work Environment with Advanced Facilities",
+        "Innovation-Focused Workspace Design",
+        "Premium Administrative Building Standards",
+        "State-of-the-Art Infrastructure and Technology"
+      ],
+      specifications: {
+        totalArea: "2,488 m²",
+        location: "Eastern Ring Road Exit 14, Al-Rabwa District",
+        status: "Under Construction",
+        year: "2024",
+        value: "300M"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["Planning", "Infrastructure", "Construction", "Completion"]
+      },
+      images: [
+        "/assets/images/projects/14/1.jpg",
+        "/assets/images/projects/14/2.JPG",
+        "/assets/images/projects/14/3.JPG",
+        "/assets/images/projects/14/4.JPG",
+        "/assets/images/projects/14/5.JPG"
+      ],
+      images_urls: [
+        "/assets/images/projects/14/1.jpg",
+        "/assets/images/projects/14/2.JPG",
+        "/assets/images/projects/14/3.JPG",
+        "/assets/images/projects/14/4.JPG",
+        "/assets/images/projects/14/5.JPG"
+      ],
+      main_image_url: "/assets/images/projects/14/1.jpg",
+      totalArea: "2,488 m²",
+      area: "2,488 m²",
+      status: "Under Construction",
+      location: "Eastern Ring Road Exit 14, Al-Rabwa District",
+      investmentType: "Administrative Headquarters",
+      category: "Administrative Buildings",
+      year: "2024",
+      value: "300M",
+      long_description: "The state-of-the-art headquarters of Ali Al Fozan & Sons Real Estate Company represents a landmark achievement in administrative building design. Located strategically at Eastern Ring Road Exit 14 in Al-Rabwa District, this prestigious 2,488 m² facility features modern architectural design with contemporary aesthetics. The building offers an integrated work environment with advanced facilities, innovation-focused workspace design, and premium administrative building standards. Equipped with state-of-the-art infrastructure and technology, it provides the perfect setting for fostering innovation, efficiency, and excellence in real estate development operations.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    },
+    AR: {
+      id: "23",
+      title: "المقر الإداري لشركة علي الفوزان وأولاده العقارية",
+      description: "يتميز المقر الإداري المتطور لشركة علي الفوزان وأولاده العقارية بتصميم معماري حديث وموقع استراتيجي في الدائري الشرقي مخرج 14. يوفر هذا المبنى الإداري المرموق بيئة عمل متكاملة تعزز الابتكار والكفاءة والتميز في التطوير العقاري.",
+      overview: "يتميز المقر الإداري المتطور لشركة علي الفوزان وأولاده العقارية بتصميم معماري حديث وموقع استراتيجي في الدائري الشرقي مخرج 14. يوفر هذا المبنى الإداري المرموق بيئة عمل متكاملة تعزز الابتكار والكفاءة والتميز في التطوير العقاري.",
+      features: [
+        "تصميم معماري حديث بجماليات معاصرة",
+        "موقع استراتيجي في الدائري الشرقي مخرج 14",
+        "بيئة عمل متكاملة مع مرافق متقدمة",
+        "تصميم مساحات عمل تركز على الابتكار",
+        "معايير مبنى إداري راقي",
+        "بنية تحتية وتكنولوجيا متطورة"
+      ],
+      specifications: {
+        totalArea: "2,488 متر مربع",
+        location: "الطريق الدائري الشرقي مخرج 14، حي الربوة",
+        status: "قيد الإنشاء",
+        year: "2024",
+        value: "300 مليون"
+      },
+      timeline: {
+        startDate: "2024-01-01",
+        completionDate: "2026-12-31",
+        phases: ["التخطيط", "البنية التحتية", "البناء", "الإنجاز"]
+      },
+      images: [
+        "/assets/images/projects/14/1.jpg",
+        "/assets/images/projects/14/2.JPG",
+        "/assets/images/projects/14/3.JPG",
+        "/assets/images/projects/14/4.JPG",
+        "/assets/images/projects/14/5.JPG"
+      ],
+      images_urls: [
+        "/assets/images/projects/14/1.jpg",
+        "/assets/images/projects/14/2.JPG",
+        "/assets/images/projects/14/3.JPG",
+        "/assets/images/projects/14/4.JPG",
+        "/assets/images/projects/14/5.JPG"
+      ],
+      main_image_url: "/assets/images/projects/14/1.jpg",
+      totalArea: "2,488 متر مربع",
+      area: "2,488 متر مربع",
+      status: "قيد الإنشاء",
+      location: "الطريق الدائري الشرقي مخرج 14، حي الربوة",
+      investmentType: "مقر إداري",
+      category: "المباني الإدارية",
+      year: "2024",
+      value: "300 مليون",
+      long_description: "يمثل المقر الإداري المتطور لشركة علي الفوزان وأولاده العقارية إنجازاً بارزاً في تصميم المباني الإدارية. يقع هذا المرفق المرموق بمساحة 2,488 متر مربع في موقع استراتيجي في الدائري الشرقي مخرج 14 بحي الربوة، ويتميز بتصميم معماري حديث بجماليات معاصرة. يوفر المبنى بيئة عمل متكاملة مع مرافق متقدمة وتصميم مساحات عمل تركز على الابتكار ومعايير مبنى إداري راقي. مجهز ببنية تحتية وتكنولوجيا متطورة، يوفر الإعداد المثالي لتعزيز الابتكار والكفاءة والتميز في عمليات التطوير العقاري.",
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z"
+    }
   }
-};
+};   

@@ -115,7 +115,7 @@ const DynamicImageGallery: React.FC<DynamicImageGalleryProps> = ({
           <img
             src={validImages[currentIndex]}
             alt={`${title} - Image ${currentIndex + 1}`}
-            className="w-full h-full object-cover transition-all duration-500"
+            className="w-full h-full object-contain transition-all duration-500"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.src = fallbackImage;
@@ -191,7 +191,7 @@ const DynamicImageGallery: React.FC<DynamicImageGalleryProps> = ({
               <img
                 src={image}
                 alt={`Thumbnail ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.src = fallbackImage;

@@ -45,43 +45,118 @@ export const PROJECT_CONFIGS: Record<string, {
 }> = {
   "1": {
     projectName: "Al fauzan industrial city",
-    mainImageName: "hero.jpg",
-    expectedImages: ["hero.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "QR.png"]
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg", "21.jpg", "22.jpg", "23.jpg", "24.jpg", "25.jpg"]
   },
   "2": {
     projectName: "remas",
-    mainImageName: "remas.jpg",
-    expectedImages: ["remas.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg", "21.jpg", "22.jpg", "QR.png"]
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg"]
   },
   "3": {
     projectName: "SAMA",
-    mainImageName: "sama.jpg",
-    expectedImages: ["sama.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "QR.png"]
+    mainImageName: "1.JPG",
+    expectedImages: ["1.JPG", "2.JPG", "3.JPG", "4.JPG", "5.JPG"]
   },
   "11": {
     projectName: "Istanbul",
-    mainImageName: "Istanbul.jpg",
-    expectedImages: ["Istanbul.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg", "21.jpg", "22.jpg", "23.jpg", "QR.png"]
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg"]
   },
   "4": {
     projectName: "Shams",
-    mainImageName: "shams.JPG",
-    expectedImages: ["shams.JPG", "1.JPG", "2.JPG", "3.JPG", "4.JPG", "5.JPG", "6.jpg", "7.JPG", "8.JPG", "9.JPG", "10.JPG", "11.JPG", "12.jpg", "QR.png"]
+    mainImageName: "1.JPG",
+    expectedImages: ["1.JPG", "2.JPG", "3.JPG", "4.JPG", "5.JPG", "6.JPG", "7.jpg", "8.JPG", "9.JPG", "10.JPG", "11.JPG", "12.jpg"]
   },
   "14": {
     projectName: "ALNAMOTHAJIYA",
-    mainImageName: "ALNAMOTHAJIYA.jpg",
-    expectedImages: ["ALNAMOTHAJIYA.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "QR.png"]
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg"]
   },
   "15": {
     projectName: "Aziziyah",
-    mainImageName: "Aziziyah.JPG",
-    expectedImages: ["Aziziyah.JPG", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "QR.png"]
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg"]
   },
   "7": {
     projectName: "mashael",
-    mainImageName: "Mashael.JPG",
-    expectedImages: ["Mashael.JPG", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "QR.png"]
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg"]
+  },
+  "13": {
+    projectName: "Rana",
+    mainImageName: "1.JPG",
+    expectedImages: ["1.JPG", "2.JPG", "3.JPG", "4.JPG", "5.JPG", "6.JPG", "7.JPG", "8.JPG", "9.JPG", "10.JPG", "11.JPG", "12.JPG"]
+  },
+  "10": {
+    projectName: "Raneem",
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.JPG", "7.jpg", "8.jpg", "9.JPG", "10.JPG", "11.jpg"]
+  },
+  "5": {
+    projectName: "Exit 18",
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg"]
+  },
+  "8": {
+    projectName: "96",
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"]
+  },
+  "9": {
+    projectName: "Durrat",
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"]
+  },
+  "12": {
+    projectName: "Randa",
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg"]
+  },
+  "6": {
+    projectName: "ALMANAKH",
+    mainImageName: "1.JPG",
+    expectedImages: ["1.JPG", "2.JPG", "3.JPG", "4.JPG"]
+  },
+  "16": {
+    projectName: "faisaliyah",
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.JPG", "6.JPG", "7.jpg", "8.JPG", "9.jpg"]
+  },
+  "17": {
+    projectName: "Muhammadiya",
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg"]
+  },
+  "18": {
+    projectName: "Taibah",
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]
+  },
+  "19": {
+    projectName: "Al Jazeera",
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg"]
+  },
+  "20": {
+    projectName: "Siricon",
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"]
+  },
+  "21": {
+    projectName: "Saada",
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]
+  },
+  "22": {
+    projectName: "Hars",
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]
+  },
+  "23": {
+    projectName: "14",
+    mainImageName: "1.jpg",
+    expectedImages: ["1.jpg", "2.JPG", "3.JPG", "4.JPG", "5.JPG"]
   }
 };
 

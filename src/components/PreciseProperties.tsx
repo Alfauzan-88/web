@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useMemo, useCallback } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components/ui/button';
@@ -18,200 +18,45 @@ import {
   ArrowRight,
   Star,
   Eye,
-  Phone
+  Phone,
+  Users
 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useNavigate } from 'react-router-dom';
+import { propertiesData } from '@/data/propertiesData';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const PreciseProperties: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const navigate = useNavigate();
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState<string>('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [searchTerm, setSearchTerm] = useState('');
   const [priceRange, setPriceRange] = useState('All');
   const [selectedProperty, setSelectedProperty] = useState<number | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const { language } = useLanguage();
 
 
-  const content = {
-    EN: {
-      title: "Premium Properties",
-      subtitle: "Discover exceptional real estate opportunities across Saudi Arabia",
-      searchPlaceholder: "Search by location, type, or features...",
-      filters: ["All", "Villa", "Apartment", "Commercial", "Land"],
-      priceRanges: ["All", "Under 1M", "1M - 5M", "5M - 10M", "10M+"],
-      viewAll: "View All Properties",
-      contact: "Contact Agent",
-      schedule: "Schedule Visit",
-      properties: [
-        {
-          id: 1,
-          title: "DEL MAR COMPOUND",
-          type: "Residential Compound",
-          price: "Contact Us",
-          currency: "",
-          location: "Al-Thumamah Road, near Imam University, Riyadh",
-          beds: 32,
-          baths: 112,
-          area: 25000,
-          parking: 50,
-          image: "/assets/images/projects/DMC/Thumbnail.png?v=1",
-          images: [
-            "/assets/images/projects/DMC/Thumbnail.png?v=1",
-            "/assets/images/projects/DMC/1.jpg",
-            "/assets/images/projects/DMC/2.JPG",
-            "/assets/images/projects/DMC/3.jpg",
-            "/assets/images/projects/DMC/4.jpg",
-            "/assets/images/projects/DMC/5.jpg",
-            "/assets/images/projects/DMC/6.jpg",
-            "/assets/images/projects/DMC/7.jpg",
-            "/assets/images/projects/DMC/8.jpg",
-            "/assets/images/projects/DMC/9.jpg",
-            "/assets/images/projects/DMC/10.jpg",
-            "/assets/images/projects/DMC/11.jpg",
-            "/assets/images/projects/DMC/12.jpg",
-            "/assets/images/projects/DMC/13.jpg",
-            "/assets/images/projects/DMC/14.JPG",
-            "/assets/images/projects/DMC/15.JPG",
-            "/assets/images/projects/DMC/16.JPG",
-            "/assets/images/projects/DMC/17.JPG",
-            "/assets/images/projects/DMC/18.JPG",
-            "/assets/images/projects/DMC/19.JPG",
-            "/assets/images/projects/DMC/20.jpg",
-            "/assets/images/projects/DMC/21.JPG",
-            "/assets/images/projects/DMC/22.JPG",
-            "/assets/images/projects/DMC/23.JPG",
-            "/assets/images/projects/DMC/24.JPG",
-            "/assets/images/projects/DMC/25.JPG",
-            "/assets/images/projects/DMC/26.JPG",
-            "/assets/images/projects/DMC/27.jpg",
-            "/assets/images/projects/DMC/28.jpg",
-            "/assets/images/projects/DMC/29.JPG",
-            "/assets/images/projects/DMC/30.JPG",
-            "/assets/images/projects/DMC/31.JPG",
-            "/assets/images/projects/DMC/32.JPG",
-            "/assets/images/projects/DMC/33.JPG",
-            "/assets/images/projects/DMC/34.JPG",
-            "/assets/images/projects/DMC/35.JPG",
-            "/assets/images/projects/DMC/36.JPG",
-            "/assets/images/projects/DMC/37.JPG",
-            "/assets/images/projects/DMC/38.JPG",
-            "/assets/images/projects/DMC/39.jpg",
-            "/assets/images/projects/DMC/40.JPG",
-            "/assets/images/projects/DMC/41.JPG",
-            "/assets/images/projects/DMC/42.JPG",
-            "/assets/images/projects/DMC/43.JPG",
-            "/assets/images/projects/DMC/44.JPG",
-            "/assets/images/projects/DMC/45.JPG",
-            "/assets/images/projects/DMC/46.JPG",
-            "/assets/images/projects/DMC/47.JPG",
-            "/assets/images/projects/DMC/48.JPG"
-          ],
-          featured: true,
-          rating: 4.9,
-          views: 1500,
-          features: ["Gym", "Sauna", "Steam Room", "Swimming Pool", "Table Tennis", "Billiard Table", "Kids Playing Area", "Barbeque Area", "Restaurant", "Mini Market", "Coffee Shop", "Relaxation Area"],
-          agent: {
-            name: "Mohammad Tariq",
-            phone: "+966 565222000"
-          }
-        }
-      ]
-    },
-    AR: {
-      title: "عقارات مميزة",
-      subtitle: "اكتشف فرص عقارية استثنائية عبر المملكة العربية السعودية",
-      searchPlaceholder: "البحث بالموقع أو النوع أو المميزات...",
-      filters: ["الكل", "فيلا", "شقة", "تجاري", "أرض"],
-      priceRanges: ["الكل", "أقل من مليون", "1-5 مليون", "5-10 مليون", "+10 مليون"],
-      viewAll: "عرض جميع العقارات",
-      contact: "تواصل مع الوكيل",
-      schedule: "حجز موعد زيارة",
-      properties: [
-        {
-          id: 1,
-          title: "مجمع ديل مار السكني",
-          type: "مجمع سكني",
-          price: "تواصل معنا",
-          currency: "",
-          location: "طريق الثمامة، قرب جامعة الإمام، الرياض",
-          beds: 32,
-          baths: 112,
-          area: 25000,
-          parking: 50,
-          image: "/assets/images/projects/DMC/Thumbnail.png?v=1",
-          images: [
-            "/assets/images/projects/DMC/Thumbnail.png?v=1",
-            "/assets/images/projects/DMC/1.jpg",
-            "/assets/images/projects/DMC/2.JPG",
-            "/assets/images/projects/DMC/3.jpg",
-            "/assets/images/projects/DMC/4.jpg",
-            "/assets/images/projects/DMC/5.jpg",
-            "/assets/images/projects/DMC/6.jpg",
-            "/assets/images/projects/DMC/7.jpg",
-            "/assets/images/projects/DMC/8.jpg",
-            "/assets/images/projects/DMC/9.jpg",
-            "/assets/images/projects/DMC/10.jpg",
-            "/assets/images/projects/DMC/11.jpg",
-            "/assets/images/projects/DMC/12.jpg",
-            "/assets/images/projects/DMC/13.jpg",
-            "/assets/images/projects/DMC/14.JPG",
-            "/assets/images/projects/DMC/15.JPG",
-            "/assets/images/projects/DMC/16.JPG",
-            "/assets/images/projects/DMC/17.JPG",
-            "/assets/images/projects/DMC/18.JPG",
-            "/assets/images/projects/DMC/19.JPG",
-            "/assets/images/projects/DMC/20.jpg",
-            "/assets/images/projects/DMC/21.JPG",
-            "/assets/images/projects/DMC/22.JPG",
-            "/assets/images/projects/DMC/23.JPG",
-            "/assets/images/projects/DMC/24.JPG",
-            "/assets/images/projects/DMC/25.JPG",
-            "/assets/images/projects/DMC/26.JPG",
-            "/assets/images/projects/DMC/27.jpg",
-            "/assets/images/projects/DMC/28.jpg",
-            "/assets/images/projects/DMC/29.JPG",
-            "/assets/images/projects/DMC/30.JPG",
-            "/assets/images/projects/DMC/31.JPG",
-            "/assets/images/projects/DMC/32.JPG",
-            "/assets/images/projects/DMC/33.JPG",
-            "/assets/images/projects/DMC/34.JPG",
-            "/assets/images/projects/DMC/35.JPG",
-            "/assets/images/projects/DMC/36.JPG",
-            "/assets/images/projects/DMC/37.JPG",
-            "/assets/images/projects/DMC/38.JPG",
-            "/assets/images/projects/DMC/39.jpg",
-            "/assets/images/projects/DMC/40.JPG",
-            "/assets/images/projects/DMC/41.JPG",
-            "/assets/images/projects/DMC/42.JPG",
-            "/assets/images/projects/DMC/43.JPG",
-            "/assets/images/projects/DMC/44.JPG",
-            "/assets/images/projects/DMC/45.JPG",
-            "/assets/images/projects/DMC/46.JPG",
-            "/assets/images/projects/DMC/47.JPG",
-            "/assets/images/projects/DMC/48.JPG"
-          ],
-          featured: true,
-          rating: 4.9,
-          views: 1500,
-          features: ["نادي رياضي", "سونا", "غرفة بخار", "حمام سباحة", "تنس الطاولة", "طاولة البلياردو", "منطقة لعب الأطفال", "منطقة شوي", "مطعم", "ميني ماركت", "مقهى", "منطقة استرخاء"],
-          agent: {
-            name: "محمد طارق",
-            phone: "+966 565222000"
-          }
-        }
-      ]
-    }
-  };
+  // Use imported data for better performance
+  const currentContent = propertiesData[language];
 
-  const currentContent = content[language];
+  // Reset filter when language changes
+  useEffect(() => {
+    setActiveFilter(language === 'AR' ? 'الكل' : 'All');
+  }, [language]);
 
   useEffect(() => {
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
     const ctx = gsap.context(() => {
       // Animate section entrance
+      const headerElement = document.querySelector('.properties-header');
+      if (headerElement) {
       gsap.fromTo('.properties-header', 
         { opacity: 0, y: 50 },
         { 
@@ -224,38 +69,57 @@ const PreciseProperties: React.FC = () => {
           }
         }
       );
+      }
 
-      // Animate property cards
+      // Animate property cards with reduced stagger for better performance
+      const propertyCards = document.querySelectorAll('.property-card');
+      const propertiesGrid = document.querySelector('.properties-grid');
+
+      if (propertyCards.length > 0 && propertiesGrid) {
       gsap.fromTo('.property-card', 
         { opacity: 0, y: 30, scale: 0.9 },
         { 
           opacity: 1, 
           y: 0, 
           scale: 1,
-          duration: 0.8,
-          stagger: 0.1,
+            duration: 0.6,
+            stagger: 0.05,
           scrollTrigger: {
             trigger: '.properties-grid',
             start: 'top 80%'
           }
         }
       );
+      }
 
     }, sectionRef);
 
-    return () => ctx.revert();
+    return () => {
+      clearTimeout(timer);
+      ctx.revert();
+    };
   }, []);
 
-  const filteredProperties = currentContent.properties.filter(property => {
-    const matchesFilter = activeFilter === 'All' || property.type === activeFilter;
+  // Memoize filtered properties for better performance
+  const filteredProperties = useMemo(() => {
+    return currentContent.properties.filter(property => {
+    const matchesFilter = activeFilter === 'All' || activeFilter === 'الكل' || property.type === activeFilter;
     const matchesSearch = property.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          property.location.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesFilter && matchesSearch;
   });
+  }, [currentContent.properties, activeFilter, searchTerm]);
 
-  const formatPrice = (price: string, currency: string) => {
+  const formatPrice = useCallback((price: string, currency: string) => {
     return `${price} ${currency}`;
-  };
+  }, []);
+
+  // Lazy loading for property images
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
+  
+  const handleImageLoad = useCallback((imageSrc: string) => {
+    setLoadedImages(prev => new Set(prev).add(imageSrc));
+  }, []);
 
   return (
     <section id="properties" ref={sectionRef} className="py-20 z-20 relative">
@@ -263,7 +127,7 @@ const PreciseProperties: React.FC = () => {
         
         {/* Header */}
         <div className="properties-header text-center mb-16">
-          <h2 className={`text-4xl md:text-5xl font-bold text-white mb-6 ${
+          <h2 className={`text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-6 ${
             language === 'AR' ? 'font-arabic' : ''
           }`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
             {currentContent.title}
@@ -337,6 +201,21 @@ const PreciseProperties: React.FC = () => {
         </div>
 
         {/* Properties Grid */}
+        {isLoading ? (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden animate-pulse">
+                <div className="h-64 bg-gray-300"></div>
+                <div className="p-6">
+                  <div className="h-6 bg-gray-300 rounded mb-2"></div>
+                  <div className="h-4 bg-gray-300 rounded mb-4"></div>
+                  <div className="h-4 bg-gray-300 rounded mb-2"></div>
+                  <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
         <div className={`properties-grid ${
           viewMode === 'grid' 
             ? 'grid md:grid-cols-2 lg:grid-cols-3 gap-8' 
@@ -353,10 +232,20 @@ const PreciseProperties: React.FC = () => {
               <div className={`relative overflow-hidden ${
                 viewMode === 'list' ? 'w-1/3' : 'h-64'
               }`}>
+                {/* Loading skeleton */}
+                {!loadedImages.has(property.image) && (
+                  <div className="absolute inset-0 bg-gray-300 animate-pulse"></div>
+                )}
                 <img
                   src={property.image}
                   alt={property.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  onLoad={() => handleImageLoad(property.image)}
+                  style={{
+                    opacity: loadedImages.has(property.image) ? 1 : 0,
+                    transition: 'opacity 0.3s ease-in-out'
+                  }}
                 />
                 
                 {/* Image Overlay */}
@@ -458,7 +347,7 @@ const PreciseProperties: React.FC = () => {
                         {feature}
                       </span>
                     ))}
-                    {property.features.length > 3 && (
+                    {property.features.length > 3 && property.id !== 1 && (
                       <span className="text-xs bg-yellow-400 text-black px-2 py-1 rounded">
                         +{property.features.length - 3} more
                       </span>
@@ -470,18 +359,16 @@ const PreciseProperties: React.FC = () => {
                 <div className="border-t border-gray-700 pt-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <img
-                        src={property.agent.image}
-                        alt={property.agent.name}
-                        className="w-8 h-8 rounded-full object-cover"
-                      />
+                      <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+                        <Users className="h-4 w-4 text-black" />
+                      </div>
                       <div>
                         <p className={`text-sm font-medium text-white ${
                           language === 'AR' ? 'font-arabic' : ''
                         }`}>
-                          {property.agent.name}
+                          {language === 'EN' ? 'Sales Team' : 'فريق المبيعات'}
                         </p>
-                        <p className="text-xs text-gray-400">{property.agent.phone}</p>
+                        <p className="text-xs text-gray-400">{property.salesTeam?.phone || '+966 565222000'}</p>
                       </div>
                     </div>
                     
@@ -509,6 +396,7 @@ const PreciseProperties: React.FC = () => {
             </div>
           ))}
         </div>
+        )}
 
         {/* View All Button */}
         <div className="text-center mt-12">

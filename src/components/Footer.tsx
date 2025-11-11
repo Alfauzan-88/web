@@ -1,66 +1,43 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail, Twitter, Instagram } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const { language } = useLanguage();
   const content = {
     AR: {
-      description: {
-        title: "الموصف",
-        text: "في رحلة الحياة تكتب خطى الساعين في مناكبها، فيكون منهم العالم والطبيب والمهندس والأستاذ والتاجر. لذا كتب الله لدوين المجد أن يقترن إلى بحثي الرؤية السديدة، والمزيجة الأكيدة من صناع الحضارة ومشيري أركانها. فقط بأمثال هؤلاء، ومن على شاكلتها نسير بالطموحات دوماً مقيرة، وكذا هي البدايات دوماً مقيرة. وتلقفها الأنسان، وكذا هو الغرس بدءاً بذرة، فهما هو اليوم الذي نقطف فيه ثمار غرسنا المبارك ذلك لتتوج وبأيكم رحلة الإنجاز."
-      },
       products: {
         title: "المنتجات",
         links: [
-          "عن الشركة",
-          "الأخبار",
-          "مشاريعنا",
-          "عقاراتنا"
-        ]
-      },
-      resources: {
-        title: "الموارد",
-        links: [
-          "سياسة الخصوصية",
-          "شروط الاستخدام",
-          "تواصل معنا",
-          "الوظائف"
+          { text: "عن الشركة", path: "/about" },
+          { text: "الأخبار", path: "/news" },
+          { text: "مشاريعنا", path: "/projects" },
+          { text: "عقاراتنا", path: "/properties" }
         ]
       },
       contact: {
         title: "معلومات التواصل",
-        phone: "920004413",
-        address: "الرياض - الحائي الشرقي مخرج 14"
+        phone: "⁦+966 50 112 2261⁩",
+        email: "info@alfauzan.com",
+        address: "الرياض - الدائري الشرقي مخرج 14"
       },
       copyright: "© 2024 الفوزان للتطوير العقاري. جميع الحقوق محفوظة."
     },
     EN: {
-      description: {
-        title: "Description",
-        text: "In life's journey, we write the steps of those who strive in its paths, among them are scholars, doctors, engineers, teachers, and merchants. Therefore, God has written for the builders of glory to be associated with sound vision and the solid foundation of civilization makers and their pillars."
-      },
       products: {
         title: "Products",
         links: [
-          "About Company",
-          "News",
-          "Our Projects",
-          "Our Properties"
-        ]
-      },
-      resources: {
-        title: "Resources",
-        links: [
-          "Privacy Policy",
-          "Terms of Use",
-          "Contact Us",
-          "Jobs"
+          { text: "About Company", path: "/about" },
+          { text: "News", path: "/news" },
+          { text: "Our Projects", path: "/projects" },
+          { text: "Our Properties", path: "/properties" }
         ]
       },
       contact: {
         title: "Contact Information",
-        phone: "920004413",
+        phone: "+966 50 112 2261",
+        email: "info@alfauzan.com",
         address: "Riyadh - Eastern District Exit 14"
       },
       copyright: "© 2024 Al Fauzan Real Estate Development. All rights reserved."
@@ -78,10 +55,10 @@ const Footer: React.FC = () => {
       ></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`grid grid-cols-1 lg:grid-cols-4 gap-12 ${language === 'AR' ? 'text-right' : 'text-left'}`}>
+        <div className={`grid grid-cols-1 lg:grid-cols-3 gap-12 ${language === 'AR' ? 'text-right' : 'text-left'}`}>
           
           {/* Company Logo */}
-          <div className={`lg:order-4 flex justify-center ${language === 'AR' ? 'lg:justify-end' : 'lg:justify-start'}`}>
+          <div className={`lg:order-3 flex justify-center ${language === 'AR' ? 'lg:justify-end' : 'lg:justify-start'}`}>
             <div className={`text-center ${language === 'AR' ? 'lg:text-right' : 'lg:text-left'}`}>
               <img
                 src="/assets/logos/logo-gold.png"
@@ -89,8 +66,10 @@ const Footer: React.FC = () => {
                 className="h-32 w-auto mx-auto lg:mx-0"
               />
               <div className={`mt-6 flex flex-row justify-center ${language === 'AR' ? 'lg:justify-end' : 'lg:justify-start'} space-x-3`}>
-                <a 
-                  href="#" 
+                <a
+                  href="https://wa.me/966501122261"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-gray-600 transition-colors p-2 rounded-full hover:bg-gray-100"
                   title="WhatsApp"
                 >
@@ -99,21 +78,29 @@ const Footer: React.FC = () => {
                   </svg>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.tiktok.com/@aqaaaaar" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-gray-600 transition-colors p-2 rounded-full hover:bg-gray-100"
-                  title="Facebook"
+                  title="TikTok"
                 >
-                  <Facebook className="h-5 w-5" />
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                  </svg>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://x.com/Alfauzan_sa" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-gray-600 transition-colors p-2 rounded-full hover:bg-gray-100"
                   title="Twitter"
                 >
                   <Twitter className="h-5 w-5" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.instagram.com/alfauzan.sa/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-gray-600 transition-colors p-2 rounded-full hover:bg-gray-100"
                   title="Instagram"
                 >
@@ -124,7 +111,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Information */}
-          <div className={`lg:order-3 ${language === 'AR' ? 'text-right' : 'text-left'}`}>
+          <div className={`lg:order-2 ${language === 'AR' ? 'text-right' : 'text-left'}`}>
             <h3 className={`text-lg font-bold text-gray-900 mb-6 ${language === 'AR' ? 'font-arabic' : ''}`}>
               {currentContent.contact.title}
             </h3>
@@ -132,6 +119,10 @@ const Footer: React.FC = () => {
               <div className={`flex items-center ${language === 'AR' ? 'justify-end space-x-3 space-x-reverse' : 'justify-start space-x-3'}`}>
                 <span className={`text-gray-700 ${language === 'AR' ? 'font-arabic' : ''}`}>{currentContent.contact.phone}</span>
                 <Phone className="h-5 w-5 text-gray-400" />
+              </div>
+              <div className={`flex items-center ${language === 'AR' ? 'justify-end space-x-3 space-x-reverse' : 'justify-start space-x-3'}`}>
+                <span className={`text-gray-700 ${language === 'AR' ? 'font-arabic' : ''}`}>{currentContent.contact.email}</span>
+                <Mail className="h-5 w-5 text-gray-400" />
               </div>
               <div className={`flex items-start ${language === 'AR' ? 'justify-end space-x-3 space-x-reverse' : 'justify-start space-x-3'}`}>
                 <span className={`text-gray-700 ${language === 'AR' ? 'font-arabic text-right' : 'text-left'} leading-relaxed`}>
@@ -142,24 +133,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Resources */}
-          <div className={`lg:order-2 ${language === 'AR' ? 'text-right' : 'text-left'}`}>
-            <h3 className={`text-lg font-bold text-gray-900 mb-6 ${language === 'AR' ? 'font-arabic' : ''}`}>
-              {currentContent.resources.title}
-            </h3>
-            <ul className="space-y-3">
-              {currentContent.resources.links.map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href="#" 
-                    className={`text-gray-700 hover:text-gray-900 transition-colors ${language === 'AR' ? 'font-arabic text-right' : 'text-left'} block`}
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Products */}
           <div className={`lg:order-1 ${language === 'AR' ? 'text-right' : 'text-left'}`}>
@@ -169,29 +142,18 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {currentContent.products.links.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href="#" 
+                  <Link 
+                    to={link.path}
                     className={`text-gray-700 hover:text-gray-900 transition-colors ${language === 'AR' ? 'font-arabic text-right' : 'text-left'} block`}
                   >
-                    {link}
-                  </a>
+                    {link.text}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        {/* Description Section - Separate row */}
-        <div className="mt-16 pt-8 border-t border-gray-200">
-          <div className={language === 'AR' ? 'text-right' : 'text-left'}>
-            <h3 className={`text-lg font-bold text-gray-900 mb-6 ${language === 'AR' ? 'font-arabic' : ''}`}>
-              {currentContent.description.title}
-            </h3>
-            <p className={`text-gray-700 leading-relaxed ${language === 'AR' ? 'font-arabic text-right max-w-4xl mr-0 ml-auto' : 'text-left max-w-4xl'}`}>
-              {currentContent.description.text}
-            </p>
-          </div>
-        </div>
 
         {/* Bottom Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-200 text-center">
@@ -205,3 +167,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+

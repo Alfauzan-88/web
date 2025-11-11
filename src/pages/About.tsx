@@ -15,7 +15,7 @@ const About = () => {
     EN: {
       history: {
         title: "Our Rich History",
-        subtitle: "35+ years of excellence in Saudi Arabia's real estate market",
+        subtitle: "More than Thirty eight years of excellence in Saudi Arabia's real estate market",
         events: [
           { year: "1988", title: "Company Foundation", description: "Ali Al Fauzan & Sons Real Estate Company was established" },
           { year: "1991", title: "Early Development", description: "Started with initial real estate development projects" },
@@ -55,7 +55,7 @@ const About = () => {
         image: "/assets/images/CEO.png",
         message: "We believe that true development is not limited to constructing projects, but extends to building a sustainable future that fulfills the aspirations of future generations. For over three decades, Ali Al Fauzan & Sons Real Estate has been at the forefront of Saudi Arabia's industrial and real estate transformation, delivering innovative solutions that support the national economy and achieve the aspirations of Saudi Vision 2030.",
         achievements: [
-          "35+ years of industry leadership",
+          "38+ years of industry leadership",
           "Led 200+ successful projects",
           "Pioneered industrial development in Saudi Arabia",
           "Established industry standards and best practices",
@@ -66,9 +66,16 @@ const About = () => {
         title: "Our Leadership Team",
         subtitle: "Experienced professionals driving our success",
         members: [
-          { name: "Ali Fauzan Mohammed Al Fauzan", position: "CEO", experience: "35+ years", image: "/assets/images/CEO.png" },
-          { name: "Faisal bin Ali Al Fouzan", position: "Director", experience: "20+ years", image: "/assets/images/team-2.jpg" },
-          { name: "Faris bin Ali Al Fouzan", position: "Vice President", experience: "15+ years", image: "/assets/images/team-3.jpg" }
+          { name: "Ali Fauzan Mohammed Al Fauzan", position: "Chairman of the Board of Directors", image: "/assets/images/CEO.png", isBoardMember: true },
+          { name: "Faisal bin Ali Al Fouzan", position: "Chief Executive Officer", image: "/assets/images/team-2.jpg", isBoardMember: true },
+          { name: "Faris bin Ali Al Fouzan", position: "Executive Vice President", image: "/assets/images/team-3.jpg", isBoardMember: true },
+          { name: "Sulaiman Saleh Al Arini", position: "General Manager", image: "/assets/images/team-4.jpg", isBoardMember: true },
+          { name: "Legal Department", image: "/assets/images/team-5.jpg", phone: "+966 599999183", whatsapp: true },
+          { name: "Property Department", image: "/assets/images/team-6.jpg", phone: "+966 598322222", whatsapp: true },
+          { name: "Financial Department", image: "/assets/images/team-7.jpg", phone: "+966 59 333 0077", whatsapp: true },
+          { name: "Maintenance Department", image: "/assets/images/team-8.jpg", phone: "+966 569294544", whatsapp: true },
+          { name: "Marketing Department", image: "/assets/images/team-9.jpg", phone: "+966 598122222", whatsapp: true },
+          { name: "Projects Department", image: "/assets/images/team-10.jpg", phone: "+966 598333337", whatsapp: true }
         ]
       },
 
@@ -84,42 +91,18 @@ const About = () => {
           { year: "2019", title: "Community Impact", organization: "Social Responsibility Awards" }
         ]
       },
-      technology: {
-        title: "Technology & Innovation",
-        subtitle: "Leading the digital transformation in real estate",
-        features: [
-          { icon: Zap, title: "Smart Buildings", description: "IoT-enabled properties with automated systems" },
-          { icon: Globe, title: "Digital Platforms", description: "Advanced property management and client portals" },
-          { icon: TrendingUp, title: "AI & Analytics", description: "Data-driven insights for better decision making" },
-          { icon: Shield, title: "Cybersecurity", description: "Robust security measures for all digital systems" },
-          { icon: Users, title: "Virtual Tours", description: "3D virtual reality property experiences" },
-          { icon: Star, title: "Mobile Apps", description: "Comprehensive mobile applications for clients" }
-        ]
-      },
-      future: {
-        title: "Our Future Vision",
-        subtitle: "Shaping the future of real estate in Saudi Arabia",
-        goals: [
-          { icon: Building, title: "Smart Cities", description: "Developing fully integrated smart city solutions" },
-          { icon: Globe, title: "Global Expansion", description: "Expanding our footprint across the region" },
-          { icon: Zap, title: "Green Technology", description: "100% sustainable and eco-friendly developments" },
-          { icon: Users, title: "Community Focus", description: "Creating vibrant, inclusive communities" },
-          { icon: TrendingUp, title: "Market Leadership", description: "Becoming the region's leading real estate company" },
-          { icon: Star, title: "Innovation Hub", description: "Establishing centers of innovation and excellence" }
-        ]
-      },
       overview: {
         title: "Company Overview",
         subtitle: "A comprehensive look at our organization",
         stats: [
-          { number: "6+", label: "Projects in the main regions of the Kingdom" },
+          { number: "23+", label: "Projects in the main regions of the Kingdom" },
           { number: "500+", label: "Commercial and industrial partners benefiting from the company's services" },
           { number: "80%", label: "Customer satisfaction driven by the quality of projects and services provided" },
           { number: "24/7", label: "Operation and maintenance services ensuring efficiency and continuity" },
-          { number: "20+", label: "Industrial Cities and Real Estate Master Plans" },
+          { number: "25+", label: "Industrial Cities and Real Estate Master Plans" },
           { number: "35+", label: "Years of experience in real estate and industrial development" },
           { number: "70+", label: "Support for CSR programs and initiatives" },
-          { number: "10,000+", label: "Direct and indirect job opportunities created through the company's projects" },
+          { number: "10k+", label: "Direct and indirect job opportunities created through the company's projects" },
           { number: "15+", label: "Future projects currently in planning and construction stages" },
           { number: "2,000+", label: "Leased industrial, commercial and residential units" },
           { number: "85%", label: "Occupancy rate in existing projects" },
@@ -144,12 +127,12 @@ const About = () => {
       ceo: {
         title: "رسالة من الرئيس التنفيذي",
         subtitle: "قيادة برؤية والتزام بالتميز",
-        name: "علي فوزان محمد الفوزان",
-        position: "الرئيس التنفيذي",
+        name: "علي بن فوزان بن محمد الفوزان",
+        position: "رئيس مجلس الادارة",
         image: "/assets/images/CEO.png",
-        message: "نؤمن بأن البناء الحقيقي لا يقتصر على تشييد المشاريع، بل يمتد إلى بناء مستقبل مستدام ينصي تطلعات الأجيال القادمة. لأكثر من ثلاثة عقود، كانت شركة علي الفوزان وأولاده العقارية في طليعة تحول العقارات والصناعة في المملكة العربية السعودية، وتقديم حلول مبتكرة تدعم الاقتصاد الوطني وتحقق تطلعات رؤية السعودية 2030.",
+        message: "نؤمن بأن البناء الحقيقي لا يقتصر على تشييد المشاريع، بل يمتد إلى بناء مستقبل مستدام يلامس تطلعات الأجيال القادمة. لأكثر من ثلاثة عقود، كانت شركة علي الفوزان وأولاده العقارية في طليعة تحول العقارات والصناعة في المملكة العربية السعودية، وتقديم حلول مبتكرة تدعم الاقتصاد الوطني وتحقق تطلعات رؤية السعودية 2030.",
         achievements: [
-          "35+ سنة من القيادة في الصناعة",
+          "38+ سنة من القيادة في الصناعة",
           "قاد 200+ مشروع ناجح",
           "رائد التطوير الصناعي في المملكة العربية السعودية",
           "أسس معايير الصناعة وأفضل الممارسات",
@@ -158,16 +141,16 @@ const About = () => {
       },
       history: {
         title: "تاريخنا العريق",
-        subtitle: "35+ سنة من التميز في السوق العقاري السعودي",
+        subtitle: "أكثر من ثمانية وثلاثين سنة من التميز في السوق العقاري السعودي",
         events: [
           { year: "1988", title: "تأسيس الشركة", description: "تأسست شركة علي الفوزان وأولاده العقارية برؤية لتحويل المشهد العقاري في المملكة العربية السعودية" },
           { year: "1992", title: "أول مشروع صناعي", description: "أنجزنا أول مشروع تطوير صناعي كبير في الرياض بنجاح" },
           { year: "1998", title: "التوسع الإقليمي", description: "وسعنا عملياتنا إلى المنطقة الشرقية وجدة، وإنشاء مكاتب إقليمية" },
           { year: "2005", title: "التطوير التجاري", description: "أطلقنا أول مشروع تطوير تجاري واسع النطاق" },
           { year: "2012", title: "المشاريع السكنية", description: "دخلنا قطاع التطوير السكني مع مشاريع الإسكان الراقية" },
-          { year: "2018", title: "مواءمة رؤية 2030", description: "وافقنا استراتيجيتنا مع أهداف رؤية السعودية 2030 والتنمية المستدامة" },
+          { year: "2014", title: "جاهز للمستقبل", description: "نقود الصناعة بتقنيات المدن الذكية وممارسات التنمية المستدامة" },
+          { year: "2018", title: "مواكبة رؤية 2030", description: "وافقنا استراتيجيتنا مع أهداف رؤية السعودية 2030 والتنمية المستدامة" },
           { year: "2023", title: "التحول الرقمي", description: "أطلقنا المنصات الرقمية وتقنيات المباني الذكية" },
-          { year: "2024", title: "جاهز للمستقبل", description: "نقود الصناعة بتقنيات المدن الذكية وممارسات التنمية المستدامة" }
         ]
       },
       values: {
@@ -186,9 +169,16 @@ const About = () => {
         title: "فريق القيادة لدينا",
         subtitle: "محترفون ذوو خبرة يقودون نجاحنا",
         members: [
-          { name: "علي فوزان محمد الفوزان", position: "الرئيس التنفيذي", experience: "35+ سنة", image: "/assets/images/team-1.jpg" },
-          { name: "فيصل بن علي الفوزان", position: "مدير", experience: "20+ سنة", image: "/assets/images/team-2.jpg" },
-          { name: "فارس بن علي الفوزان", position: "نائب الرئيس", experience: "15+ سنة", image: "/assets/images/team-3.jpg" }
+          { name: "علي بن فوزان محمد الفوزان", position: "رئيس مجلس الادارة", image: "/assets/images/team-1.jpg", isBoardMember: true },
+          { name: "فيصل بن علي الفوزان", position: "الرئيس التنفيذي", image: "/assets/images/team-2.jpg", isBoardMember: true },
+          { name: "فارس بن علي الفوزان", position: "نائب الرئيس التنفيذي", image: "/assets/images/team-3.jpg", isBoardMember: true },
+          { name: "سليمان صالح العريني", position: "المدير العام", image: "/assets/images/team-4.jpg", isBoardMember: true },
+          { name: "القسم القانوني", image: "/assets/images/team-5.jpg", phone: "+966 599999183", whatsapp: true },
+          { name: "العقارات", image: "/assets/images/team-6.jpg", phone: "+966 598322222", whatsapp: true },
+          { name: "المالية", image: "/assets/images/team-7.jpg", phone: "+966 59 333 0077", whatsapp: true },
+          { name: "الصيانة", image: "/assets/images/team-8.jpg", phone: "+966 569294544", whatsapp: true },
+          { name: "التسويق", image: "/assets/images/team-9.jpg", phone: "+966 598122222", whatsapp: true },
+          { name: "المشاريع", image: "/assets/images/team-10.jpg", phone: "+966 598333337", whatsapp: true }
         ]
       },
 
@@ -204,42 +194,18 @@ const About = () => {
           { year: "2019", title: "التأثير المجتمعي", organization: "جوائز المسؤولية الاجتماعية" }
         ]
       },
-      technology: {
-        title: "التقنية والابتكار",
-        subtitle: "نقود التحول الرقمي في العقارات",
-        features: [
-          { icon: Zap, title: "المباني الذكية", description: "عقارات مزودة بتقنية إنترنت الأشياء مع أنظمة آلية" },
-          { icon: Globe, title: "المنصات الرقمية", description: "إدارة عقارية متقدمة ومداخل للعملاء" },
-          { icon: TrendingUp, title: "الذكاء الاصطناعي والتحليلات", description: "رؤى مدفوعة بالبيانات لاتخاذ قرارات أفضل" },
-          { icon: Shield, title: "الأمن السيبراني", description: "إجراءات أمنية قوية لجميع الأنظمة الرقمية" },
-          { icon: Users, title: "الجولات الافتراضية", description: "تجارب عقارية ثلاثية الأبعاد بالواقع الافتراضي" },
-          { icon: Star, title: "التطبيقات المحمولة", description: "تطبيقات شاملة للعملاء" }
-        ]
-      },
-      future: {
-        title: "رؤيتنا المستقبلية",
-        subtitle: "تشكيل مستقبل العقارات في المملكة العربية السعودية",
-        goals: [
-          { icon: Building, title: "المدن الذكية", description: "تطوير حلول مدن ذكية متكاملة بالكامل" },
-          { icon: Globe, title: "التوسع العالمي", description: "توسيع نطاقنا عبر المنطقة" },
-          { icon: Zap, title: "التقنية الخضراء", description: "تطويرات مستدامة وصديقة للبيئة 100%" },
-          { icon: Users, title: "التركيز المجتمعي", description: "إنشاء مجتمعات نابضة بالحياة وشاملة" },
-          { icon: TrendingUp, title: "قيادة السوق", description: "أن نصبح الشركة العقارية الرائدة في المنطقة" },
-          { icon: Star, title: "مركز الابتكار", description: "إنشاء مراكز للابتكار والتميز" }
-        ]
-      },
       overview: {
         title: "نظرة عامة على الشركة",
         subtitle: "نظرة شاملة على مؤسستنا",
         stats: [
-          { number: "6+", label: "المشاريع في المناطق الرئيسية في المملكة" },
+          { number: "23+", label: "المشاريع في المناطق الرئيسية في المملكة" },
           { number: "500+", label: "شريك تجاري وصناعي مستفيد من خدمات الشركة" },
           { number: "80%", label: "رضا العملاء بفضل نوعية المشاريع والخدمات المقدمة" },
           { number: "24/7", label: "خدمات تشغيل وصيانة لضمان كفاءة العمليات واستمراريتها" },
-          { number: "20+", label: "مشاريع صناعية ومخططات عقارية" },
+          { number: "25+", label: "مشاريع صناعية ومخططات عقارية" },
           { number: "35+", label: "سنة من الخبرة في التطوير العقاري والصناعي" },
           { number: "70+", label: "دعم برامج ومبادرات المسؤولية المجتمعية" },
-          { number: "10,000+", label: "فرصة عمل مباشرة وغير مباشرة تم توفيرها من خلال مشاريع الشركة" },
+          { number: "10k+", label: "فرصة عمل مباشرة وغير مباشرة تم توفيرها من خلال مشاريع الشركة" },
           { number: "15+", label: "مشاريع نوعية قيد التخطيط والإنشاء" },
           { number: "2,000+", label: "وحدة صناعية وتجارية وسكنية مؤجرة" },
           { number: "85%", label: "نسبة الإشغال في المشاريع القائمة" },
@@ -297,7 +263,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* CEO Section - 2nd */}
+      {/* CEO Section */}
       <section className="relative z-10 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -309,29 +275,56 @@ const About = () => {
             </p>
           </div>
           
-          <div className="flex justify-center">
-            <div className="relative group">
-              {/* Glassmorphism background layer */}
-              <div className="absolute inset-0 bg-white/20 backdrop-blur-md rounded-3xl border border-white/30 shadow-2xl transform scale-110 transition-all duration-500 group-hover:scale-115"></div>
-              
-              {/* White background tile with effects */}
-              <div className="relative bg-white rounded-2xl p-12 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-3xl border border-gray-100">
-                <img 
-                  src="/assets/images/33.png" 
-                  alt="Ali Fauzan AlFauzan"
-                  className="w-full h-auto max-w-5xl mx-auto transform transition-all duration-500 group-hover:scale-105"
-                  style={{
-                    filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1))'
-                  }}
-                />
-                {/* Subtle glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/5 to-orange-500/5 rounded-2xl pointer-events-none"></div>
+          {/* CEO Message Box */}
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl border border-white/20">
+              <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+                {/* CEO Image */}
+                <div className={`${language === 'AR' ? 'lg:order-2' : 'lg:order-1'}`}>
+                  <div className="relative">
+                    <img 
+                      src="/assets/images/CEO.PNG" 
+                      alt={currentContent.ceo.name}
+                      className="w-full h-auto max-w-sm sm:max-w-md mx-auto rounded-2xl shadow-xl"
+                      onError={(e) => {
+                        console.error('Failed to load CEO image:', e);
+                        e.currentTarget.src = '/assets/images/CEO.png';
+                      }}
+                    />
+                    {/* Decorative elements */}
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-pulse"></div>
+                    <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-yellow-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                  </div>
+                </div>
+
+                {/* CEO Message */}
+                <div className={`${language === 'AR' ? 'lg:order-1 text-right' : 'lg:order-2 text-left'}`}>
+                  <div className="space-y-4">
+                    {/* CEO Name and Position */}
+                    <div>
+                      <h3 className={`text-xl sm:text-2xl font-bold text-gray-900 mb-2 ${language === 'AR' ? 'font-arabic' : ''}`}>
+                        {currentContent.ceo.name}
+                      </h3>
+                      <p className={`text-base sm:text-lg text-yellow-600 font-semibold ${language === 'AR' ? 'font-arabic' : ''}`}>
+                        {currentContent.ceo.position}
+                      </p>
+                    </div>
+
+                    {/* Message */}
+                    <div className="relative">
+                      <div className="absolute top-0 left-0 text-3xl sm:text-4xl text-yellow-400 opacity-20 font-serif">
+                        "
+                      </div>
+                      <blockquote className={`text-base sm:text-lg text-gray-700 leading-relaxed pt-4 sm:pt-6 pl-4 sm:pl-6 ${language === 'AR' ? 'font-arabic text-right pr-4 sm:pr-6 pl-0' : ''}`}>
+                        {currentContent.ceo.message}
+                      </blockquote>
+                      <div className={`absolute bottom-0 text-3xl sm:text-4xl text-yellow-400 opacity-20 font-serif ${language === 'AR' ? 'left-0' : 'right-0'}`}>
+                        "
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              
-              {/* Floating particles effect */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-yellow-400/20 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-orange-500/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-              <div className="absolute top-1/2 -left-2 w-4 h-4 bg-yellow-400/30 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
             </div>
           </div>
         </div>
@@ -509,17 +502,65 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {currentContent.team.members.map((member, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-24 h-24 bg-yellow-400 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <Users className="h-12 w-12 text-black" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                <p className="text-yellow-400 font-semibold mb-2">{member.position}</p>
-                <p className="text-white/70 text-sm">{member.experience}</p>
-              </div>
-            ))}
+          {/* Board Members Section */}
+          <div className="mb-16">
+            <h3 className={`text-2xl md:text-3xl font-bold text-white mb-8 text-center ${language === 'AR' ? 'font-arabic' : ''}`} style={{ textShadow: '2px 2px 6px rgba(0,0,0,0.8)' }}>
+              {language === 'AR' ? 'عضو مجلس الإدارة' : 'Board Members'}
+            </h3>
+            <div 
+              className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"
+              style={{ direction: language === 'AR' ? 'rtl' : 'ltr' }}
+            >
+              {currentContent.team.members.filter(member => member.isBoardMember).map((member, index) => {
+                const displayIndex = language === 'AR' ? currentContent.team.members.filter(member => member.isBoardMember).length - 1 - index : index;
+                return (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                    <div className="w-24 h-24 bg-yellow-400 rounded-full mx-auto mb-6 flex items-center justify-center">
+                      <Users className="h-12 w-12 text-black" />
+                    </div>
+                    <h3 className={`text-xl font-bold text-white mb-2 ${language === 'AR' ? 'font-arabic' : ''}`}>{member.name}</h3>
+                    {member.position && <p className={`text-yellow-400 font-semibold mb-2 ${language === 'AR' ? 'font-arabic' : ''}`}>{member.position}</p>}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Department Managers Section */}
+          <div>
+            <h3 className={`text-2xl md:text-3xl font-bold text-white mb-8 text-center ${language === 'AR' ? 'font-arabic' : ''}`} style={{ textShadow: '2px 2px 6px rgba(0,0,0,0.8)' }}>
+              {language === 'AR' ? 'مديري الأقسام' : 'Department Managers'}
+            </h3>
+            <div 
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
+              style={{ direction: language === 'AR' ? 'rtl' : 'ltr' }}
+            >
+              {currentContent.team.members.filter(member => !member.isBoardMember).map((member, index) => {
+                const displayIndex = language === 'AR' ? currentContent.team.members.filter(member => !member.isBoardMember).length - 1 - index : index;
+                return (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                    <div className="w-24 h-24 bg-yellow-400 rounded-full mx-auto mb-6 flex items-center justify-center">
+                      <Users className="h-12 w-12 text-black" />
+                    </div>
+                    <h3 className={`text-xl font-bold text-white mb-2 ${language === 'AR' ? 'font-arabic' : ''}`}>{member.name}</h3>
+                    {member.position && <p className={`text-yellow-400 font-semibold mb-2 ${language === 'AR' ? 'font-arabic' : ''}`}>{member.position}</p>}
+                    {member.whatsapp && member.phone && (
+                      <a
+                        href={`https://wa.me/${member.phone.replace(/[^\d]/g, '')}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110 group"
+                        title="WhatsApp"
+                      >
+                        <svg className="h-6 w-6 text-white group-hover:text-yellow-400 transition-colors duration-300" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.787"/>
+                        </svg>
+                      </a>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
@@ -554,63 +595,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Technology Section */}
-      <section className="relative z-10 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
-              {currentContent.technology.title}
-            </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
-              {currentContent.technology.subtitle}
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {currentContent.technology.features.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <div className="bg-yellow-400 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                    <IconComponent className="h-8 w-8 text-black" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-white/90 leading-relaxed">{feature.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Future Vision Section */}
-      <section className="relative z-10 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
-              {currentContent.future.title}
-            </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
-              {currentContent.future.subtitle}
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {currentContent.future.goals.map((goal, index) => {
-              const IconComponent = goal.icon;
-              return (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <div className="bg-yellow-400 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                    <IconComponent className="h-8 w-8 text-black" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{goal.title}</h3>
-                  <p className="text-white/90 leading-relaxed">{goal.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

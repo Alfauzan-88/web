@@ -7,13 +7,13 @@ const SuccessPartners = () => {
 
   const content = {
     EN: {
-      title: "Success Partners",
-      subtitle: "Trusted by leading organizations across the Kingdom",
+      title: "Partners in Success, Together, We Build an Exceptional Real Estate Future",
+      subtitle: "Our partners in success are the cornerstone of our excellence and leadership. By collaborating with top-tier companies and institutions, we create integrated real estate solutions that bring true transformation to the market. Our strategic partnerships are not just collaborations; they are a shared commitment to delivering the highest standards of quality and added value.",
       cta: "Join over 1500+ companies who trust Al Fauzan Real Estate"
     },
     AR: {
-      title: "شركاء النجاح",
-      subtitle: "موثوق به من قبل المؤسسات الرائدة في المملكة",
+      title: "شركاء النجاح.. معاً نصنع مستقبلاً عقارياً استثنائياً",
+      subtitle: "شركاؤنا في النجاح هم أساس تميزنا وريادتنا، من خلال التعاون مع نخبة من الشركات والمؤسسات الرائدة، نبتكر حلولاً عقارية متكاملة تحدث تغييراً حقيقياً في السوق، شراكاتنا الاستراتيجية ليست مجرد تعاون، بل التزام مشترك بتحقيق أعلى مستويات الجودة والقيمة المضافة",
       cta: "انضم إلى أكثر من 1500+ شركة تثق بالفوزان العقارية"
     }
   };
@@ -47,7 +47,7 @@ const SuccessPartners = () => {
     <section className="py-20 z-10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 ${language === 'AR' ? 'font-arabic' : ''}`}>
-          <h2 className={`text-3xl md:text-4xl font-bold text-white mb-4 text-center ${
+          <h2 className={`text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-4 text-center ${
             language === 'AR' ? 'font-arabic' : ''
           }`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
             {currentContent.title}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe, Building2, Home, Users, Newspaper, Briefcase, MessageCircle } from 'lucide-react';
+import { Menu, X, Building2, Home, Users, Newspaper, Briefcase, MessageCircle } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -60,7 +60,7 @@ const TransparentNavigation: React.FC = () => {
                 <img
                   src="/assets/logos/logo-white.png"
                   alt="Al Fauzan Real Estate"
-                  className="h-16 w-auto transition-all duration-300 hover:scale-105"
+                  className="h-24 w-auto transition-all duration-300 hover:scale-105 mt-2"
                 />
               </Link>
             </div>
@@ -92,9 +92,9 @@ const TransparentNavigation: React.FC = () => {
             <div className="flex items-center space-x-4">
               <button
                 onClick={() => setLanguage(language === 'EN' ? 'AR' : 'EN')}
-                className="text-white hover:text-yellow-400 transition-colors p-2 rounded-lg hover:bg-white/10"
+                className="text-white hover:text-yellow-400 transition-colors px-3 py-2 rounded-lg hover:bg-white/10 text-sm font-medium"
               >
-                <Globe className="w-5 h-5" />
+                English | العربية
               </button>
 
               {/* Mobile Menu Button */}
@@ -146,11 +146,10 @@ const TransparentNavigation: React.FC = () => {
                   setLanguage(language === 'EN' ? 'AR' : 'EN');
                   setIsMobileMenuOpen(false);
                 }}
-                className="w-full bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 flex items-center justify-center space-x-3 text-white hover:text-yellow-400 transition-colors duration-300"
+                className="w-full bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 flex items-center justify-center text-white hover:text-yellow-400 transition-colors duration-300"
               >
-                <Globe className="w-5 h-5" />
-                <span className={language === 'AR' ? 'font-arabic' : ''}>
-                  {language === 'EN' ? 'Switch to Arabic' : 'التبديل إلى الإنجليزية'}
+                <span className="text-sm font-medium">
+                  English | العربية
                 </span>
               </button>
             </div>

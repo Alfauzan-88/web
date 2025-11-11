@@ -17,9 +17,9 @@ const VideoHero: React.FC = () => {
 
   const content = {
     EN: {
-      title: "Transforming Saudi Arabia's",
-      titleHighlight: "Industrial Landscape",
-      subtitle: "Leading the future of industrial, commercial, and residential development with innovative projects that shape communities and create lasting value across the Kingdom.",
+      title: "Welcome to Ali Al Fauzan & Sons Real Estate",
+      titleHighlight: "Your Gateway to Exceptional Real Estate and Industrial Investments",
+      subtitle: "We take you into a world of investment opportunities where quality meets innovation. Join us today to be part of a promising real estate and industrial future, designed to support and fulfill your investment ambitions.",
       cta1: "Explore Projects",
       cta2: "Learn More",
       stats: [
@@ -31,9 +31,9 @@ const VideoHero: React.FC = () => {
       scrollText: "Discover Our World"
     },
     AR: {
-      title: "نحول المشهد العقاري في",
-      titleHighlight: "المملكة العربية السعودية",
-      subtitle: "نقود مستقبل التطوير الصناعي والتجاري والسكني بمشاريع مبتكرة تشكل المجتمعات وتخلق قيمة دائمة عبر المملكة.",
+      title: "مرحباً بك في شركة علي الفوزان وأولاده العقارية",
+      titleHighlight: "بوابتك إلى استثمارات عقارية وصناعية استثنائية",
+      subtitle: "نأخذك إلى عالم من الفرص الاستثمارية حيث تلتقي الجودة بالابتكار، انضم إلينا اليوم لتكون جزءاً من مستقبل عقاري وصناعي واعد، مصمم خصيصاً لدعم وتحقيق طموحاتك الاستثمارية",
       cta1: "استكشف المشاريع",
       cta2: "اعرف المزيد",
       stats: [
@@ -49,7 +49,7 @@ const VideoHero: React.FC = () => {
   const currentContent = content[language];
 
   // Get dynamic content from database
-  const heroVideo = getContent('hero', 'hero_video', language) || '/assets/videos/hero-video.mp4';
+  const heroVideo = getContent('hero', 'hero_video', language) || '/assets/videos/hero-banner.mp4';
 
   // Refresh content when language changes
   useEffect(() => {
@@ -88,13 +88,7 @@ const VideoHero: React.FC = () => {
         y: 0,
         duration: 0.8,
         ease: 'power3.out'
-      }, '-=0.6')
-      .to('.scroll-indicator', {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        ease: 'power3.out'
-      }, '-=0.2');
+      }, '-=0.6');
 
       // Parallax effect for video
       gsap.to('.video-container', {
@@ -173,69 +167,70 @@ const VideoHero: React.FC = () => {
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
         
-        <div className="max-w-7xl mx-auto px-0 py-20">
-          <div className="grid lg:grid-cols-12 gap-2 items-center min-h-screen">
-            {/* Left Side - Motion Logo */}
-            <div className="lg:col-span-6 flex justify-center lg:justify-start lg:pl-0 lg:-ml-12">
-              <div className="hero-logo lg:pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col items-center justify-center min-h-screen pt-8 space-y-4 md:space-y-6 overflow-hidden">
+            
+            {/* 1. Logo - Center Top */}
+            <div className="hero-logo flex justify-center w-full">
                 <video
                   autoPlay
                   muted
                   loop
                   playsInline
-                  className="h-96 md:h-[28rem] lg:h-[36rem] xl:h-[40rem] w-auto transition-all duration-300 hover:scale-105"
+                className="h-48 sm:h-64 md:h-80 lg:h-[28rem] xl:h-[36rem] w-auto transition-all duration-300 hover:scale-105 mx-auto"
                   style={{
-                    filter: 'drop-shadow(0 0 40px rgba(255, 215, 0, 0.6)) drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.8))',
-                    maxWidth: '1000px'
+                  filter: 'brightness(1.2) contrast(1.1) drop-shadow(0 0 50px rgba(255, 215, 0, 0.7)) drop-shadow(2px 2px 12px rgba(0, 0, 0, 0.9))',
+                  maxWidth: '1000px',
+                  backgroundColor: 'transparent',
+                  mixBlendMode: 'screen',
+                  background: 'transparent',
+                  opacity: 1
                   }}
                 >
                   <source src="/assets/logos/logo-motion.webm" type="video/webm" />
                   <img
                     src="/assets/logos/logo-white.png"
                     alt="Ali Alfauzan Co & Sons Real Estate - Fauzan 1988"
-                    className="h-96 md:h-[28rem] lg:h-[36rem] xl:h-[40rem] w-auto"
+                  className="h-48 sm:h-64 md:h-80 lg:h-[28rem] xl:h-[36rem] w-auto mx-auto"
                   />
                 </video>
-              </div>
             </div>
             
-            {/* Right Side - Content */}
-            <div className={`lg:col-span-6 hero-content text-center lg:text-left ${language === 'AR' ? 'font-arabic' : ''}`}>
-            
+            {/* 2. Text Content */}
+            <div className={`hero-content w-full px-2 sm:px-4 md:px-6 lg:px-8 ${language === 'AR' ? 'font-arabic' : ''}`}>
             {/* Main Title */}
-            <h1 className={`hero-title text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-6 leading-tight text-center ${
-              language === 'AR' ? 'font-arabic' : ''
-            }`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.9), 1px 1px 4px rgba(0,0,0,0.8)' }}>
-              <span className="block">{currentContent.title}</span>
-              <span className="block text-white">
+              <h1 className={`hero-title text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-white mb-3 sm:mb-4 md:mb-6 leading-tight break-words text-center ${language === 'AR' ? 'font-arabic' : ''}`} style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.9), 1px 1px 4px rgba(0,0,0,0.8)' }}>
+                <span className="block break-words hyphens-auto">{currentContent.title}</span>
+                <span className="block text-white break-words hyphens-auto">
                 {currentContent.titleHighlight}
               </span>
             </h1>
 
             {/* Subtitle */}
-            <p className={`hero-subtitle text-lg md:text-xl text-white mb-10 max-w-4xl mx-auto leading-relaxed text-center ${
-              language === 'AR' ? 'font-arabic' : ''
+              <p className={`hero-subtitle text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white mb-4 sm:mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed break-words hyphens-auto text-center ${
+                language === 'AR' ? 'font-arabic' : ''
             }`} style={{ textShadow: '2px 2px 6px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.7)' }}>
               {currentContent.subtitle}
             </p>
+            </div>
 
-            {/* CTA Buttons */}
-            <div className="hero-buttons flex flex-col sm:flex-row gap-6 mb-16 justify-center">
+            {/* 3. CTA Buttons */}
+            <div className="hero-buttons flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center px-2 sm:px-4 w-full">
               <Button 
                 size="lg" 
-                className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/25 ${
+                className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/25 w-full sm:w-auto ${
                   language === 'AR' ? 'font-arabic' : ''
                 }`}
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 {currentContent.cta1}
-                <ArrowRight className={`ml-2 h-5 w-5 ${language === 'AR' ? 'rotate-180 mr-2 ml-0' : ''}`} />
+                <ArrowRight className={`ml-2 h-4 w-4 sm:h-5 sm:w-5 ${language === 'AR' ? 'rotate-180 mr-2 ml-0' : ''}`} />
               </Button>
               
               <Button 
                 variant="outline" 
                 size="lg"
-                className={`border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg transition-all duration-300 hover:scale-105 ${
+                className={`border-white text-white hover:bg-white hover:text-black px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg transition-all duration-300 hover:scale-105 w-full sm:w-auto ${
                   language === 'AR' ? 'font-arabic' : ''
                 }`}
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
@@ -254,20 +249,10 @@ const VideoHero: React.FC = () => {
               </div>
             )}
 
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="scroll-indicator absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center z-20">
-        <p className={`text-white text-sm mb-4 ${language === 'AR' ? 'font-arabic' : ''}`} style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
-          {currentContent.scrollText}
-        </p>
-        <div className="animate-bounce">
-          <ChevronDown className="h-6 w-6 text-yellow-400 mx-auto" style={{ filter: 'drop-shadow(1px 1px 3px rgba(0,0,0,0.8))' }} />
-        </div>
-      </div>
 
       {/* Loading State */}
       {!videoLoaded && (

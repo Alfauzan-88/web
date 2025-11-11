@@ -381,65 +381,6 @@ const EventsGallery = () => {
           </div>
         </div>
 
-                          {/* Event Stats */}
-         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-           <div className="text-center">
-             <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-black/30 transition-all duration-300">
-               <AnimatedCounter 
-                 end={6} 
-                 suffix="+" 
-                 className="text-3xl font-bold text-yellow-400 mb-2"
-                 duration={2500}
-                 delay={200}
-               />
-               <div className="text-white/90 text-sm">
-                 {language === 'EN' ? 'Projects in main regions' : 'المشاريع في المناطق الرئيسية'}
-               </div>
-             </div>
-           </div>
-           <div className="text-center">
-             <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-black/30 transition-all duration-300">
-               <AnimatedCounter 
-                 end={500} 
-                 suffix="+" 
-                 className="text-3xl font-bold text-yellow-400 mb-2"
-                 duration={2000}
-                 delay={400}
-               />
-               <div className="text-white/90 text-sm">
-                 {language === 'EN' ? 'Commercial partners' : 'شريك تجاري وصناعي'}
-               </div>
-             </div>
-           </div>
-           <div className="text-center">
-             <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-black/30 transition-all duration-300">
-               <AnimatedCounter 
-                 end={80} 
-                 suffix="%" 
-                 className="text-3xl font-bold text-yellow-400 mb-2"
-                 duration={1800}
-                 delay={600}
-               />
-               <div className="text-white/90 text-sm">
-                 {language === 'EN' ? 'Customer satisfaction' : 'رضا العملاء'}
-               </div>
-             </div>
-           </div>
-           <div className="text-center">
-             <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-black/30 transition-all duration-300">
-               <AnimatedCounter 
-                 end={24} 
-                 suffix="/7" 
-                 className="text-3xl font-bold text-yellow-400 mb-2"
-                 duration={2200}
-                 delay={800}
-               />
-               <div className="text-white/90 text-sm">
-                 {language === 'EN' ? 'Operation services' : 'خدمات تشغيل وصيانة'}
-               </div>
-             </div>
-           </div>
-         </div>
       </div>
     </section>
   );

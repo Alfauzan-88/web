@@ -143,7 +143,7 @@ const WebsiteContentManager: React.FC = () => {
       // For demo purposes, return a default project image
       // In a real implementation, this would upload to the server
       console.log('Image uploaded:', file.name);
-      return '/assets/images/projects/Al fauzan industrial city/hero.jpg';
+      return '/assets/images/projects/Al fauzan industrial city/1.jpg';
     } catch (error) {
       console.error('Error uploading image:', error);
       return null;

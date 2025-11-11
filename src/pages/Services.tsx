@@ -56,7 +56,7 @@ const Services = () => {
              sqm: "15M+",
              clients: "500+"
            },
-          image: "/assets/images/projects/Al fauzan industrial city/hero.jpg",
+          image: "/assets/images/projects/Al fauzan industrial city/1.jpg",
           testimonial: {
             text: "Al Fauzan delivered our industrial complex on time and exceeded all expectations. The facilities have significantly improved our operational efficiency.",
             client: "Ahmed Al-Rashid, Operations Director"
@@ -81,7 +81,7 @@ const Services = () => {
              sqm: "8M+",
              clients: "300+"
            },
-          image: "/assets/images/projects/SAMA/sama.jpg",
+          image: "/assets/images/projects/SAMA/1.JPG",
           testimonial: {
             text: "Al Fauzan delivered our corporate headquarters on time and exceeded all expectations. The attention to detail and quality is outstanding.",
             client: "Fatima Al-Zahra, CEO of TechCorp"
@@ -106,7 +106,7 @@ const Services = () => {
              sqm: "5M+",
              clients: "200+"
            },
-          image: "/assets/images/projects/DMC/Hero.png",
+          image: "/assets/images/projects/DMC/1.jpg",
           testimonial: {
             text: "Our family has been living in their community for 3 years. The quality of construction and amenities are exceptional.",
             client: "Mohammed Al-Faisal, Resident"
@@ -131,7 +131,7 @@ const Services = () => {
              sqm: "4M+",
              clients: "150+"
            },
-          image: "/assets/images/projects/remas/remas.jpg",
+          image: "/assets/images/projects/remas/1.jpg",
           testimonial: {
             text: "Their warehouse solution has revolutionized our logistics operations. The design is both functional and cost-effective.",
             client: "Sara Al-Mutairi, Logistics Manager"
@@ -233,7 +233,7 @@ const Services = () => {
             sqm: "2 مليون+",
             clients: "500+"
           },
-          image: "/assets/images/projects/SAMA/sama.jpg",
+          image: "/assets/images/projects/SAMA/1.JPG",
           testimonial: {
             text: "سلمت الفوزان مقرنا الرئيسي في الوقت المحدد وتجاوزت جميع التوقعات. الاهتمام بالتفاصيل والجودة متميز.",
             client: "أحمد الراشد، الرئيس التنفيذي لشركة التقنية"
