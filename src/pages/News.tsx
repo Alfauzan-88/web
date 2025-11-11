@@ -71,20 +71,6 @@ const News = () => {
           image: "/assets/images/News/4.png",
           featured: false,
           readMoreUrl: "https://www.alriyadh.com/930934"
-        },
-        {
-          id: 5,
-          title: "Ali Al-Fouzan and Sons Real Estate Company signs a financing agreement for its customers with Amlak International",
-          excerpt: "Strategic partnership to provide customers with facilitated financing solutions for purchasing warehouses and industrial facilities.",
-          content: "Strategic partnership to provide customers with facilitated financing solutions for purchasing warehouses and industrial facilities. This agreement makes it easier for our customers to invest in industrial properties...",
-          category: "Company News",
-          author: "Press Team",
-          date: "2024-01-13",
-          views: "2,100",
-          comments: "42",
-          image: "/assets/images/News/5.png",
-          featured: false,
-          readMoreUrl: "https://www.argaam.com/ar/article/articledetail/id/946166"
         }
       ]
     },
@@ -148,20 +134,6 @@ const News = () => {
           image: "/assets/images/News/4.png",
           featured: false,
           readMoreUrl: "https://www.alriyadh.com/930934"
-        },
-        {
-          id: 5,
-          title: "شركة علي الفوزان وأولاده العقارية توقع اتفاقية تمويل لعملائها مع أملاك العالمية",
-          excerpt: "شراكة استراتيجية لتوفير حلول تمويلية ميسرة للعملاء لشراء المستودعات والمرافق الصناعية.",
-          content: "شراكة استراتيجية لتوفير حلول تمويلية ميسرة للعملاء لشراء المستودعات والمرافق الصناعية. هذه الاتفاقية تسهل على عملائنا الاستثمار في العقارات الصناعية...",
-          category: "أخبار الشركة",
-          author: "فريق الصحافة",
-          date: "2024-01-13",
-          views: "2,100",
-          comments: "42",
-          image: "/assets/images/News/5.png",
-          featured: false,
-          readMoreUrl: "https://www.argaam.com/ar/article/articledetail/id/946166"
         }
       ]
     }

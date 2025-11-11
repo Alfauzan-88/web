@@ -62,15 +62,6 @@ const LatestNews = () => {
         category: 'Company News',
         readMoreUrl: 'https://www.alriyadh.com/930934'
       },
-      {
-        id: 5,
-        title: 'Ali Al-Fouzan and Sons Real Estate Company signs a financing agreement for its customers with Amlak International',
-        excerpt: 'Strategic partnership to provide customers with facilitated financing solutions for purchasing warehouses and industrial facilities.',
-        date: '2024-01-13',
-        image: '/assets/images/News/5.png',
-        category: 'Company News',
-        readMoreUrl: 'https://www.argaam.com/ar/article/articledetail/id/946166'
-      },
 
     ],
     AR: [
@@ -109,15 +100,6 @@ const LatestNews = () => {
         image: '/assets/images/News/4.png',
         category: 'أخبار الشركة',
         readMoreUrl: 'https://www.alriyadh.com/930934'
-      },
-      {
-        id: 5,
-        title: 'شركة علي الفوزان وأولاده العقارية توقع اتفاقية تمويل لعملائها مع أملاك العالمية',
-        excerpt: 'شراكة استراتيجية لتوفير حلول تمويلية ميسرة للعملاء لشراء المستودعات والمرافق الصناعية.',
-        date: '2024-01-13',
-        image: '/assets/images/News/5.png',
-        category: 'أخبار الشركة',
-        readMoreUrl: 'https://www.argaam.com/ar/article/articledetail/id/946166'
       },
 
     ]
